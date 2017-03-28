@@ -1,0 +1,120 @@
+.person-center-info{
+    border: none;
+    background: none;
+    padding-top: 0;
+}
+.spread-data-overview {
+    padding: 20px 0;
+    height: 180px;
+    background-color: white;
+    border: 1px solid #dddddd;
+}
+.spread-data-overview li {
+    box-sizing: border-box;
+    float: left;
+    width: 398px;
+    text-align: center;
+    height: 100%;
+    padding-top: 30px;
+}
+.spread-data-overview li:not(:last-child){
+    border-right: 1px solid #dddddd;
+}
+.spread-data-overview li > span{
+    font-size: 20px;
+    color: #ff7253;
+}
+.spread-data-overview span.glyphicon{
+    color: #dddddd;
+    font-size: 12px;
+    cursor: pointer;
+}
+.spread-data-overview span.glyphicon:hover{
+    color: red;
+}
+.spread-data-overview li p{
+    position: relative;
+}
+.spread-data-overview span.glyphicon:hover+span.tips{
+    display: block;
+}
+.spread-data-overview span.tips{
+    display: none;
+    position: absolute;
+    top: -20px;
+    right: 0;
+    font-size: 12px;
+    color: red;
+}
+
+/*..........................*/
+.spread-data-nav{
+    overflow: hidden;
+    margin-top: 20px;
+}
+.spread-data-nav li{
+    height: 30px;
+    width: 100px;
+    line-height: 30px;
+    background-color: #e2e2e2;
+    border-radius: 5px;
+    font-size: 18px;
+    text-align: center;
+    float: left;
+    margin-right: 15px;
+}
+.spread-data-nav li >a {
+    display: block;
+    color: inherit;
+}
+.spread-data-nav li.active{
+    background-color: #344E87;
+    color: white;
+}
+.spread-data-nav li:hover{
+    background-color: #344E87;
+    color: white;
+}
+.person-center-info .table{
+    margin-top: 20px;
+}
+.person-center-info .table th{
+    vertical-align: text-top;
+    background-color: #e2e2e2;
+}
+.person-center-info .table tbody td{
+    background-color: white;
+    text-align: center;
+}
+th.userIdSearch > input{
+    border: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding-left: 5px;
+    font-size: 14px;
+    font-weight: normal;
+}
+th.userIdSearch > button{
+    border: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: white;
+    background-color: #344E87;
+    font-weight: normal;
+}
+/*.....................*/
+.mySpreadLink input{
+    width: 400px;
+}
+.mySpreadLink button{
+    height: 26px;
+    color: white;
+    background-color: #344E87;
+}
+.mySpreadLink span.fadeTips{
+    display: none;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    padding: 3px 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,16 @@
+.ego-sidebar-btt{
+    position: fixed;
+    height: 60px;
+    width: 60px;
+    right: 10px;
+    top: 70%;
+    background-color: #344e87  ;
+    /*border-radius: 10px;*/
+    text-align: center;
+    cursor: pointer;
+    display: none;
+}
+.ego-sidebar-btt img{
+    margin-top: 25px;
+    width: 25px;
+}

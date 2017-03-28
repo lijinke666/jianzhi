@@ -1,0 +1,338 @@
+.person-center{
+    margin-top: 120px;
+    min-height: 910px;
+    background-color: #f4f4f4;
+}
+.person-center-contain{
+    /*margin-top: 120px\0;*/
+    width: 1200px;
+    margin: 0 auto;
+    margin: 120px auto 0\9;
+    padding-bottom: 20px;
+    min-height: 910px;
+}
+.person-bread-nav{
+    height: 50px;
+    line-height: 50px;
+}
+.breadcrumb{
+    background-color: transparent;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+.breadcrumb > li + li:before {
+    color: #CCCCCC;
+    content: ">";
+    padding: 0 10px;
+}
+.person-center-title{
+    line-height: 46px;
+    height: 46px;
+    background-color: #dcdcdc;
+}
+.person-center-title span:nth-of-type(1){
+    margin: 0 8px 0 20px;
+    font-size: 12px;
+}
+.person-center-title span:nth-of-type(2){
+    font-size: 16px;
+}
+.person-center-info{
+    padding-top: 50px;
+    min-height: 787px;
+    background-color: white;
+    box-sizing: border-box;
+    border-bottom: 1px solid #dcdcdc;
+    border-left: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    padding-bottom: 20px;
+}
+.person-center-info .alert{
+    margin-left: 50px;
+}
+.sender-progress ul li{
+    float: left;
+    position: relative;
+}
+.sender-progress ul li.rotate{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    color:#474948;
+    font-size:14px;
+    text-align: center;
+    line-height: 35px;
+    background-color:#344e87;
+}
+.sender-progress ul li.rotate,
+.sender-progress ul li.line{
+    vertical-align: middle;
+    background-color:#ddd;
+}
+.sender-progress ul li.line{
+    width:92px;
+    height:8px;
+    margin-top:12.5px;
+}
+.sender-progress ul li.active{
+    background-color:#344e87;
+    color:#FFF;
+}
+.sender-progress{
+    margin-top:-10px;
+}
+.sender-progress li.rotate:nth-of-type(3).active::before,
+.sender-progress li.rotate:nth-of-type(5).active::before,
+.sender-progress li.rotate:nth-of-type(3).active::after,
+.sender-progress li.rotate:nth-of-type(5).active::after,
+.sender-progress li.rotate:first-child.active::after,
+.sender-progress li.rotate:last-child.active::before{
+    content:" ";
+    width:46px;
+    height:8px;
+    background: #344e87;
+    position: absolute;
+    top: 13px;
+    z-index: 2;
+}
+.sender-progress li.rotate:nth-of-type(3).active::before,
+.sender-progress li.rotate:nth-of-type(5).active::before{
+    right: -45px;
+    border-radius: 0 5px 5px 0;
+}
+.sender-progress li.rotate:first-child.active::after{
+    left:34px;
+    border-radius: 0 5px 5px 0;
+}
+.sender-progress li.rotate:last-child.active::before{
+    right:34px;
+    border-radius: 5px 0 0 5px;
+}
+.sender-progress li.rotate:nth-of-type(3).active::after,
+.sender-progress li.rotate:nth-of-type(5).active::after{
+    left: -45px;
+    border-radius: 5px 0 0 5px;
+}
+
+
+.sender-content{
+    width:1200px;
+    min-height:46px;
+    margin-top:10px;
+    border:1px solid #ddd;
+    background-color: #fff;
+}
+.sender-content .user-info-header{
+    height:45px;
+    background-color: #DCDCDC;
+    line-height: 45px;
+    padding: 12px 20px;
+}
+.sender-content .user-info-content{
+    padding: 20px 20px 40px 20px;
+}
+.sender-content h4.title{
+    font-size:16px;
+    color:#000;
+    margin-bottom: 20px;
+}
+.sender-content .user-info-select-box li{
+    width:260px;
+    height:150px;
+    float: left;
+    margin:0 40px 20px 0;
+    position: relative;
+    padding: 24px 15px 15px 15px;
+}
+.sender-content .user-info-select-box li.select-item{
+    background: url("../../static/image/userInfo/user_select.png") no-repeat;
+    background-size:cover;
+}
+.sender-content .user-info-select-box li.add-item{
+    border:1px solid #ddd;
+}
+.sender-content .user-info-select-box .select-item .set-address{
+    width:80px;
+    height:24px;
+    font-size:14px;
+    color:#fff;
+    position: absolute;
+    right:0;
+    top:0;
+    background-color: #b2b2b2;
+    transition:all .3s;
+}
+.sender-content .user-info-select-box .select-item .info .name{
+    margin-right:15px;
+
+}
+.sender-content .user-info-select-box .select-item .address{
+    padding: 6px 0;
+    border-top:1px solid #ddd;
+    border-bottom:1px solid #ddd;
+    margin:10px 0;
+    height:52px;
+    min-height: 52px;
+    color:#333333;
+    font-size:12px;
+    text-overflow: hidden;
+    -webkit-line-clamp:2;
+    display:-webkit-box;
+    overflow: hidden;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    line-height: 20px;
+}
+.sender-content .user-info-select-box .select-item .operation a{
+    color:#344e87;
+}
+.sender-content .user-info-select-box .select-item .operation a:first-child{
+    margin-right:5px;
+}
+.sender-content .user-info-select-box .add-item {
+    background-color: #f7f7f7;
+}
+.sender-content .user-info-select-box .add-item .add-address{
+    position: absolute;
+    margin:auto;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    font-size:14px;
+    text-align: center;
+    color:#333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sender-content .user-info-select-box .add-item i{
+    font-style: normal;
+    color:#333;
+    font-size:40px;
+}
+.sender-content .user-info-select-box .select-item.active .set-address{
+    background-color: #344e87;
+}
+.sender-content .user-info-select-box .select-item.active::before{
+    content:"";
+    position: absolute;
+    border:20px solid transparent;
+    border-right-color:#344e87;
+    transform: rotate(-135deg);
+    right:-20px;
+    bottom:-20px;
+    z-index: 2;
+}
+.sender-content .user-info-select-box .select-item.active::after{
+    position: absolute;
+    z-index: 3;
+    right:10px;
+    bottom:0;
+    background: url("../../static/image/userInfo/select_gou.png") no-repeat;
+}
+.sender-content .sender-user-info .add-user-info-content{
+    width:1200px;
+    min-height:154px;
+    padding: 20px;
+    border-top:1px solid #ddd;
+}
+.sender-content .sender-user-info .add-user-info-content select{
+    min-width: 160px;
+}
+.sender-content .sender-user-info .add-user-info-content input{
+    width: 160px;
+}
+.sender-content form span{
+    margin-right: 32px;
+}
+.sender-content .sender-user-info .add-user-info-content input.address{
+    width:280px;
+}
+.person-center-contain .btn-next{
+    width:410px;
+    height:45px;
+    line-height: 30px;
+    display: block;
+    margin:40px auto;
+    color:#fff !important;
+    background-color: #344E87;
+}
+.mt20{
+    margin-top:20px;
+}
+.sender-content .sender-user-info{
+    display: none;
+}
+.sender-content .sender-user-info:first-child{
+    display: block;
+}
+.sender-content .sender-user-info span.form-group{
+    position: relative;
+}
+span.v-error{
+    position: absolute;
+    color:#D43333;
+    right: -25px;
+    bottom: -18px;
+}
+.sender-content .sender-parcel-detail{
+    background: #fff;
+}
+.sender-content .sender-parcel-detail-content{
+    padding: 20px;
+    position: relative;
+}
+.sender-content .parcel-form{
+    width:620px;
+    height: auto;
+    margin:10px auto;
+}
+.sender-content .sender-parcel-detail-content .order-input{
+    margin-right: 20px;
+}
+.sender-content .sender-parcel-detail-content label{
+    color:#333;
+    font-weight: normal;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.sender-content .sender-parcel-detail-content .order-input input{
+    width:260px;
+}
+.sender-content .sender-parcel-detail-content .weight-input input{
+    width:85px;
+}
+.sender-content .sender-parcel-detail-content .remark-input input{
+    width:495px;
+}
+.sender-content .shop-detail{
+    padding: 20px;
+        border-top:1px solid #ddd;
+    position: relative;
+}
+.sender-content .sender-shop-detail .select-shop-tempalte{
+    position: absolute;
+    right: 6px;
+    top: 26px;
+}
+.sender-content .sender-shop-detail .shop-table{
+    margin-top:40px;
+    border:1px solid #ddd;
+}
+.sender-content .sender-shop-detail .shop-table thead{
+    background-color: #f6f6f6;
+}
+.sender-content .sender-shop-detail .shop-table td{
+    min-height: 48px;
+    text-align: center;
+    line-height: 48px;
+    color:#333;
+    padding: 0;
+}
+.sender-content .sender-shop-detail  .btn-add{
+    background-color: #e5821d;
+    padding: 8px 42px;
+}

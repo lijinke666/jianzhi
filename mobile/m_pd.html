@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no" >
+    <title>丝路易购优势产品</title>
+    <style>
+        html,body{
+            width: 100%;
+            padding: 0;
+            margin: 0;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+</body>
+<script>
+function GetRequest() {
+    var url = location.search; //获取url中"?"符后的字串
+    var theRequest = new Object();
+    if (url.indexOf("?") != -1) {
+        var str = url.substr(1);
+        strs = str.split("&");
+        for(var i = 0; i < strs.length; i ++) {
+            theRequest[strs[i].split("=")[0]]=unescape(strs[i].split("=")[1]);
+        }
+    }
+    return theRequest;
+}
+function getImg() {
+    var pdObj = GetRequest();
+    var urlPreFix = "http://www.egoint.com/static/image/m_index/second/";
+    var img = document.createElement('img');
+    if (pdObj.pd == "intro"){
+        img.src = urlPreFix+pdObj.pd+".png";
+    }else {
+        img.src = urlPreFix+pdObj.pd+".jpg";
+    }
+    var body = document.getElementsByTagName('body')[0];
+    body.appendChild(img)
+}
+getImg();
+</script>
+</html>

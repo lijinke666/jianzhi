@@ -1,0 +1,231 @@
+.ego-oversea-accordion{
+    height: 600px;
+}
+.ego-accordion li {
+    position:relative;
+    box-shadow: 0 0 12px #000;
+}
+.ego-accordion li a{
+    display: block;
+}
+.ego-accordion div.slider-bg {
+    background:#000;
+    bottom: 0;
+    height:102px;
+    width:100%;
+    left:0;
+    position:absolute;
+    z-index:10;
+    opacity:.5;
+}
+.ego-accordion div.slider-info {
+    bottom: 0;
+    height:102px;
+    left:0;
+    position:absolute;
+    width:150px;
+    z-index:15;
+    padding:15px;
+}
+.ego-accordion div.slider-info strong {
+    font-size:18px;
+    color:#fff;
+    margin-bottom:5px;
+}
+.ego-accordion div.slider-info p {
+    display:none;
+    font-size:14px;
+    line-height:20px;
+    color:#fff;
+    margin:0 !important;
+}
+.ego-accordion li.slider-open div.slider-bg {
+    height: 130px;
+}
+.ego-accordion li.slider-open div.slider-info {
+    width:570px;
+    height: 130px;
+}
+.ego-accordion li.slider-open div.slider-info strong {
+    font-size:26px;
+    margin-bottom: 30px;
+}
+.ego-accordion li.slider-open div.slider-info p {
+    display:block;
+}
+.ego-oversea-advantage{
+    margin: 0 auto;
+    width: 1200px;
+    height: 164px;
+}
+.ego-oversea-advantage li{
+    float: left;
+    width: 400px;
+    line-height: 164px;
+    font-size: 20px;
+}
+.ego-oversea-advantage li:nth-of-type(2){
+    padding-left: 120px;
+}
+.ego-oversea-advantage li:nth-of-type(3){
+    padding-left: 170px;
+}
+.ego-oversea-advantage li span{
+    font-size: 60px;
+    color: #e5821d;
+    float: left;
+    margin-right: 10px;
+}
+.ego-oversea-info{
+    background-color: #fafafa;
+}
+.ego-oversea-info > div{
+    width: 1200px;
+    margin: 0 auto 90px;
+    border: 1px solid #dddddd;
+    box-sizing: content-box;
+    overflow: hidden;
+}
+.ego-product-title{
+    overflow: hidden;
+}
+.ego-products-item{
+    width: 600px;
+    box-sizing: border-box;
+    height: 55px;
+    float: left;
+    text-align: center;
+    line-height: 55px;
+    font-size: 16px;
+    background-color: #f4f4f4;
+    cursor: pointer;
+    color: #999999;
+    border-right: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+}
+.ego-products-item:last-child{
+    border-right: none;
+}
+.ego-products-item.active{
+    background-color: white;
+    border-bottom: none;
+    color: #3e5c9d;
+}
+/*title滚动后的样式*/
+.ego-product-title.fixed{
+    width: 70px;
+    position: fixed;
+    top: 80px;
+    left: 50%;
+    margin-left: -670px;
+}
+.ego-product-title.fixed .ego-products-item{
+    width: 70px;
+    height: 100px;
+    text-align: center;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+.ego-product-title.fixed .ego-products-item.active{
+    border-bottom: 1px solid #dddddd;
+    border-right: none;
+}
+.ego-product-title.fixed .ego-products-item >span:nth-of-type(1){
+    display: block;
+}
+.ego-products-info{
+    display: none;
+    /*height: 1000px;*/
+    padding-bottom: 90px;
+    background-color: white;
+}
+.ego-products-info > div{
+    overflow: hidden;
+}
+.ego-oversea-service{
+    margin-top: 126px;
+    width: 600px;
+    text-align: center;
+    float: left;
+}
+.ego-oversea-service > div{
+    display: inline-block;
+    width: 257px;
+    height: 52px;
+    color: white;
+    background-color: #3e5c9d;
+    font-size: 24px;
+    line-height: 52px;
+    text-align: center;
+}
+.ego-oversea-service > ul{
+    /*display: inline-block;*/
+    margin: 40px 0 80px 0;
+    text-align: left;
+    padding-left: 230px;
+}
+.ego-oversea-service > ul li{
+    font-size: 18px;
+    line-height: 36px;
+}
+.ego-oversea-service > ul li span{
+    color: #3e5c9d;
+    margin-right: 10px;
+}
+.ego-oversea-number-contain{
+    padding: 0 172px;
+}
+.ego-oversea-number{
+    width: 120px;
+    float: left;
+    text-align: center;
+    margin-right: 124px;
+}
+.ego-oversea-number:last-child{
+    margin-right: 0;
+}
+.ego-oversea-number .circle{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #e5821d;
+    line-height: 120px;
+    font-size: 20px;
+}
+.ego-oversea-number p{
+    font-size: 20px;
+    line-height: 40px;
+}
+/*报价*/
+.ego-products-info.price{
+    padding: 94px 70px 90px;
+    text-align: center;
+}
+.ego-products-info.price p{
+    font-size: 30px;
+    margin: 0 0 43px 0;
+}
+.ego-products-info.price table{
+    text-align: center;
+}
+.ego-products-info.price table th{
+    height: 62px;
+    background-color: #3e5c9d;
+    color: white;
+    vertical-align: middle;
+    text-align: center;
+}
+.ego-products-info.price table tr td{
+    height: 79px;
+    background-color: #f7f7f7;
+    vertical-align: middle;
+    border: 3px solid white;
+}
+.ego-products-info.price button{
+    width: 300px;
+    height: 50px;
+    color: white;
+    background-color: #e5821d;
+    font-size: 16px;
+    margin-top: 40px;
+}

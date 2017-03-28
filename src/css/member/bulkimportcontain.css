@@ -1,0 +1,211 @@
+.person-center-info{
+    padding: 0;
+    display: inline-block;
+    background: none;
+    border: none;
+}
+.bulk-item-infoBG{
+    padding: 72px 0 30px 0;
+    width: 1200px;
+    box-sizing: border-box;
+    /*overflow: hidden;*/
+    background-color: white;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+    border-right: 1px solid #dddddd;
+}
+.bulk-item-contain{
+    height: 130px;
+    padding-left: 320px;
+}
+.bulk-step-item{
+    width:133px;
+    height: 73px;
+    border-radius: 5px;
+    background-color: #e2e2e2;
+    color: #333333;
+    font-size: 16px;
+    position: relative;
+}
+.bulk-step-item > p{
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+}
+.bulk-step-item,
+.bulk-step-arrow{
+    float: left;
+}
+.bulk-step-arrow{
+    height: 87px;
+    width: 80px;
+    text-align: center;
+    padding-top: 20px;
+}
+.bulk-step-arrow > span{
+    color: #dcdcdc;
+    font-size: 32px;
+}
+.bulk-step-item-no{
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: 60%;
+    margin-left: -24px;
+    left: 50%;
+    border-radius: 50%;
+    background-color: white;
+    box-sizing: border-box;
+    border: 3px solid #e2e2e2;
+    line-height: 48px;
+    text-align: center;
+    color: #333333;
+}
+/*---------*/
+.bulk-btn-contain{
+    padding-left: 320px;
+}
+.bulkTemplateDownload,
+.bulk-upload{
+    width: 133px;
+    height: 45px;
+    background-color: #344e87;
+    font-size: 16px;
+    border-radius: 5px;
+    float: left;
+    margin-right: 80px;
+}
+.bulkTemplateDownload > a{
+    text-align: center;
+    color: white;
+    display: block;
+    line-height: 45px;
+}
+.bulk-upload{
+    position: relative;
+    width: 133px;
+    height: 45px;
+    line-height: 45px;
+    background-color: #344e87;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1
+}
+.bulk-upload:hover{
+    color: white;
+}
+.bulk-upload>input {
+    position: absolute;
+    z-index: 20;
+    left: -84px;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 220px;
+    height: 45px;
+}
+.bulk-upload>p{
+    position: absolute;
+    width: 133px;
+    height: 45px;
+    line-height: 45px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    top:0;
+    left: 0;
+}
+.ego-btn.submit{
+    width: 133px;
+    height: 45px;
+    background-color: #e5821d;
+    color: white;
+    font-size: 16px;
+}
+.ego-btn.submit.dis{
+    background-color: #e2e2e2;
+    color: #333333;
+    cursor: not-allowed;
+}
+.bulk-file-view{
+    text-align: center;
+    margin-top: 20px;
+}
+.bulk-file-view > p {
+    display: inline-block;
+    text-align: left;
+    border-bottom: 1px solid #ececec;
+    padding: 5px 10px;
+}
+.bulk-file-view > p span.iconfont{
+    margin-left: 30px;
+    color: #0a8226;
+    font-weight: bolder;
+}
+.bulk-file-view > p span.fileName{
+    color: #666666;
+    font-size: 14px;
+}
+p.notice{
+    text-align: center;
+    margin-top: 35px;
+    font-size: 14px;
+    color: #333333;
+}
+.bulk-go-back{
+    text-align: center;
+    padding-top: 40px;
+}
+.bulk-back-btn{
+    width: 408px;
+    height: 45px;
+    color: white;
+    background-color: #344e87;
+}
+.bulk-back-btn > a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+    padding: 0;
+}
+/*----modal----*/
+.temp_download{
+    display: flex;
+    justify-content:space-between;
+}
+.temp_type{
+    box-sizing: border-box;
+    flex:0 0 50%;
+    padding: 5px 5px 5px 30px;
+    text-align: center;
+}
+.temp_type:nth-of-type(1){
+    padding-left: 45px;
+    border-right: 1px solid #dddddd;
+}
+.temp_type > h4 {
+    text-align: left;
+}
+.temp_type > p {
+    padding: 10px 0;
+    min-height: 150px;
+    line-height: 1.8;
+    box-sizing: border-box;
+    text-align: left;
+}
+.temp_type > p > a{
+    text-decoration: underline;
+    color: #344E87;
+}
+.temp_type > a.ego-btn{
+    display: inline-block;
+    cursor: pointer;
+    color: white;
+    padding:  0 5px;
+    height: 35px;
+    width: 100px;
+    line-height: 35px;
+    background-color: #344E87;
+}

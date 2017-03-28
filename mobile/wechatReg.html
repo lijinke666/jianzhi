@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no" >
+    <link rel="stylesheet" href="../static/lib/weui.css">
+    <title>新用户注册</title>
+    <style type="text/css">
+        body{
+            background: url("../static/image/xmas/moilebg.jpg") no-repeat;
+            background-size: cover;
+        }
+        .page__hd{
+            text-align: center;
+            padding: 30% 40px 20px;
+            color: white;
+        }
+        .page__bd{
+            padding: 0 10%;
+        }
+        #regEgoint{
+            margin-top: 20px;
+        }
+        .ing{
+            color: grey;
+        }
+        .weui-cells{
+            background-color: transparent;
+        }
+        .weui-cells:before{
+            border-top: none;
+        }
+        .weui-cells:after{
+            border-bottom: none;
+        }
+        .weui-cell:before{
+            border-top: none;
+        }
+        .weui-cell{
+            background-color: #FFFFFF;
+            margin-bottom: 20px;
+            -webkit-border-radius: 2em;
+            -moz-border-radius: 2em;
+            border-radius: 2em;
+        }
+        div.success{
+            padding: 50% 40px 20px;
+            text-align: center;
+            font-size: 1.2em;
+            color: white;
+        }
+    </style>
+</head>
+<body ontouchstart="">
+    <div class="page__hd">
+        <h2 class="page__title">注册丝路易购</h2>
+        <p>感受全新跨境物流服务</p>
+    </div>
+    <div class="page__bd">
+        <form action="">
+            <div class="weui-cells weui-cells_form">
+                <!--手机号-->
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="tel" name="phoneNumber" placeholder="请输入手机号">
+                    </div>
+                </div>
+                <!--用户名-->
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" name="userName" placeholder="姓名(建议输入您的真实姓名)">
+                    </div>
+                </div>
+                <!--设置密码-->
+                <div class="weui-cell">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" type="password" name="userPass" placeholder="请输入密码,6-18位">
+                    </div>
+                </div>
+                <!--验证码-->
+                <div class="weui-cell weui-cell_vcode">
+                    <div class="weui-cell__bd">
+                        <input class="weui-input" name="Vcode" type="number" maxlength="4" placeholder="请输入验证码">
+                    </div>
+                    <div class="weui-cell__ft">
+                        <button type="button" class="weui-vcode-btn" id="getVcode">获取验证码</button>
+                    </div>
+                </div>
+            </div>
+            <p style="margin-bottom: -15px;font-size: .75rem;line-height: 1.1;text-align: left;color: white">*已注册用户<br>请电脑访问官网 www.egoint.com进行下单。</p>
+            <button type="button" class="weui-btn weui-btn_primary ego_disabled" id="regEgoint">注册</button>
+        </form>
+    </div>
+    <!--成功-->
+    <div class="success" style="display: none">
+        <h1>注册成功</h1>
+        <p>
+            即刻使用PC登录<br> <a href="" >www.egoint.com</a><br>使用吧！
+        </p>
+    </div>
+    <!--弹出框-->
+    <div id="dialogs">
+        <div class="js_dialog" id="ego_alert" style="display: none;">
+            <div class="weui-mask"></div>
+            <div class="weui-dialog">
+                <div class="weui-dialog__bd">弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内</div>
+                <div class="weui-dialog__ft">
+                    <a href="javascript:;" class="weui-dialog__btn weui-dialog__btn_primary">知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script>
+    $(document).ready(function () {
+        var height = $(window).height();
+        var $alert = $('#ego_alert');
+        //初始化页面高度
+        $('body').css({
+            height:height
+        });
+        //获取验证码
+        $('#getVcode').on('click',function () {
+            var phoneNumber = $("input[name='phoneNumber']").val();
+            var $this       = $(this);
+            if(phoneNumber == '' || !/^1[34578]\d{9}$/.test(phoneNumber)){
+                egoAlert('请输入正确的手机号');
+                return false;
+            }else {
+                buttonTips($this);
+                /*$.ajax({
+                    url: "",
+                    type: "",
+                    data:{},
+                    dataType: "json",
+                    beforeSend:function(){
+
+                    },
+                    success: function (data) {
+
+                    },
+                    error: function () {
+
+                    }
+                });*/
+            }
+        });
+        //注册
+        $('#regEgoint').on('click',function () {
+            var phoneNumber     = $("input[name='phoneNumber']").val(),
+                username        = $("input[name='userName']").val(),
+                userPass        = $("input[name='userPass']").val(),
+                userPassConfirm = $("input[name='userPassConfirm']").val(),
+                vCode           = $("input[name='Vcode']").val();
+            //验证
+            if (phoneNumber == '' || !/^1[34578]\d{9}$/.test(phoneNumber)){
+                egoAlert('请输入正确的手机号');
+                return false;
+            }
+            if (username == ''){
+                egoAlert('请输入用户名');
+                return false;
+            }
+            if (userPass == ''){
+                egoAlert('密码不能为空')
+                return false;
+            }else if (!/^[a-zA-Z0-9_]{6,18}$/.test(userPass)){
+                egoAlert('密码应该由6-18位的数字、字符或下划线组成');
+                return false;
+            }
+            if (vCode == ''){
+                egoAlert('请输入验证码');
+                return false;
+            }
+            success();
+        });
+        //关闭提示框
+        $('#dialogs').on('click', '.weui-dialog__btn', function(){
+            $(this).parents('.js_dialog').fadeOut(200);
+        });
+    });
+    function success() {
+        var $con     = $('body');
+        var $success = $('.success');
+        $con.find('.page__hd').hide();
+        $con.find('.page__bd').hide();
+        $success.fadeIn();
+    }
+    function egoAlert(msg) {
+        var $alert = $('#ego_alert');
+        $alert.find('div.weui-dialog__bd').html(msg);
+        $alert.fadeIn(200);
+    }
+    function buttonTips($this) {
+        var i = 60;
+        var codeInterval = setInterval(function () {
+            if(i == 60){
+                $this.html("发送成功");
+            }else{
+                $this.html(i+"秒后重发");
+            }
+            $this.attr('disabled','disabled').addClass('ing');
+            if (i == 0) {
+                clearInterval(codeInterval);
+                $this.removeAttr('disabled');
+                $this.html("获取验证码").removeClass("ing");
+            }
+            i--;
+        }, 1000);
+    }
+</script>
+</html>

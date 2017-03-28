@@ -1,0 +1,385 @@
+.bulk-load{
+    color: white;
+    font-size: 14px;
+    margin: 12px 0;
+}
+.bulk-load button{
+    width: 100px;
+    height: 26px;
+    background-color: #e5821d;
+}
+/*收寄件人信息*/
+.delivery-deliveryinfo{
+    overflow: hidden;
+    /*display: none;*/
+}
+.delivery-role-info{
+    width: 590px;
+    height: 840px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    float: left;
+    box-sizing: border-box;
+    padding: 0 25px;
+    position: relative;
+}
+.delivery-role-info.del-sender{
+    margin-right: 20px;
+}
+.delivery-role-info>p{
+    margin-top: 50px;
+    padding-bottom: 27px;
+    border-bottom: 1px solid #dddddd;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.del-role-info-list{
+    padding: 0 25px;
+}
+.delivery-info-input{
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 2px;
+}
+.delivery-info-input p{
+    font-size: 16px;
+    color: #333333;
+    margin: 21px 0 15px 0;
+    font-weight: bold;
+}
+.delivery-info-input input{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+}
+/*--------------------------*/
+.delivery-info-input select{
+    width: 100%;
+    height: 40px;
+    padding: 0 0 0 10px;
+    font-size: 14px;
+    border: 1px solid #dddddd;
+    border-radius: 3px;
+    background-color: #f7f7f7;
+}
+.select2-container--default .select2-selection--single{
+    border: 1px solid #dddddd;
+}
+.select2-container .select2-selection--single{
+    height: 40px;
+    background-color: #f7f7f7;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 40px;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    top: 6px;
+}
+/*-----*/
+.delivery-role-info .choose-address{
+    position: absolute;
+    right: 25px;
+    top: 24px;
+    border: none;
+    background: none;
+    outline: none;
+}
+.delivery-role-info .choose-address span{
+    font-size: 22px;
+}
+.delivery-role-info.del-sender .choose-address span{
+    color: #344e87;
+}
+.delivery-role-info.del-receiver .choose-address span{
+    color: #e5821d;
+}
+.delivery-control-btns{
+    margin: 40px 0 40px 0;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+}
+.delivery-next-btn{
+    width: 408px;
+    height: 45px;
+    background-color: #344e87;
+    color: white;
+}
+.del-role-noValidate{
+    border: 2px solid #d75148!important;
+}
+.del-role-validate{
+    border: 2px solid #30a735!important;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}
+/*选择服务*/
+.delivery-chooseService{
+    width: 100%;
+    background-color: white;
+    border: 1px solid #dddddd;
+    padding: 0 45px 0;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.delivery-chooseService>p{
+    height: 75px;
+    font-size: 18px;
+    line-height: 75px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-weight: bolder;
+}
+.delivery-chooseService div.service-item{
+    width: 150px;
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    margin: 20px 20px 20px 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+/*产品包裹信息*/
+.delivery-productInfo{
+    display: none;
+    height: auto;
+    box-sizing: border-box;
+}
+.delivery-packageInfo{
+    width: 100%;
+    height: 315px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    padding: 0 45px 0;
+    overflow: hidden;
+}
+.delivery-packageInfo>p{
+    height: 75px;
+    font-size: 18px;
+    line-height: 75px;
+    text-align: center;
+    border-bottom: 1px solid #dddddd;
+    font-weight: bolder;
+}
+.delivery-package-item{
+    padding: 0 20px 0;
+    width: 50%;
+    float: left;
+}
+.delivery-commodityInfo{
+    margin-top: 30px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    padding: 0 45px 0;
+    min-height: 430px;
+    overflow: hidden;
+}
+.delivery-commodityInfo>p{
+    height: 75px;
+    line-height: 75px;
+    font-size: 18px;
+    font-weight: bolder;
+    text-align: center;
+}
+.delivery-commodity-box{
+    border-top: 10px solid #344E87;
+    border-radius: 5px;
+    background-color: #eeeeee;
+    margin-bottom: 20px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    position: relative;
+}
+.delivery-commodity-item{
+    box-sizing: border-box;
+    padding: 0 20px 0;
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+.delivery-commodity-item .delivery-commodity-itemsmall{
+    float: left;
+    width:50%;
+}
+.delivery-commodity-item .delivery-commodity-itemsmall:nth-of-type(1){
+    padding-right: 10px;
+}
+.delivery-commodity-item .delivery-commodity-itemsmall:nth-of-type(2){
+    padding-left: 10px;
+}
+.ctrl-group{
+    padding-left: 20px;
+}
+.ctrl-group button{
+    margin-top: 21px;
+    color: white;
+}
+.commodity-choose{
+    background-color: #e5821d;
+}
+.commodity-delete{
+    background-color: #344E87;
+}
+
+.add-commodity-btn{
+    width: 246px;
+    height: 35px;
+    color: white;
+    background-color: #e5821d;
+    font-size: 14px;
+    float: right;
+    margin: 0 20px 40px 0;
+}
+a.after-tax-table{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    text-decoration: underline;
+    color: #344e87;
+}
+a.after-tax-table:hover{
+   color: #e5821d;
+}
+.product-btn{
+    height: 45px;
+    width: 264px;
+    color: white;
+    font-size: 14px;
+}
+.product-btn.pbtn-prev{
+    background-color: #e5821d;
+    margin-right: 20px;
+}
+.product-btn.pbtn-next{
+    background-color: #344e87;
+}
+/*匹配运价*/
+.delivery-matchRate{
+    /*display: none;*/
+}
+.delivery-matchRate-contain{
+    padding: 0 56px 20px;
+    min-height: 330px;
+    height: auto;
+    border: 1px solid #dddddd;
+    background-color: white;
+    box-sizing: border-box;
+}
+.delivery-matchRate-contain>p{
+    font-size: 14px;
+    margin: 42px 0 34px 0;
+    font-weight: bold;
+}
+.delivery-matchRate-contain>span{
+    color: #eb2c2c;
+    font-size: 14px;
+}
+.delivery-matchRate-contain .table{
+    text-align: center;
+    margin-bottom: 12px;
+}
+.delivery-matchRate-contain .table thead{
+    background-color: #ececec;
+}
+.delivery-matchRate-contain .table .mr-table-choose{
+    width: 40px;
+}
+.delivery-matchRate-contain .table .mr-table-note{
+    width: 180px;
+}
+.delivery-matchRate-contain .table td{
+    border-top: none;
+    border-bottom: 1px solid #dddddd;
+}
+.mr-note-btn{
+    padding: 0;
+    height: auto;
+    background: none;
+    outline: none!important;
+}
+.mr-btn-prev{
+    background-color: #e5821d;
+    margin-right: 20px;
+}
+.mr-btn-next{
+    background-color: #344e87;
+}
+/*蓉欧补充信息*/
+.ro-add-info{
+    height: 500px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    padding: 42px 58px 20px;
+
+}
+.ro-add-info .billInfo{
+    overflow: hidden;
+    padding: 20px 0 40px 0;
+    border-bottom: 1px solid #dddddd;
+}
+.ro-add-info .billInfoLabel{
+    float: left;
+    line-height: 34px;
+    height: 34px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+.ro-add-info div.input-group{
+    float: left;
+    width: 250px;
+    margin-right: 30px;
+}
+.ro-add-info div.input-group > .form-control{
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+.ro-add-info div.input-group.select{
+    width: 100px;
+}
+
+/*地址模态框*/
+.address-modal .table{
+    text-align: center;
+}
+.address-modal .table thead{
+    background-color: #ececec;
+}
+.address-modal .table .address-choose{
+    width: 40px;
+}
+/*商品模态框*/
+.ellipsis{
+    text-overflow: ellipsis;
+}
+.delivery-control-btns > label{
+    margin: 20px 0;
+    font-size: 14px;
+}
+.delivery-control-btns > label input{
+    vertical-align: top;
+}
+.delivery-control-btns > label a{
+    color: #002a80;
+    vertical-align: top;
+}
+.ego-btn.disabled{
+    background-color: #d0d0d0;
+    cursor: not-allowed;
+}

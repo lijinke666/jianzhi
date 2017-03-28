@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>账户提现</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/financialdetails.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">我的资产</a></li>
+                <li class="active">账户提现</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>账户提现</span>
+            </div>
+            <div class="person-center-info">
+                <!--左侧信息导航-->
+                <div class="person-center-info-left not-select">
+                    <ul>
+                        <li><a href="#">资产明细</a></li>
+                        <li><a href="#">账户充值</a></li>
+                        <li  class="person-center-active"><a href="#">账户提现</a></li>
+                    </ul>
+                </div>
+                <!--右侧信息显示-->
+                <div class="person-center-info-right">
+                    <div class="financial-detail-contain">
+                        <div class="account-withdraw">
+                            <form action="">
+                                <table class="table">
+                                    <tr>
+                                        <td class="aw-left">可提现金额：</td>
+                                        <td class="aw-right aw-usable-money">￥<span>9999</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aw-left">支付宝账号：</td>
+                                        <td class="aw-right">
+                                            <div class="aw-input-wrap">
+                                                <input type="text"
+                                                       placeholder="请输入支付宝账号"
+                                                       id="alipayNo"
+                                                       name="alipayNo">
+                                                <span class="iconfont icon-zhanghao"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aw-left">提现密码：</td>
+                                        <td class="aw-right">
+                                            <div class="aw-input-wrap">
+                                                <input type="text"
+                                                       placeholder="请输入提现密码"
+                                                       id="withdraw_pass"
+                                                       name="withdraw_pass">
+                                                <span class="iconfont icon-jianpan"></span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="aw-left">提现金额(￥)：</td>
+                                        <td class="aw-right">
+                                            <div class="aw-input-wrap">
+                                                <input type="text"
+                                                       placeholder="请输入提现金额"
+                                                       id="withdraw_sum"
+                                                       name="withdraw_sum">
+                                                <span>元</span>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <p>
+                                    <span class="iconfont icon-tishi"></span>
+                                    一天内只能提交一次<br>
+                                    <span class="iconfont icon-tishi"></span>
+                                    提现金额大于等于100元<br>
+                                    <span class="iconfont icon-tishi"></span>
+                                    款项将在3~5个工作日内到达您的账户
+                                </p>
+                                <button class="ego-btn aw-withdraw-btn">确认提现</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+</body>
+</html>

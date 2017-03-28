@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>地址管理</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/cropper/cropper.min.css">
+    <link rel="stylesheet" href="../static/lib/sitelogo/sitelogo.css">
+    <link rel="stylesheet" href="../static/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../static/lib/citypicker/city-picker.css">
+    <link rel="stylesheet" href="../src/css/personalcenter.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">个人中心</a></li>
+                <li class="active">地址管理</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>用户信息</span>
+            </div>
+            <div class="person-center-info">
+                <!--左侧信息导航-->
+                <div class="person-center-info-left not-select">
+                    <div id="crop-avatar" class="person-center-info-usericon">
+                        <div class="avatar-view" title="点击更换头像">
+                            <img src="../static/image/member/Head-portrait.png">
+                        </div>
+                    </div>
+                    <p>HI! <span>易购全球</span></p>
+                    <ul>
+                        <li><a href="#">用户信息</a></li>
+                        <li><a href="#">账户安全</a></li>
+                        <li><a href="#">实名认证</a></li>
+                        <li class="person-center-active"><a href="#">地址管理</a></li>
+                    </ul>
+                </div>
+                <!--右侧信息显示-->
+                <div class="person-center-info-right">
+                    <div class="per-cen-address-contain">
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#per-receive" role="tab" data-toggle="tab">收件地址管理</a></li>
+                            <li role="presentation"><a href="#per-delivery" role="tab" data-toggle="tab">寄件地址管理</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <!--收件-->
+                            <div role="tabpanel" class="tab-pane active" id="per-receive">
+                                <button class="ego-btn per-address-btn" data-toggle="modal" data-target="#per-receive-modal">
+                                    <span>+</span>新增地址
+                                </button>
+                                <table class="table table-bordered table-break">
+                                    <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>电话</th>
+                                        <th>身份证号</th>
+                                        <th>省/市/区</th>
+                                        <th>详细地址</th>
+                                        <th>邮编</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>丝路易购科技有限aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</td>
+                                        <td>15982317485</td>
+                                        <td>5阿斯顿发生</td>
+                                        <td>四川省成都市锦江区</td>
+                                        <td>北爱的发达</td>
+                                        <td>610061</td>
+                                        <td class="address-modify">
+                                            <a href="">11112222222222222aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <!--分页-->
+                                <nav>
+                                    <ul class="ego-pagination">
+                                        <li><a href="#">上一页</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">下一页</a></li>
+                                    </ul>
+                                    <span>共<span>100</span>条</span>
+                                    <span>
+                                        <select name="" >
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                    <span>条/页</span>
+                                </nav>
+                            </div>
+                            <!--寄件-->
+                            <div role="tabpanel" class="tab-pane" id="per-delivery">
+                                <button class="ego-btn per-address-btn" data-toggle="modal" data-target="#per-delivery-modal">
+                                    <span>+</span>新增地址
+                                </button>
+                                <table class="table table-bordered">
+                                    <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th>电话</th>
+                                        <th>身份证号</th>
+                                        <th>省/市/区</th>
+                                        <th>详细地址</th>
+                                        <th>邮编</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>丝路易购科</td>
+                                        <td>168555</td>
+                                        <td>0012413</td>
+                                        <td>四川省成都</td>
+                                        <td>6666</td>
+                                        <td>610061</td>
+                                        <td class="address-modify">
+                                            <a href="">1111</a>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                                <!--分页-->
+                                <nav class="ego-pagination-contain">
+                                    <ul class="ego-pagination">
+                                        <li><a href="#">上一页</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">下一页</a></li>
+                                    </ul>
+                                    <span>共<span>100</span>条</span>
+                                    <span>
+                                        <select name="" >
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                    <span>条/页</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--隐藏模态框-->
+<!--头像上传-->
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="avatar-form" action="{{url('admin/upload-logo')}}" enctype="multipart/form-data" method="post">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传头像</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <label for="avatarInput">图片上传</label>
+                            <!---->
+                            <a href="javascript:;" class="a-upload">
+                                <span>选择图片</span>
+                                <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="avatar-wrapper"></div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="avatar-preview preview-lg"></div>
+                                <div class="avatar-preview preview-md"></div>
+                                <div class="avatar-preview preview-sm"></div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+                            <div class="col-md-9">
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+<!--/头像上传-->
+
+<!--收件地址管理-->
+<!--<div class="modal fade" id="per-receive-modal" tabindex="-1" role="dialog"  aria-hidden="true">-->
+    <!--<div class="modal-dialog address-modal">-->
+        <!--<div class="modal-content">-->
+            <!--<div class="modal-header">-->
+                <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
+                <!--<h4 class="modal-title" >新增收件地址</h4>-->
+            <!--</div>-->
+            <!--<div class="modal-body">-->
+                <!--<form action="" id="receiveFrom">-->
+                    <!--<table class="pca-table">-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">姓名：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<input type="text"-->
+                                       <!--placeholder=""-->
+                                       <!--id="re-name"-->
+                                       <!--name="re-name">-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">电话：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<input type="text"-->
+                                       <!--placeholder=""-->
+                                       <!--id="re-phone"-->
+                                       <!--name="re-phone"-->
+                                       <!--maxlength="11"-->
+                                       <!--minlength="11">-->
+                            <!--</td>-->
+                        <!--</tr>-->
+
+                        <!--<tr>-->
+                            <!--<td class="pca-left">身份证号：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<input type="text"-->
+                                       <!--placeholder=""-->
+                                       <!--id="re-idcard"-->
+                                       <!--name="re-idcard"-->
+                                       <!--maxlength="18"-->
+                                       <!--minlength="18">-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">国家：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<select name="re-dist-select" id="re-dist-select" class="select2">-->
+                                    <!--<option value="">中国</option>-->
+                                    <!--<option value="">美国</option>-->
+                                    <!--<option value="">英国</option>-->
+                                    <!--<option value="">日本</option>-->
+                                <!--</select>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">邮编：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<input type="text"-->
+                                       <!--name="re-postcode"-->
+                                       <!--id="re-postcode"-->
+                                       <!--placeholder="">-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">详细地址：</td>-->
+                            <!--<td class="pca-right">-->
+                                <!--<textarea name="re-detail-address"-->
+                                          <!--id="re-detail-address">-->
+                                <!--</textarea>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left">设为默认地址：</td>-->
+                            <!--<td class="pca-right pca-checkbox">-->
+                                <!--<div class="checkbox">-->
+                                    <!--<label>-->
+                                        <!--<input type="checkbox" id="re-setDefault">-->
+                                    <!--</label>-->
+                                <!--</div>-->
+                            <!--</td>-->
+                        <!--</tr>-->
+                        <!--<tr>-->
+                            <!--<td class="pca-left"></td>-->
+                            <!--<td class="pca-right pca-button"><button class="ego-btn">保存</button></td>-->
+                        <!--</tr>-->
+                    <!--</table>-->
+                <!--</form>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+
+<!--/收件地址管理-->
+<!--寄件地址管理-->
+<div class="modal fade" id="per-delivery-modal" tabindex="-1" role="dialog"  aria-hidden="true">
+    <div class="modal-dialog address-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" >新增寄件地址</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="deliveryFrom">
+                    <table class="pca-table">
+                        <tr>
+                            <td class="pca-left">类型：</td>
+                            <td class="pca-right">
+                                <div class="btn-group" data-toggle="buttons">
+                                    <label class="btn btn-primary active" id="exportOption">
+                                        <input type="radio" checked name="options"  value="1" autocomplete="off"> 出口
+                                    </label>
+                                    <label class="btn btn-default" id="importOption">
+                                        <input type="radio" name="options"   value="2" autocomplete="off"> 进口
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left">姓名：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       placeholder=""
+                                       id="de-name"
+                                       name="de-name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left">电话：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       placeholder=""
+                                       id="de-phone"
+                                       name="de-phone"
+                                       maxlength="11"
+                                       minlength="11">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left">身份证号：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       placeholder=""
+                                       id="de-idcard"
+                                       name="de-idcard"
+                                       maxlength="18"
+                                       minlength="18">
+                            </td>
+                        </tr>
+                        <!--出口-->
+                        <tr class="export-tr">
+                            <td class="pca-left">国家：</td>
+                            <td class="pca-right">
+                                <select name="re-dist-select" id="de-dist-select"  disabled>
+                                    <option value="中国" selected>中国</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="export-tr">
+                            <td class="pca-left">省/市/区：</td>
+                            <td class="pca-right">
+                                <div id="distpicker">
+                                    <div>
+                                        <div style="position: relative;">
+                                            <input id="city-picker" class="cpicker" readonly type="text"  data-toggle="city-picker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <!--/出口-->
+                        <!--进口！！-->
+                        <tr class="import-tr">
+                            <td class="pca-left">国家：</td>
+                            <td class="pca-right">
+                                <select name="country" id="re-dist-select" class="country_select">
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                    <option value="{$vo.cnname}">aaaaa</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr class="import-tr">
+                            <td class="pca-left">州/郡/省：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       name="province"
+
+                                       placeholder="">
+                            </td>
+                        </tr>
+                        <tr class="import-tr">
+                            <td class="pca-left">城市：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       name="city"
+
+                                       placeholder="">
+                            </td>
+                        </tr>
+                        <!--！---！-->
+
+                        <tr>
+                            <td class="pca-left">邮编：</td>
+                            <td class="pca-right">
+                                <input type="text"
+                                       placeholder=""
+                                       id="de-postcode">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left">详细地址：</td>
+                            <td class="pca-right">
+                                <textarea name=""
+                                          placeholder=""
+                                          id="de-detail-address"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left">设为默认地址：</td>
+                            <td class="pca-right pca-checkbox">
+                                <div class="checkbox">
+                                    <label class="label-not">
+                                        <input type="checkbox"
+                                               id="de-setDefault">
+                                    </label>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="pca-left"></td>
+                            <td class="pca-right pca-button"><button class="ego-btn">保存</button></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--/寄件地址管理-->
+
+
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/cropper/cropper.min.js"></script>
+<script src="../static/lib/sitelogo/sitelogo.js"></script>
+<script src="../static/lib/select2/select2.min.js"></script>
+<script src="../static/lib/select2/zh-CN.js"></script>
+<script src="../static/lib/citypicker/city-picker.data.min.js"></script>
+<script src="../static/lib/citypicker/city-picker.min.js"></script>
+<script>
+    $.fn.modal.Constructor.prototype.enforceFocus = function () { };
+    $(document).ready(function () {
+
+        $(".select2").select2({
+            language:'zh-CN'
+        });
+        $('.city-picker-span').css({
+            width:'100%'
+        });
+        $(".pca-right").find('label:not(".label-not")').on('click',function(){
+            var $this = $(this);
+            var val = $this.attr('id');
+            var exportTr = $('.export-tr');
+            var importTr = $('.import-tr');
+            $this.removeClass('btn-default').addClass('btn-primary');
+            $this.siblings().removeClass('btn-primary').addClass('btn-default');
+            if (val == 'exportOption'){
+                importTr.hide();
+                exportTr.show();
+            }else if (val == 'importOption'){
+                exportTr.hide();
+                importTr.show();
+            }
+        });
+        //根据表格内容增高页面
+        var $contain = $('.person-center-info');
+        var $tab     = $('.tab-pane');
+        console.log($contain.height());
+        console.log($tab.height());
+        if($tab.height() > 530 ){
+            $contain.css({
+                height:$tab.height()+160+'px'
+            })
+        }
+    });
+</script>
+</html>

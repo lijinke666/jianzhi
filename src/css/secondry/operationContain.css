@@ -1,0 +1,177 @@
+.ego-operation-banner{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.ego-operation-banner> img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.ego-operation > div{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 90px;
+}
+p.ego-operation-title{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 88px;
+    text-align: center;
+}
+div.ego-operation-info{
+    padding: 50px 0;
+    border-bottom: 1px solid #dddddd;
+    border-top: 1px solid #dddddd;
+}
+div.ego-operation-info p{
+    font-size: 18px;
+    color: #333333;
+}
+div.ego-operation-info p:nth-of-type(2){
+    margin-top: 20px;
+}
+ul.ego-operation-tab{
+    padding: 74px 0;
+    overflow: hidden;
+}
+ul.ego-operation-tab li{
+    cursor: pointer;
+    text-align: center;
+    width: 384px;
+    height: 45px;
+    line-height: 45px;
+    margin-right: 24px;
+    background-color: #dedede;
+    font-size: 18px;
+    float: left;
+}
+ul.ego-operation-tab li.active{
+    background-color: #3e5c9d;
+    color: white;
+}
+ul.ego-operation-tab li:nth-of-type(3){
+    margin-right: 0;
+}
+.ego-operation-item{
+    overflow: hidden;
+    display: none;
+}
+/*电商培训*/
+.train-item{
+    width: 570px;
+    min-height: 518px;
+    border: 1px solid #dddddd;
+    float: left;
+}
+.train-item .train-title{
+    position: relative;
+}
+.train-item .train-title p{
+    padding-left: 20px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 18px;
+    border-bottom: 1px solid #dddddd;
+}
+.train-item .train-title a{
+    line-height: 60px;
+    font-size: 14px;
+    position: absolute;
+    right: 36px;
+    top: 0;
+}
+.train-item ul{
+    padding: 0 20px;
+}
+.train-item ul li{
+    line-height: 50px;
+    border-bottom: 1px dashed #dddddd;
+}
+.train-item ul li span{
+    float: right;
+}
+.train-item.past {
+    margin-right: 60px;
+}
+.train-item.next{
+    position: relative;
+}
+.train-item.next .layer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    background-color: rgba(0,0,0,.7);
+}
+.train-item.next .layer p{
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    padding-top: 250px;
+}
+.train-item.next table{
+    width: 100%;
+}
+.train-item.next table td{
+    height: 50px;
+}
+.train-item.next table tr td:first-child{
+    text-align: right;
+}
+.train-item.next table td input:not([type="radio"]){
+    width: 368px;
+    border: 1px solid #dddddd;
+    height: 35px;
+}
+.train-item.next table td button {
+    width: 368px;
+    height: 35px;
+    color: white;
+    background-color: #e5821d;
+}
+/*综合运营*/
+.operation-item{
+    width: 600px;
+    text-align: center;
+    float: left;
+}
+.operation-item a{
+    display: inline-block;
+    width: 243px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    background-color: #3e5c9d;
+    border-radius: 3px;
+    margin-top: 110px;
+}
+.operation-item.process a{
+    margin-top: 72px;
+}
+/*运营案例*/
+.ego-operation-item.cases .case{
+    width: 363px;
+    height: 555px;
+    text-align: center;
+    border: 2px solid #dddddd;
+    float: left;
+    margin-right: 55px;
+}
+.ego-operation-item.cases .case:last-child{
+    margin-right: 0;
+}
+.ego-operation-item.cases .case h3{
+    font-size: 20px;
+    height: 70px;
+    line-height: 70px;
+}
+.ego-operation-item.cases .case p {
+    padding:0 20px 0;
+    text-align: left;
+    line-height: 28px;
+}
+.ego-operation-item.cases .case p span{
+    color: #e5821d;
+}

@@ -1,0 +1,341 @@
+.person-center-info{
+    background: none;
+    padding: 0 0 20px 0;
+    border: none;
+}
+.waybill-contain{
+    min-height: 500px;
+}
+/*总览*/
+.waybill-overview{
+    background-color: white;
+    height: 44px;
+    overflow: hidden;
+}
+.waybill-overview-item{
+    float: left;
+    width: 300px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    font-size: 16px;
+    box-sizing: border-box;
+    border-top: 1px solid #dddddd;
+    border-bottom: 1px solid #dddddd;
+    border-left: 1px solid #dddddd;
+}
+.waybill-overview-item:last-of-type{
+    border-right: 1px solid #dddddd;
+}
+.way-overview-active{
+    background-color: #344e87;
+}
+.way-overview-active>a{
+    color: white;
+}
+.waybill-overview-item>a{
+    display: block;
+}
+.waybill-overview-item>a>span{
+    color: #e5821d;
+}
+/*查询*/
+.waybill-search{
+    margin-top: 12px;
+    height: 70px;
+    background-color: white;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+    padding-top: 17px;
+}
+.waybill-search p{
+    margin: 0 10px 0 23px;
+    float: left;
+    height: 34px;
+    line-height: 34px;
+    font-size: 16px;
+}
+.way-date-item{
+    float: left;
+    display: inline-block;
+    width: 278px;
+    position: relative;
+}
+.way-date-item:nth-of-type(1):after{
+    content: '';
+    position: absolute;
+    width: 20px;
+    right: -22px;
+    top: 50%;
+    border-bottom: 1px solid #dddddd;
+}
+.way-date-item:nth-of-type(2){
+    margin-left: 20px;
+}
+.way-bill-options{
+    float: left;
+    margin-left: 10px;
+    display: inline-block;
+    width: 371px;
+}
+.way-bill-options>input{
+    width: 100%;
+    border-radius: 5px;
+    padding-left: 10px;
+    border: 1px solid #dddddd;
+    height: 34px;
+
+}
+.waybill-search-btn{
+    margin-left: 10px;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    color: white;
+    background-color: #344e87;
+    float: left;
+}
+/*功能按钮*/
+.waybill-list-operation{
+    margin-top: 30px;
+}
+.wbo-btn{
+    font-size: 14px;
+    background-color: #e2e2e2;
+    border: 1px solid #dddddd;
+    height: 35px;
+    width: 110px;
+    margin-right: 6px;
+}
+.wbo-btn:hover{
+    background-color: #e5821d;
+    color: white;
+}
+.wbo-btn-active{
+    background-color: #e5821d;
+    color: white;
+}
+/*列表*/
+/*表格布局*/
+.waybill-list{
+    margin-top: 15px;
+    background-color: white;
+    border: 1px solid #dddddd;
+}
+.waybill-list .table{
+    margin-bottom: 0;
+}
+.way-table-check{
+    width: 50px;
+}
+.way-table-fixWidth{
+    width: 100px;
+}
+.waybill-list-table table thead th{
+    height: 35px;
+    vertical-align: middle;
+    background-color: #ececec;
+    text-decoration: underline;
+}
+.waybill-state-btn{
+    border: 1px solid #dddddd;
+    background-color: white;
+    border-radius: 3px;
+    height: 24px;
+    padding: 2px 10px;
+}
+.waybill-state-btn+.dropdown-menu{
+    min-width: 86px;
+    width: 86px;
+    box-sizing: content-box;
+    z-index: 500;
+}
+.waybill-state-btn+.dropdown-menu>li>a{
+    padding: 3px 10px;
+}
+.waybill-list-table table tbody{
+}
+.waybill-list-table table tbody tr{
+    height: 75px;
+    border-bottom: 1px solid #dddddd;
+}
+.waybill-list-table table tbody td{
+    text-align: center;
+    vertical-align: middle;
+}
+.waybill-centerfix{
+    display: inline-block;
+    text-align: left;
+}
+.waybill-list-table table tbody td p:nth-of-type(2){
+     margin-top: 5px;
+ }
+/*操作按钮效果*/
+.waybill-modify{
+    position: relative;
+}
+.waybill-modify-contain{
+    height: 34px;
+    width: 70px;
+    left: 9px;
+    top: 20px;
+    font-size: 14px;
+    line-height: 25px;
+    overflow: hidden;
+    position: absolute;
+    box-sizing: content-box;
+    padding: 0 6px;
+    z-index: 500;
+    cursor: pointer;
+}
+.waybill-modify-op{
+    width: 70px;
+    height: 34px;
+    line-height: 34px;
+    border-radius: 4px;
+    text-align: center;
+}
+.waybill-modify-dropdown{
+    position: relative;
+    background-color: white;
+    border-radius: 4px;
+    margin-top: 2px;
+    border: 1px solid rgba(0, 0 ,0 ,.22);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.waybill-modify-dropdown>li>a{
+    display: block;
+}
+.waybill-modify-contain:hover{
+    z-index: 501;
+    padding-bottom: 12px;
+    height: auto;
+}
+.waybill-modify-contain:hover .waybill-modify-op{
+    background-color: #344e87;
+    color: white;
+}
+.waybill-modify-contain:hover .waybill-modify-op span.caret{
+    transform: rotate(180deg);
+    transition: all linear 200ms;
+}
+/*分页、充值*/
+.ego-pagination-contain{
+    padding: 0 15px;
+    overflow: hidden;
+}
+.ego-pagination-contain>ul{
+    float: right;
+}
+.waybill-recharge{
+    overflow: hidden;
+    padding-right: 15px;
+}
+.waybill-recharge button{
+    float: right;
+}
+.waybill-recharge p{
+    height: 40px;
+    line-height: 40px;
+    float: right;
+    margin-right: 18px;
+}
+.waybill-recharge p span{
+   color: red;
+}
+.waybill-recharge-btn{
+    width: 150px;
+    height: 40px;
+    background-color: #e5821d;
+    color: white;
+    font-size: 16px;
+}
+/*回填单号*/
+.domesticNumberTable td,
+.domesticNumberTable th{
+    width: 50%;
+    text-align: left;
+}
+.domesticNumberTable>thead>tr>td{
+    font-size: 16px;
+    color: #000000;
+}
+.domesticNumberTable>tbody>tr>td{
+    vertical-align: middle;
+    border: none;
+}
+.domesticNumberTable tbody td input{
+    width: 210px;
+    border-radius: 5px;
+    line-height: 30px;
+    border: 1px solid #f7f7f7;
+    background-color: #eeeeee;
+    text-align: left;
+    padding-left: 5px;
+}
+.domesticNumber-footer{
+    text-align: center;
+}
+.ego-btn.domesticNumber-submit{
+    margin-top: 36px;
+    width: 224px;
+    height: 36px;
+    color: white;
+    background-color: #344e87;
+}
+.domesticNumber-footer>p{
+    margin-top: 17px;
+    color: #e82c2c;
+}
+/*打印面单*/
+.alertModal .modal-body{
+    text-align: center;
+}
+.printBillType{
+    display: inline-block;
+    text-align: left;
+    margin-top: 12px;
+}
+.printBillType > h4,
+.printBillType > p{
+    margin-bottom: 27px;
+}
+.printBillType > p > label{
+    font-size: 14px;
+    font-weight: normal;
+}
+.printBillType > p > label > input{
+   margin-right: 10px;
+}
+.waybill-account-money{
+    font-size: 14px;
+}
+.waybill-account-money > span{
+    color: #e53535;
+    margin-left: 10px;
+}
+.waybill-account-notice{
+    margin-bottom: 30px;
+    color: #e53535;
+}
+
+.ego-btn.printExpressBill-btn{
+    width: 224px;
+    height: 36px;
+    color: white;
+    background-color: #344e87;
+}
+.ego-btn.bulkSendOut-btn{
+    width: 100px;
+    height: 36px;
+    margin-right: 20px;
+    color: white;
+    background-color: #344e87;
+}
+.ego-btn.bulk-confirm,.ego-btn.bulk-recharge{
+    background-color: #e5821d;
+}
+.couponLabel{
+    font-weight: normal;
+    margin-bottom: 27px;
+}

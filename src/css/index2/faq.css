@@ -1,0 +1,56 @@
+.ego-faq > div{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ego-faq-contain{
+    overflow: hidden;
+    padding-bottom: 80px;
+}
+.ego-faq-item{
+    width: 572px;
+    float: left;
+}
+.ego-faq-item > img{
+    width: 100%;
+}
+.ego-faq-title{
+    width: 100%;
+    height: 100px;
+}
+.ego-faq-title > p{
+    height: 100px;
+    line-height: 100px;
+    color: #e5821d;
+    float: left;
+    font-size: 18px;
+}
+.ego-faq-title > p > span{
+    float: left;
+    font-size: 28px;
+    margin-right: 10px;
+}
+.ego-faq-more{
+    float: right;
+}
+.ego-faq-more a{
+    display: block;
+    width: 108px;
+    height: 30px;
+    margin-top: 35px;
+    border: 1px solid #dddddd;
+    border-radius: 2px;
+    line-height: 30px;
+    text-align: center;
+}
+.ego-faq-item > ul{
+    width: 100%;
+}
+.ego-faq-item > ul > li{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px dashed #dddddd;
+    font-size: 14px;
+}
+.ego-faq-item.news{
+    margin-right: 55px;
+}

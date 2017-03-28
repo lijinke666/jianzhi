@@ -1,0 +1,10 @@
+.regLogin-header{
+  height: 76px;
+  min-width: 1200px;
+}
+.regLogin-header-contain{
+  height: 76px;
+  line-height: 76px;
+  width: 1200px;
+  margin: 0 auto;
+}

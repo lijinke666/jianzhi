@@ -1,0 +1,122 @@
+/*优势*/
+.ego-cb-advantages  > div{
+    height: 276px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.ego-cb-advantage-item{
+    width: 120px;
+    height: 130px;
+    float: left;
+    text-align: center;
+    margin-right: 150px;
+    margin-top: 60px;
+}
+.ego-cb-advantage-item:last-child{
+    margin-right: 0;
+}
+.ego-cb-advantage-item > span{
+    color: #3e5c9d;
+    font-size: 76px;
+}
+.ego-cb-advantage-item > p{
+    font-size: 18px;
+}
+/*服务*/
+.ego-cb-service{
+    background-color: #f9f9f9;
+}
+.ego-cb-service > div{
+    height: 360px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.ego-cb-service-item{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    margin-right: 13px;
+    margin-top: 50px;
+    float: left;
+    cursor: pointer;
+}
+.ego-cb-service-item:last-child{
+    margin-right: 0;
+}
+.ego-cb-service-item  a{
+    display: block;
+}
+.ego-cb-service-item  img{
+    width: 290px;
+}
+.ego-cb-service-item  p{
+    background-color: white;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    font-size: 18px;
+}
+/*优势产品*/
+.ego-cb-products>div{
+    padding-top: 50px;
+    width: 1200px;
+    margin: 0 auto;
+}
+.ego-cb-proContain{
+    overflow: hidden;
+    padding-bottom: 130px;
+}
+.ego-cb-proItem{
+    width: 358px;
+    height: 226px;
+    text-align: center;
+    border: 2px solid #dddddd;
+    position: relative;
+    float: left;
+    margin: 30px 63px 0 0;
+}
+.ego-cb-proItem:nth-of-type(3),
+.ego-cb-proItem:nth-of-type(6){
+    margin-right: 0;
+}
+.ego-cb-proItem a{
+    cursor: default;
+    display: block;
+}
+.ego-cb-proItem:hover {
+    border: 2px solid #e5821d;
+}
+.ego-cb-proItem:hover a {
+    color: inherit;
+}
+.ego-cb-proItem:hover a h4{
+    background-color: #e5821d;
+}
+.ego-cb-proItem:hover a .ego-item-arrow{
+    border: 2px solid #e5821d;
+}
+
+.ego-cb-proItem h4{
+    height:78px;
+    line-height: 78px;
+    font-size: 22px;
+    background-color: #3e5c9d;
+    color: white;
+}
+.ego-cb-proItem p{
+    padding-top: 45px;
+    height:144px;
+    font-size: 16px;
+}
+.ego-cb-proItem .ego-item-arrow{
+    height:40px;
+    width: 40px;
+    line-height: 40px;
+    position: absolute;
+    left: 50%;
+    bottom: -20px;
+    margin-left: -20px;
+    border: 2px solid #dddddd;
+    border-radius: 50%;
+    font-size: 16px;
+    background-color: white;
+}
+

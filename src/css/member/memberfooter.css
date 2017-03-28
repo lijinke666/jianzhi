@@ -1,0 +1,12 @@
+.member-footer{
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    background-color: #E6E6E6;
+}
+.member-footer p{
+    font-size: 14px;
+    color: #333;
+    height: 50px;
+    line-height: 50px;
+}

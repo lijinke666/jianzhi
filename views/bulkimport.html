@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>批量导入</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/bulkimport.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">我要寄件</a></li>
+                <li class="active">批量导入</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>模板导入</span>
+            </div>
+            <div class="person-center-info">
+                <div class="bulk-item-infoBG">
+                    <div class="bulk-item-contain not-select">
+                        <div class="bulk-step-item">
+                            <p>批量导入模板下载</p>
+                            <div class="bulk-step-item-no">1</div>
+                        </div>
+                        <div class="bulk-step-arrow">
+                            <span class="iconfont icon-jiantou"></span>
+                        </div>
+                        <div class="bulk-step-item">
+                            <p>填写模板信息</p>
+                            <div class="bulk-step-item-no">2</div>
+                        </div>
+                        <div class="bulk-step-arrow">
+                            <span class="iconfont icon-jiantou"></span>
+                        </div>
+                        <div class="bulk-step-item">
+                            <p>上传批量模板</p>
+                            <div class="bulk-step-item-no">3</div>
+                        </div>
+                    </div>
+                    <div class="bulk-btn-contain">
+                        <div class="bulkTemplateDownload">
+                            <a href="javascript:void(0)" id="choose_download">
+                                <span class="iconfont icon-mobanxiazai"></span> 模板下载
+                            </a>
+                        </div>
+                        <div class="bulk-upload">
+                            <input id="bulkTemplateUpload" name="bulkTemplateUpload" type="file">
+                            <p><span class="iconfont icon-mobanshangchuan"></span> 模板上传</p>
+                        </div>
+                        <button type="submit" class="ego-btn submit dis" disabled="disabled">
+                            <span class="iconfont icon-tijiaomoban"></span> 提交模板
+                        </button>
+                    </div>
+                    <div class="bulk-file-view clearfix">
+                        <p>
+
+                        </p>
+                    </div>
+                    <p class="notice">为保证数据的正确读取，请注意：1.请勿改变模板中每列的标题顺序；2.请勿新增或删除任何标题；3.请勿插入任何公式。</p>
+                </div>
+                <div class="bulk-go-back">
+                    <button class="ego-btn bulk-back-btn">
+                        <a href="">返回</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<div class="modal fade" id="choose_download_modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">选择模板</h4>
+            </div>
+            <div class="modal-body">
+                <div class="temp_download">
+                    <div class="temp_type">
+                        <h4>商品库SKU订单导入模板</h4>
+                        <p>
+                            备注：<br/>
+                            1.批量下单前，请先维护默认 <a href="/manage/address/send">寄件地址</a><br/>
+                            2.使用该模板，请先至 <a href="/manage/goods/index">商品库</a> 维护商品信息<br/>
+                            3.订单填写请按照模板要求，内容错误将无法下单。
+                        </p>
+                        <a href="http://www.egoint.com/uploads/excel/丝路易购出口寄件V2.xlsx" class="ego-btn skuBtn">SKU模板下载</a>
+                    </div>
+                    <div class="temp_type">
+                        <h4>商品详情订单导入模板</h4>
+                        <p>
+                            备注：<br/>
+                            1.批量下单前，请先维护默认 <a href="/manage/address/send">寄件地址</a><br/>
+                            2.使用该模板，单个订单号只能填写单个商品信息，多个商品可使用左侧商品库SKU订单导入功能<br/>
+                            3.订单填写请按照模板要求，内容错误将无法下单。
+                        </p>
+                        <a href="http://www.egoint.com/uploads/excel/丝路易购出口寄件V2.xlsx" class="ego-btn goodsBtn">商品模板下载</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../src/js/public.js"></script>
+<script>
+    //文件预览
+    $(document).ready(function () {
+        var closeBtn = $('.modal button.close');
+        var modal = $('#choose_download_modal');
+        $('#choose_download').on('click',function () {
+            modal.modal();
+        });
+        $('.temp_type a.ego-btn').on("click",function () {
+            closeBtn.trigger("click");
+        });
+
+        /*--------------*/
+        $('#bulkTemplateUpload').on('change',function (e) {
+            var file  = e.target.files||e.dataTransfer.files;
+            var $item = $('.bulk-file-view p');
+            var fileNameTest = /^.*?\.(xlsx)$/;
+            if(file){
+                var filename = $(this).val();
+                if(fileNameTest.test(filename)){
+                    addPopUp('文件上传成功，请点击"提交模板"按钮');
+                    $('button.ego-btn.submit').removeClass('dis').attr('disabled',false);
+                    var str =   '<span class="fileNotice">您要上传的文件为：</span>'+
+                            '<span class="fileName">'+filename+'</span>'+
+                            '<span class="iconfont icon-queding"></span>';
+                    $item.html(str);
+                }else {
+                    addPopUp('请上传后缀名为.xlsx的模板文件',3);
+                    $('button.ego-btn.submit').addClass('dis').attr('disabled',true);
+                    $(this).val('');
+                }
+            }
+        });
+    });
+</script>
+</html>

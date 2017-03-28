@@ -1,0 +1,134 @@
+h1,h2,h3,h4,h5,h6,ul,p{
+    margin: 0;
+    padding: 0;
+}
+a:link,a:visited,a:hover,a:active{ color: inherit; text-decoration: none;  }
+a:hover{
+    color: inherit;
+}
+@media screen and (min-width: 320px) {
+    html {font-size: 14px;}
+}
+
+@media screen and (min-width: 360px) {
+    html {font-size: 16px;}
+}
+
+@media screen and (min-width: 400px) {
+    html {font-size: 18px;}
+}
+
+@media screen and (min-width: 440px) {
+    html {font-size: 20px;}
+}
+
+@media screen and (min-width: 480px) {
+    html {font-size: 22px;}
+}
+
+@media screen and (min-width: 640px) {
+    html {font-size: 28px;}
+}
+body{
+    background: url("../../static/image/xmasMobile/bg.jpg") top center;
+    background-size: cover;
+    margin: 0;
+}
+.container{
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.container.header{
+    color: white;
+    display: inline-block;
+}
+.container.header > img.snow{
+    width: 100%;
+}
+.container.header > h3{
+    margin-top: 20px;
+}
+.container.header > h1{
+    margin: 10px;
+    font-size: 3rem;
+}
+.container.header > p{
+    margin-bottom: 10px;
+}
+.container.xmas{
+    background: -webkit-radial-gradient(#ffffff, #f2ddcf); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#ffffff, #f2ddcf); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#ffffff, #f2ddcf); /* Firefox 3.6 - 15 */
+    background: radial-gradient(#ffffff, #f2ddcf); /* 标准的语法 */
+    width: 90%;
+    padding: 15px 10px;
+    margin: 0 auto;
+    border-right: 9px;
+    border-left: 9px;
+    border-image:url("../../static/image/xmasMobile/borderbg.jpg") 9 repeat;
+    position: relative;
+}
+.container.xmas2,.container.xmas3{
+    margin-top: 30px;
+}
+.container.xmas .title{
+    width: 92%;
+    padding: 5px 0;
+    display: inline-block;
+    background-color: rgb(255,0,78);
+    border: 2px solid white;
+    color: white;
+    margin-bottom: 10px;
+}
+.container.xmas > img.snowTitle{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container.xmas .notice{
+    text-align: left;
+    line-height: 2;
+}
+.container.xmas .notice > h4{
+    margin: 10px 0;
+}
+.container.xmas1 .goods{
+    position: relative;
+}
+.container.xmas1 .goods> img.snowTitle{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.container.xmas1 .goods table{
+    display: inline-block;
+    background-color: #0a8226;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.container.xmas1 .goods table td{
+    border-top: 1px solid white;
+    color: white;
+}
+.container.xmas1 .goods table tr td:not(:last-child){
+    border-right: 1px solid white;
+}
+.container.footer > a{
+    width: 60%;
+    height: 50px;
+    line-height: 50px;
+    display: inline-block;
+    margin: 20px 0 30px;
+    color: rgb(255,0,78);
+    background: -webkit-radial-gradient(#ffffff, #f2ddcf); /* Safari 5.1 - 6.0 */
+    background: -o-radial-gradient(#ffffff, #f2ddcf); /* Opera 11.6 - 12.0 */
+    background: -moz-radial-gradient(#ffffff, #f2ddcf); /* Firefox 3.6 - 15 */
+    background: radial-gradient(#ffffff, #f2ddcf); /* 标准的语法 */
+}
+span.bold{
+    font-weight: bolder;
+    color: #ff004e;
+}

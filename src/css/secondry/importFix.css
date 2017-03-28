@@ -1,0 +1,19 @@
+.ego-products-item{
+    width: 600px;
+}
+.ego-products-info.zhiyou .intro-contain .intro-item{
+    margin-right: 45px;
+}
+.ego-products-info.zhiyou .intro-contain .intro-item:last-child{
+    margin-right: 0;
+}
+.ego-products-info.zhiyou .ego-products-infocon.steps{
+    padding-left: 100px;
+}
+.ego-products-info.post .ego-products-infocon.steps{
+    text-align: center;
+    padding-left: 0;
+}
+.ego-products-info.post .ego-products-infocon.steps > img{
+    float: none;
+}

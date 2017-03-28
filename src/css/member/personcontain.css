@@ -1,0 +1,402 @@
+/*左侧目录*/
+.person-center-info-left{
+    float: left;
+    width: 276px;
+    height: 579px;
+    text-align: center;
+}
+.avatar-view{
+    width: 108px;
+    height: 108px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.person-center-info-usericon img{
+    width: 108px;
+    height: 108px;
+    cursor: pointer;
+}
+.person-center-info-left p{
+    margin-top: 26px;
+    font-size: 18px;
+    color: #000;
+}
+.person-center-info-left ul{
+    display: inline-block;
+    text-align: center;
+    margin-top: 42px;
+    width: 181px;
+}
+.person-center-info-left ul li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.person-center-info-left ul li:hover{
+    color: white;
+    background-color: #344e87;
+}
+.person-center-info-left ul li:hover a{
+    color: white;
+}
+.person-center-info-left ul li>a{
+    display: block;
+}
+.person-center-info-left ul li>a:hover{
+    color: white;
+}
+.person-center-active{
+    color: white;
+    background-color: #344e87;
+}
+.person-center-active>a{
+    color: white;
+}
+/*右侧工具类*/
+.person-center-info-right{
+    width: 850px;
+    border-left: 1px solid #dcdcdc;
+    min-height: 579px;
+    float: left;
+    position: relative;
+    z-index: 0;
+}
+.per-cen-left{
+    height: 60px;
+    text-align: right;
+    width: 197px;
+    font-size: 16px;
+}
+.per-cen-right{
+    height: 60px;
+    padding-left: 10px;
+    width: 330px;
+}
+.per-cen-right input,.per-cen-right select{
+    font-size: 14px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+.per-cen-btn{
+    width: 100%;
+    height: 46px;
+    background-color: #344e87;
+    color: white;
+    font-size: 16px;
+    margin-top: 40px;
+}
+#member-platform option{
+    font-size: 18px;
+}
+.member-platform-tip{
+    color: black;
+    background-color: #E6E6E6;
+}
+/*账户安全*/
+.per-cen-safecontain{
+    margin: 110px 0 0 50px;
+}
+.per-cen-safe-item{
+    width: 764px;
+    height: 100px;
+    box-sizing: border-box;
+    border-bottom: 1px solid #E6E6E6;
+}
+.per-cen-safe-item>span:nth-of-type(1){
+    color: #999999;
+    font-size: 40px;
+    float: left;
+    margin: 20px 20px 0 30px;
+}
+.per-cen-safe-item>span:nth-of-type(2){
+    margin-top: 45px;
+    float: right;
+}
+.per-cen-safe-item>span:nth-of-type(2) button{
+    border: none;
+    background: none;
+    color: #344e87;
+}
+.as-contain .table td{
+    /*height: 45px;*/
+    text-align: right;
+    vertical-align: middle;
+    border-top: none;
+    position: relative;
+}
+.as-contain .table td input{
+    height: 45px;
+    width: 100%;
+    border:1px solid #dddddd;
+    border-radius: 5px;
+    padding-left: 5px;
+}
+.as-contain .table td button{
+    width: 100%;
+    height: 45px;
+    color: white;
+    background-color: #344e87;
+}
+.as-contain-left{
+    width: 100px;
+    font-size: 16px;
+    text-align: right;
+}
+.as-contain-middle+td{
+    width: 126px;
+}
+.as-contain label.error{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    font-size: 12px;
+    color: #d75148;
+    background-color: white;
+}
+.icon-youxiangyanzheng:before{
+    font-size: 30px;
+}
+.per-cen-safe-item>div{
+    float: left;
+    margin-top: 20px;
+}
+.per-cen-safe-item>div>p{
+    color: black;
+    font-size: 16px;
+    margin-bottom: 13px;
+}
+.per-cen-safe-item>div>span{
+    color: #666;
+    font-size: 14px;
+}
+.as-contain{
+    margin: 0 auto;
+    width: 400px;
+}
+.as-contain h3{
+    text-align: center;
+    margin: 20px 0;
+}
+.safecontain-controls{
+    text-align: center;
+}
+.safecontain-controls button{
+    width: 170px;
+    height: 40px;
+    color: white;
+}
+.modify-cancel{
+    background-color: #e5821d;
+    margin-right: 40px;
+}
+.modify-done{
+    background-color: #344e87;
+}
+
+/*实名认证*/
+.per-cen-Auth-title{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 36px;
+}
+.per-cen-Auth-type{
+    display: inline-block;
+    width: 128px;
+    height: 46px;
+    background-color: white;
+    border: 1px solid #ddd;
+    margin-right: 20px;
+}
+.auth-type-active{
+    color: white;
+    background-color: #e5821d;
+}
+.per-cen-Auth-contain{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 82px;
+    text-align: center;
+}
+.pcac-person{
+    z-index: 20;
+}
+.pcac-enterprise{
+    z-index: 10;
+    opacity: 0;
+}
+.per-cen-Auth-contain table{
+    margin-left: 60px;
+}
+.per-cen-Auth-contain form>p{
+    display: inline-block;
+    color: #666;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 40px;
+}
+.per-cen-auth-imgContain{
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+.per-cen-authImg{
+    box-sizing: border-box;
+    width: 203px;
+    height: 120px;
+    border: 1px solid #dddddd;
+    background-color: #eeeeee;
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+}
+.pca-imgFile{
+    width: 203px;
+    height: 120px;
+    /*opacity: 0;*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 60;
+    cursor: pointer;
+}
+.per-cen-authImg p{
+    height: 120px;
+    width: 203px;
+    line-height: 120px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 50;
+}
+.per-cen-authImg p span{
+    color: grey;
+    display: inline-block;
+}
+.per-cen-authImg p .iconfont{
+
+    font-size: 20px;
+}
+.per-cen-authImg img{
+    width: 203px;
+    height: 120px;
+    z-index: 40;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.per-cen-auth-submit{
+    width: 322px;
+    height: 44px;
+    background-color: #344e87;
+    color: white;
+    margin-top: 22px;
+}
+/*地址管理*/
+.per-cen-address-contain{
+    margin-left: 40px;
+}
+.per-address-btn{
+    background-color: #e5821d;
+    color: white;
+    font-size: 14px;
+    width: 107px;
+    height: 36px;
+    line-height: 36px;
+    margin: 40px 0 34px 0;
+}
+.per-address-btn span:nth-of-type(1){
+    line-height: 34px;
+    font-size: 24px;
+    font-weight: bolder;
+    float: left;
+    margin-left: 10px;
+}
+.per-table-btn{
+    width: 70px;
+    background: none;
+}
+.address-modify{
+      width: 80px;
+}
+.address-modify a{
+    display: inline-block;
+    width: 80px;
+}
+.per-table-btn+.dropdown-menu{
+    min-width: 70px;
+    width: 70px;
+}
+.btn-group.open .dropdown-toggle.per-table-btn {
+   background-color: #344e87;
+    color: white;
+}
+.address-modal .modal-content{
+    width: 529px;
+    height: auto;
+}
+.pca-table tr td{
+    height: 60px;
+}
+.pca-left{
+    width: 130px;
+    text-align: right;
+}
+.pca-right{
+    width: 320px;
+    padding-left: 15px;
+}
+/**/
+.import-tr{
+    display: none;
+}
+/**/
+.pca-right input[type='text']{
+    height: 40px;
+    width: 100%;
+    padding-left: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.pca-right select{
+    width: 320px;
+    height: 40px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.pca-right textarea{
+    width: 320px;
+    max-width: 320px;
+    height: 70px;
+    max-height: 70px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+.pca-button{
+    position: relative;
+}
+.pca-button button{
+    width: 320px;
+    height: 44px;
+    background-color: #344e87;
+    color: white;
+    position: absolute;
+    top: -10px;
+}
+
+

@@ -1,0 +1,150 @@
+.person-center-info{
+    background: none;
+    border: none;
+    padding-top: 0;
+}
+.declaration-options{
+    overflow: hidden;
+}
+.declaration-options li{
+    width: 50%;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    height: 44px;
+    text-align: center;
+    font-size: 18px;
+    float: left;
+    line-height: 44px;
+    cursor: pointer;
+    background-color: white;
+}
+.declaration-options li:first-child{
+    border-right: none;
+}
+.declaration-options li a{
+    display: block;
+    color: inherit;
+}
+.declaration-options li span{
+    color: #e5821d;
+}
+.declaration-options li.active{
+    background-color: #344E87;
+    color: white;
+}
+.declaration-search{
+    margin: 20px 0;
+}
+.declaration-search input{
+    height: 35px;
+    width: 350px;
+    padding-left: 5px;
+    border: 1px solid #dddddd;
+}
+.declaration-search button{
+    margin-left: 10px;
+    width: 74px;
+    height: 35px;
+    color: white;
+    background-color: #344E87;
+}
+
+.declaration-ctrl{
+    margin: 20px 0;
+    height: 35px;
+    line-height: 35px;
+}
+.declaration-ctrl a.ego-btn{
+    display: block;
+    text-align: center;
+    width: 110px;
+    height: 35px;
+    background-color: #e5821d;
+    float: left;
+    color: white;
+}
+.declaration-ctrl a.note{
+    float: left;
+    margin-left: 5px;
+    color: #2855d5;
+    text-decoration: underline;
+}
+.upload{
+    position: relative;
+    margin-left: 20px;
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    background-color: #344e87;
+    overflow: hidden;
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+.upload:hover{
+    color: white;
+}
+.upload>input {
+    position: absolute;
+    z-index: 20;
+    right: 0;
+    top: 0;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    cursor: pointer;
+    width: 133px;
+    height: 45px;
+}
+.upload>p{
+    position: absolute;
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    color: white;
+    text-align: center;
+    z-index: 10;
+    top:0;
+    left: 0;
+}
+table.allFormTable > thead > tr > th,
+table.readyFormTable > thead > tr > th{
+    background-color: #ececec;
+}
+table.allFormTable > tbody > tr > td,
+table.readyFormTable > tbody > tr > td{
+    text-align: center;
+    background-color: white;
+}
+table.allFormTable > tbody > tr > td button.viewErrorBtn{
+    background-color: #344E87;
+    color: white;
+    width: 100px;
+}
+.modal-body{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+.modal-footer-ego{
+    padding: 10px 0;
+    text-align: center;
+}
+.modal-footer-ego button{
+    width: 157px;
+    height: 26px;
+    color: white;
+    background-color: #344E87;
+}
+th.dropdown > a{
+    display: block;
+}
+th.dropdown > ul.dropdown-menu{
+    min-width: 100px;
+    width: 100px;
+}
+th.dropdown > ul.dropdown-menu > li > a {
+    text-align: center;
+}

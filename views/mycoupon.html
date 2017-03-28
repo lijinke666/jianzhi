@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>优惠券</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/mycoupon.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">我的资产</a></li>
+                <li class="active"></li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>资产明细</span>
+            </div>
+            <div class="person-center-info">
+                <!--左侧信息导航-->
+                <div class="person-center-info-left not-select">
+                    <ul>
+                        <li ><a href="#">资产明细</a></li>
+                        <li><a href="#">账户充值</a></li>
+                        <li><a href="#">账户提现</a></li>
+                        <li class="person-center-active"><a href="#">优惠券</a></li>
+                    </ul>
+                </div>
+                <!--右侧信息显示-->
+                <div class="person-center-info-right">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#usable" aria-controls="usable" role="tab" data-toggle="tab">未使用</a></li>
+                        <li role="presentation"><a href="#used" aria-controls="used" role="tab" data-toggle="tab">已使用</a></li>
+                        <li role="presentation"><a href="#invalid" aria-controls="invalid" role="tab" data-toggle="tab">已失效</a></li>
+                    </ul>
+                    <!-- Tab panes -->
+                    <!--
+                    1. coupon-item 表示一张优惠券
+                    2. usable :可使用
+                        1)usable_20 20元
+                        2)usable_30 30元
+                        3)usable_50 50元
+                    3. used : 已使用
+                        1)used_20
+                        2)used_30
+                        3)used_50
+                    4. invalid : 已过期
+                    -->
+                    <div class="tab-content">
+                        <!--keyishiyong-->
+                        <div role="tabpanel" class="tab-pane active" id="usable">
+                            <ul class="items not-select">
+                                <li class="coupon-item usable usable_20">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">20</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">无门槛使用</div>
+                                            <div class="title">优惠券(7天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_30">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">30</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥300使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_30">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">30</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥300使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item usable usable_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--yishiyong-->
+                        <div role="tabpanel" class="tab-pane" id="used">
+                            <ul class="items not-select">
+                                <li class="coupon-item used used_20">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">20</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">无门槛使用</div>
+                                            <div class="title">优惠券(7天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item used used_30">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">30</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥300使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                                <li class="coupon-item used used_50">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">50</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">满￥1000使用</div>
+                                            <div class="title">优惠券(30天)</div>
+                                        </div>
+                                    </div>
+                                    <p>有效期：2017/03/15 -2017/04/15</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--guoqi-->
+                        <div role="tabpanel" class="tab-pane" id="invalid">
+                            <ul class="items not-select">
+                                <li class="coupon-item invalid ">
+                                    <div class="content">
+                                        <div class="money_contain">
+                                            <span class="token">￥</span>
+                                            <span class="money">20</span>
+                                        </div>
+                                        <div class="use_help">
+                                            <div class="use_condition">无门槛使用</div>
+                                            <div class="title">优惠券(7天)</div>
+                                        </div>
+                                    </div>
+                                    <p>已过期</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>推广注册</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/spreadReg.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">我要推广</a></li>
+                <li class="active">推广注册</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>推广注册</span>
+            </div>
+            <div class="person-center-info">
+                <form action="" id="spreadForm">
+                    <div class="container-fluid spread-reg-con">
+                        <div class="row">
+                            <div class="col-xs-3 col-lg-3 text-right">真实姓名</div>
+                            <div class="col-xs-9 col-lg-9">
+                                <input name="realName"
+                                       placeholder="请输入您的真实姓名"
+                                       class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-lg-3 text-right">身份证号码</div>
+                            <div class="col-xs-9 col-lg-9">
+                                <input name="idCode"
+                                       placeholder="请输入您的身份证号码"
+                                       class="form-control"
+                                       type="text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-lg-3 text-right">身份证图片</div>
+                            <div class="col-xs-9 col-lg-9">
+                                <span class="notice">支持JPG、PNG、BMP格式，不超过300KB</span><br/>
+                                <div class="per-cen-auth-imgContain">
+                                    <div class="per-cen-authImg">
+                                        <input type="file" name="front-idCard" class="pca-imgFile">
+                                        <p>
+                                            <span class="iconfont icon-shenfenzhengzhengmian"></span>
+                                            <span>身份证正面</span>
+                                        </p>
+                                        <img src="" alt="">
+                                    </div>
+                                    <div class="per-cen-authImg">
+                                        <input type="file" name="back-idCard" class="pca-imgFile">
+                                        <p>
+                                            <span class="iconfont icon-shenfenzhengbeimian" style="color: grey"></span>
+                                            <span>身份证背面</span>
+                                        </p>
+                                        <img src="" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-lg-3 text-right">代理协议扫描件</div>
+                            <div class="col-xs-9 col-lg-9">
+                                <span class="notice">请下载<a href="#">《丝路易购代理合作协议》</a>
+                                    后填写打印，并盖章后上传扫描件。支持JPG、PNG、BMP格式，不超过2MB
+                                </span><br/>
+                                <div>
+                                    <div class="per-cen-auth-imgContain">
+                                        <div class="per-cen-authImg per-cen-authImg-lg">
+                                            <input type="file" name="spreadAgreement" class="pca-imgFile">
+                                            <p>
+                                                <span class="iconfont icon-shangchuandailixieyisaomiaojian"></span>
+                                                <span>上传代理协议扫描件</span>
+                                            </p>
+                                            <img src="" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3 col-lg-3 text-right"></div>
+                            <div class="col-xs-9 col-lg-9">
+                                <button type="button" class="ego-btn submit">提交</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/spreadReg.js"></script>
+</html>

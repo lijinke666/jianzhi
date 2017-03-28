@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>进口寄件</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../static/lib/citypicker/city-picker.css">
+    <link rel="stylesheet" href="../src/css/export.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">我要寄件</a></li>
+                <li class="active">进口寄件</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="delivery-step not-select">
+                <div class="delivery-step-item step1 step-active">
+                    <p>1</p>
+                    <div class="step-item-line sil-right"></div>
+                    <div class="step-item-notice">填写寄件信息</div>
+                </div>
+                <div class="delivery-step-item step2">
+                    <div class="step-item-line sil-left"></div>
+                    <p>2</p>
+                    <div class="step-item-line sil-right"></div>
+                    <div class="step-item-notice">填写产品信息</div>
+                </div>
+                <div class="delivery-step-item step3">
+                    <div class="step-item-line sil-left"></div>
+                    <p>3</p>
+                    <div class="step-item-line sil-right"></div>
+                    <div class="step-item-notice">匹配运价</div>
+                </div>
+                <div class="delivery-step-item step4">
+                    <div class="step-item-line sil-left"></div>
+                    <p>4</p>
+                    <div class="step-item-notice">生产运单</div>
+                </div>
+            </div>
+            <div class="bulk-load">
+                <button class="ego-btn">批量模板导入</button>
+            </div>
+            <form action="" id="importinfo">
+                <!--step1 寄件信息-->
+                <div class="delivery-deliveryinfo">
+                    <div class="delivery-role-info del-sender">
+                        <button class="choose-address" type="button" data-toggle="modal" data-target="#sender_address"><span class="iconfont icon-dizhi"></span></button>
+                        <p>发件人信息</p>
+                        <div class="del-role-info-list">
+                            <div class="delivery-info-input">
+                                <p>姓名</p>
+                                <input type="text"
+                                       id="importSenderName"
+                                       name="importSenderName"
+                                       placeholder="请输入发件人姓名">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>联系方式</p>
+                                <input type="text"
+                                       id="importSenderPhone"
+                                       name="importSenderPhone"
+                                       placeholder="请输入联系电话">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>国家</p>
+                                <select name="importSenderCountry"
+                                        id="importSenderCountry"
+                                        class="select2">
+                                    <option value="中国">中国-China</option>
+                                    <option value="美国">美国-America</option>
+                                    <option value="英国">英国-Uk</option>
+                                    <option value="加拿大">加拿大-Canada</option>
+                                    <option value="日本">日本-Japan</option>
+                                </select>
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>州/郡/省</p>
+                                <input type="text"
+                                       id="importSenderArea"
+                                       name="importSenderArea"
+                                       placeholder="请输入外语地址">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>城市</p>
+                                <input type="text"
+                                       id="importSenderCity"
+                                       name="importSenderCity"
+                                       placeholder="请输入城市">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>详细地址</p>
+                                <input type="text"
+                                       id="importSenderDetailAddress"
+                                       name="importSenderDetailAddress"
+                                       placeholder="详细街道（精确到门牌号）">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>邮编</p>
+                                <input type="text"
+                                       id="importSenderPostCode"
+                                       name="importSenderPostCode"
+                                       placeholder="请输入邮政编号">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-role-info del-receiver">
+                        <p>收件人信息</p>
+                        <div class="del-role-info-list">
+                            <div class="delivery-info-input">
+                                <p>姓名</p>
+                                <input type="text"
+                                       id="importReceiverName"
+                                       name="importReceiverName"
+                                       placeholder="请输入发件人姓名">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>联系方式</p>
+                                <input type="text"
+                                       id="importReceiverPhone"
+                                       name="importReceiverPhone"
+                                       placeholder="请输入联系电话">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>身份证号</p>
+                                <input type="text"
+                                       id="importReceiverIdCard"
+                                       name="importReceiverIdCard"
+                                       placeholder="请输入国内收件人身份证号">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>国家</p>
+                                <input type="text"
+                                       id="importReceiverCountry"
+                                       name="importReceiverCountry"
+                                       placeholder="中国"
+                                       value="中国"
+                                       disabled="disabled"
+                                       style="cursor:not-allowed;">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>省/市/区</p>
+                                <div id="distpicker">
+                                    <div>
+                                        <div style="position: relative;">
+                                            <input id="importReceiverArea"
+                                                   name="importReceiverArea"
+                                                   placeholder="请选择省/市/区"
+                                                   class="cpicker"
+                                                   readonly type="text"
+                                                   data-toggle="city-picker">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>详细地址</p>
+                                <input type="text"
+                                       id="importReceiverDetailAddress"
+                                       name="importReceiverDetailAddress"
+                                       placeholder="详细街道（精确到门牌号）">
+                            </div>
+                            <div class="delivery-info-input">
+                                <p>邮编</p>
+                                <input type="number"
+                                       id="importReceiverPostCode"
+                                       name="importReceiverPostCode"
+                                       placeholder="请输入邮政编号">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="delivery-control-btns clearfix">
+                        <button class="ego-btn delivery-next-btn" type="button">下一步</button>
+                    </div>
+                </div>
+                <!--/step1-->
+                <!--step2 产品信息-->
+                <div class="delivery-productInfo">
+                    <div class="delivery-chooseService">
+                        <p>请选择服务内容</p>
+                        <div class="service-item overseaPickUp">
+                            <input type="checkbox" name="service[]" value="1">
+                            海外提货
+                        </div>
+                        <div class="service-item transport">
+                            <input type="checkbox" name="service[]" value="2">
+                            国际运输
+                        </div>
+                        <div class="service-item delivery">
+                            <input type="checkbox" name="service[]" value="3">
+                            国内清关+派送
+                        </div>
+                    </div>
+                    <div class="delivery-info-box">
+                        <div class="delivery-packageInfo">
+                            <p>包裹信息</p>
+                            <div class="delivery-package-item">
+                                <div class="delivery-info-input">
+                                    <p>订单号</p>
+                                    <input type="text"
+                                           name="orderCode"
+                                           placeholder="请输入订单号码">
+                                </div>
+                            </div>
+                            <div class="delivery-package-item">
+                                <div class="delivery-info-input">
+                                    <p>总件数</p>
+                                    <input type="text"
+                                           name="totalQuantity"
+                                           placeholder="请输入货物件数">
+                                </div>
+                            </div>
+                            <div class="delivery-package-item">
+                                <div class="delivery-info-input">
+                                    <p>包裹总重量</p>
+                                    <input type="text"
+                                           name="totalWeight"
+                                           placeholder="请输入货物总重量">
+                                </div>
+                            </div>
+                            <div class="delivery-package-item">
+                                <div class="delivery-info-input">
+                                    <p>备注</p>
+                                    <input type="text"
+                                           name="packageNotes"
+                                           placeholder="是否内置电池、是否有磁性、是否易碎等">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="delivery-commodityInfo">
+                            <p>商品明细</p>
+                            <div class="delivery-commodity-box">
+                                <div class="ctrl-group">
+                                    <button class="commodity-choose ego-btn" type="button"><span class="iconfont icon-baoguochaxun"></span>从商品库选择</button>
+                                    <button class="commodity-delete ego-btn" type="button" style="display: none"><span class="iconfont icon-huishouzhan"></span>删除</button>
+                                </div>
+                                <a href="" class="after-tax-table">下载完税价格表</a>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-info-input">
+                                        <p>SKU</p>
+                                        <input type="text"
+                                               name="skuCode"
+                                               placeholder="请填写SKU">
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-info-input">
+                                        <p>行邮税号</p>
+                                        <input type="text"
+                                               name="hsCode"
+                                               placeholder="请填写行邮税号">
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-info-input">
+                                        <p>商品名称(中文)</p>
+                                        <input type="text"
+                                               name="commodityNameCN"
+                                               placeholder="请输入货物中文名称">
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-info-input">
+                                        <p>商品名称(英文)</p>
+                                        <input type="text"
+                                               name="commodityNameEN"
+                                               placeholder="请输入货物英文名称">
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>数量</p>
+                                            <input type="number"
+                                                   name="commodityQuantity"
+                                                   placeholder="请输入货物数量">
+                                        </div>
+                                    </div>
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>申报单位</p>
+                                            <select name="commodityUnit" title="请选择货物申报单位">
+                                                <option value="11">11</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>净重</p>
+                                            <input type="text"
+                                                   name="netWeight"
+                                                   placeholder="请输入货物净重">
+                                        </div>
+                                    </div>
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>毛重</p>
+                                            <input type="text"
+                                                   name="grossWeight"
+                                                   placeholder="请输入货物毛重">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>规格型号</p>
+                                            <input type="text"
+                                                   name="specification"
+                                                   placeholder="请输入货物规格型号">
+                                        </div>
+                                    </div>
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>申报单价</p>
+                                            <input type="number"
+                                                   name="declarePrice"
+                                                   placeholder="请输入货物申报单价">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="delivery-commodity-item">
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>申报币别</p>
+                                            <select name="currencyType" title="请选择申报币别" disabled style="cursor: not-allowed">
+                                                <option value="11" selected>人民币 RMB</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="delivery-commodity-itemsmall">
+                                        <div class="delivery-info-input">
+                                            <p>总价(元)</p>
+                                            <input type="text"
+                                                   name="totalPrice"
+                                                   class="ignorable"
+                                                   disabled
+                                                   style="cursor: not-allowed"
+                                                   placeholder="数量*申报单价">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="ego-btn add-commodity-btn">+ 增加一个商品信息</button>
+                        </div>
+                        <div class="delivery-control-btns clearfix">
+                            <button class="ego-btn product-btn pbtn-prev" type="button">上一步</button>
+                            <button class="ego-btn product-btn pbtn-next" type="button">下一步</button>
+                        </div>
+                    </div>
+                </div>
+                <!--/step2-->
+                <!--step3 匹配运价-->
+                <!--/step3-->
+                <div class="delivery-matchRate">
+                    <div class="delivery-matchRate-contain">
+                        <p>根据您的运单明细，为您匹配到一下发运方式。请至少选择一项</p>
+                        <table class="table table-hover table-break">
+                            <thead>
+                            <tr>
+                                <th class="mr-table-choose"></th>
+                                <th>运输方式</th>
+                                <th>集货地</th>
+                                <th>总价(含油)</th>
+                                <th>时效</th>
+                                <th>是否有退运费</th>
+                                <th class="mr-table-note">备注</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><input type="radio" name="choose-delWay"></td>
+                                <td>蓉欧快铁-小包</td>
+                                <td>成都2仓</td>
+                                <td>￥38.81</td>
+                                <td>15-25天</td>
+                                <td>是</td>
+                                <td>
+                                    <a href="javascript:void(0)"
+                                       tabindex="0"
+                                       class="btn mr-note-btn"
+                                       role="button"
+                                       data-toggle="popover"
+                                       data-trigger="hover"
+                                       data-placement="bottom"
+                                       data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                                        查看
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="choose-delWay"></td>
+                                <td>蓉欧快铁-小包</td>
+                                <td>成都2仓</td>
+                                <td>￥38.81</td>
+                                <td>15-25天</td>
+                                <td>是</td>
+                                <td>
+                                    <a href="javascript:void(0)"
+                                       tabindex="0"
+                                       class="btn mr-note-btn"
+                                       role="button"
+                                       data-toggle="popover"
+                                       data-trigger="hover"
+                                       data-placement="bottom"
+                                       data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                                        查看
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="choose-delWay"></td>
+                                <td>蓉欧快铁-小包</td>
+                                <td>成都2仓</td>
+                                <td>￥38.81</td>
+                                <td>15-25天</td>
+                                <td>是</td>
+                                <td>
+                                    <a href="javascript:void(0)"
+                                       tabindex="0"
+                                       class="btn mr-note-btn"
+                                       role="button"
+                                       data-toggle="popover"
+                                       data-trigger="hover"
+                                       data-placement="bottom"
+                                       data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                                        查看
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="choose-delWay"></td>
+                                <td>蓉欧快铁-小包</td>
+                                <td>成都2仓</td>
+                                <td>￥38.81</td>
+                                <td>15-25天</td>
+                                <td>是</td>
+                                <td>
+                                    <a href="javascript:void(0)"
+                                       tabindex="0"
+                                       class="btn mr-note-btn"
+                                       role="button"
+                                       data-toggle="popover"
+                                       data-trigger="hover"
+                                       data-placement="bottom"
+                                       data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                                        查看
+                                    </a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><input type="radio" name="choose-delWay"></td>
+                                <td>蓉欧快铁-小包</td>
+                                <td>成都2仓</td>
+                                <td>￥38.81</td>
+                                <td>15-25天</td>
+                                <td>是</td>
+                                <td>
+                                    <a href="javascript:void(0)"
+                                       tabindex="0"
+                                       class="btn mr-note-btn"
+                                       role="button"
+                                       data-toggle="popover"
+                                       data-trigger="hover"
+                                       data-placement="bottom"
+                                       data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                                        查看
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <span>入仓地址：四川省成都市双流区西航港通关路86号</span>
+                    </div>
+                    <div class="delivery-control-btns clearfix">
+                        <button class="ego-btn product-btn mr-btn-prev" type="button">上一步</button>
+                        <button class="ego-btn product-btn mr-btn-next" type="submit">下一步</button>
+                    </div>
+                </div>
+                <!--step4 生成运单-->
+                <!--/-->
+            </form>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<div class="modal fade address-modal" id="sender_address">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">发件人地址管理</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <table class="table table-break table-hover">
+                        <thead>
+                        <tr>
+                            <th class="address-choose"></th>
+                            <th>姓名</th>
+                            <th>联系方式</th>
+                            <th>国家</th>
+                            <th>州/郡/省</th>
+                            <th>城市</th>
+                            <th>详细地址</th>
+                            <th>邮编</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="radio" name="choose-receiverAddress"></td>
+                            <td>jackma</td>
+                            <td>12345678901</td>
+                            <td>中国-China</td>
+                            <td>California</td>
+                            <td>liaqwerq</td>
+                            <td>aabbcc</td>
+                            <td>1234565</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio" name="choose-receiverAddress"></td>
+                            <td>ponyma</td>
+                            <td>166666661</td>
+                            <td>加拿大-Canada</td>
+                            <td>asdfasdf</td>
+                            <td>london</td>
+                            <td>dddddcc</td>
+                            <td>126666665</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="chooseSenderAddress">选择</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade address-modal" id="commodityStore">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title">选择商品</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <input type="hidden" name="cBoxId">
+                    <table class="table table-break table-hover">
+                        <thead>
+                        <tr>
+                            <th class="address-choose"></th>
+                            <th width="120">SKU</th>
+                            <th width="100">行邮税号</th>
+                            <th>中文名称</th>
+                            <th>英文名称</th>
+                            <th width="50">单位</th>
+                            <th width="50">净重</th>
+                            <th>规格</th>
+                            <th width="50">单价</th>
+                            <th width="50">币别</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><input type="radio"></td>
+                            <td>1234658789</td>
+                            <td>9876543211</td>
+                            <td>
+                                <div class="mr-note-btn" data-toggle="popover" data-content="嗷嗷啊这个是完整的那个中文名称1">
+                                    啊啊啊啊啊啊啊啊
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mr-note-btn" data-toggle="popover" data-content="aaaacomaaaaaaaaaaaaaaaa">
+                                    aaaaaaaaa
+                                </div>
+                            </td>
+                            <td>个</td>
+                            <td>bb</td>
+                            <td>宇宙牌香烟</td>
+                            <td>1</td>
+                            <td>USD</td>
+                        </tr>
+                        <tr>
+                            <td><input type="radio"></td>
+                            <td>1234658782</td>
+                            <td>9876543212</td>
+                            <td>
+                                <div class="mr-note-btn" data-toggle="popover" data-content="哔哔哔不不不不不不不不不不" >
+                                    哔哔哔
+                                </div>
+                            </td>
+                            <td>
+                                <div class="mr-note-btn" data-toggle="popover" data-content="bbbbbbbbbbbbbbbbbb">
+                                    bbb
+                                </div>
+                            </td>
+                            <td>嗷嗷</td>
+                            <td>2</td>
+                            <td>宇宙牌香烟</td>
+                            <td>1</td>
+                            <td>USD</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+            <div style="text-align: center">
+                <p>温馨提示：选择商品信息后，请手动填写该商品的数量与毛重</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" id="chooseCommodity">选择</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/select2/select2.min.js"></script>
+<script src="../static/lib/select2/zh-CN.js"></script>
+<script src="../static/lib/citypicker/city-picker.data.min.js"></script>
+<script src="../static/lib/citypicker/city-picker.min.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/import.js"></script>
+<script>
+    $(document).ready(function () {
+        var step1 = new ImportStep1();
+        var step2 = new ImportStep2();
+        step2.validate(function () {
+            //AJAX匹配运价
+            console.log(step2.getService());
+            alert('匹配运价');
+            //onsuccess:step2.goNext()
+            step2.goNext();
+        });
+        //匹配运价的下一步按钮
+        $('.mr-btn-next').on('click',function () {
+            alert('生成运单');
+        });
+    })
+</script>
+
+</body>
+
+</html>

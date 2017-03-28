@@ -1,0 +1,150 @@
+.ego-header{
+    width: 100%;
+    position: fixed;
+    top:0;
+    left: 0;
+    height: 80px;
+    background-color: rgba(0,0,0,.175);
+    box-sizing: border-box;
+    z-index: 1000;
+    transition: all 400ms cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-header a, .ego-header div{
+    color: white;
+}
+.ego-header a{
+    display: block;
+}
+.ego-header a:hover{
+    color: #e5821d;
+}
+.ego-header > div{
+    width: 1200px;
+    margin: 0 auto;
+    height: 80px;
+}
+.ego-logo, .ego-nav{
+    float: left;
+}
+.ego-logo{
+    margin: 19px 32px 0 0;
+    width: 316px;
+}
+.ego-nav > li{
+    width: 115px;
+    float: left;
+    position: relative;
+    height: 80px;
+    line-height: 80px;
+    font-size: 16px;
+    text-align: center;
+}
+.m-nav-arrow {
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #fff;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -moz-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -ms-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -o-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-nav > li:hover ul.second-nav{
+    -webkit-transform: scaleY(1);
+    -moz-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    transform: scaleY(1);
+    display: block \9;
+    transform-origin: center top;
+    -webkit-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -moz-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -ms-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -o-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-nav > li:hover .nav-title .m-nav-arrow{
+    -webkit-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -moz-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -ms-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -o-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transform: rotate(180deg);
+}
+ul.second-nav{
+    width: 100%;
+    position: absolute;
+    top: 79px;
+    left: 0;
+    background-color: rgba(0,0,0,.3);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    display: none \9;
+    -webkit-transform: scaleY(0);
+    -moz-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    transform: scaleY(0);
+    -webkit-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -moz-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -ms-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -o-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transform-origin: center top;
+}
+ul.second-nav > li{
+    height: 45px;
+}
+ul.second-nav > li > a{
+    display: block;
+    height: 45px;
+    line-height: 45px;
+}
+ul.second-nav > li:last-child > a{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+ul.second-nav > li > a:hover{
+    background-color: #d9d9d9;
+}
+.ego-log-reg{
+    float: right;
+    height: 80px;
+    line-height: 80px;
+}
+.ego-log-reg a{
+   float: left;
+}
+.ego-log-reg div{
+   float: left;
+    margin: 0 10px;
+}
+/*--滚动后样式--*/
+.ego-header.ego-header-onscroll{
+    background-color: rgba(255,255,255,.9);
+    font-weight: bold;
+    border-bottom: 1px solid #dddddd;
+}
+.ego-header.ego-header-onscroll a,
+.ego-header.ego-header-onscroll div{
+    color: black
+}
+.ego-header.ego-header-onscroll a:hover{
+    color: #e5821d;
+}
+.ego-header.ego-header-onscroll .m-nav-arrow{
+    border-top: 6px solid #000;
+}
+.ego-header.ego-header-onscroll ul.second-nav{
+    background-color: rgba(255,255,255,.9);
+}

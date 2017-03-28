@@ -1,0 +1,108 @@
+@import "common.css";
+@import "reg/regLoginHeader.css";
+@import "reg/regLoginContent.css";
+@import "footer.css";
+.regLogin-mainWrap{
+    background: url("../../static/image/login/Password.jpg") center center;
+}
+.regLogin-box-bg{
+    margin-left: -200px;
+    left: 50%;
+    margin-top: -206px;
+    top: 45%;
+    height: 412px;
+}
+.forget-box{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.forget-box-title{
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #344e87  ;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.forget-panel{
+    width: 100%;
+    padding: 20px 14px 0;
+}
+.forget-panel label{
+    font-weight: normal;
+}
+.forget-panel p{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+.forget-panel input{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.forget-panel table td{
+    vertical-align: middle;
+    height: 45px;
+}
+.forget-form-left{
+    width: 70px;
+    text-align: right;
+}
+.forget-form-right input{
+    width: 280px;
+}
+.forget-form-right{
+    position: relative;
+}
+.forget-form-middle input{
+    width: 155px;
+}
+.forget-form-middle{
+    width: 160px;
+    position: relative;
+}
+.forget-getCode{
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: #344e87  ;
+    color: white;
+    font-size: 12px;
+    width: 100%;
+}
+.forget-save-pwd{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #e5821d;
+    border: none;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+}
+input.error{
+    color: #d75148;
+    border: 2px solid #d75148!important;
+}
+label.error{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    font-size: 12px;
+    color: #d75148;
+    background-color: white;
+}
+input.valid{
+    border: 2px solid #30a735!important;
+}

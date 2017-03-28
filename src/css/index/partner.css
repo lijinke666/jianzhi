@@ -1,0 +1,50 @@
+.ego-partners{
+    min-width: 1200px;
+    width: 100%;
+}
+.ego-partners-contain{
+    width: 1200px;
+    height: 227px;
+    margin: 0 auto;
+    text-align: center;
+}
+.ego-partners-wrap{
+    width: 1200px;
+    height: 63px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.ego-partners-btn{
+    width: 30px;
+    height: 63px;
+    float: left;
+    cursor: pointer;
+}
+.epb-left{
+    background: url("../../../static/image/index/mianwrap/Cooperativepartner/Left-arrow-Icon.png") center center no-repeat;
+}
+.epb-right{
+    background: url("../../../static/image/index/mianwrap/Cooperativepartner/Arrow-right-Icon.png") center center no-repeat;
+}
+.ego-partners-view{
+    width: 1140px;
+    height: 63px;
+    float: left;
+    overflow: hidden;
+}
+.ego-partner-list{
+    width: 2286px;
+    height: 63px;
+}
+.ego-partner-item{
+    width: 140px;
+    height: 63px;
+    box-sizing: border-box;
+    border: 1px solid #dddddd;
+    float: left;
+    margin-left: 20px;
+}
+.ego-partner-item img{
+    margin-top: 15px;
+    text-align: center;
+}

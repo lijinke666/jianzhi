@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>会员中心</title>
+    <!--[if lt IE 9]>
+        <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/intro/introjs.css">
+    <link rel="stylesheet" href="../src/css/member.css">
+    <style>
+
+
+    </style>
+</head>
+<body>
+<!--头部-->
+<section class="member-header not-select">
+        <img src="../static/image/member/LOGO.png" alt="">
+        <div class="member-header-right">
+            <div class="member-header-usericon">
+                <img src="../static/image/member/Head-portrait.png" alt="">
+            </div>
+            <span>易购全球</span>
+            <a href="javascript:void(0)">安全退出</a> |
+            <a href="javascript:void(0)">返回首页</a>
+        </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!--会员中心-->
+<section class="member-center">
+    <div class="member-center-contain">
+        <div class="member-center-usericon">
+            <div class="m-center-icon">
+                <img src="../static/image/member/Head-portrait.png" alt="">
+            </div>
+        </div>
+        <div class="member-middle-info">
+            <p>Hi! <span> 易购全球</span></p>
+            <p>联系电话：<span>15002814341</span></p>
+            <p>电子邮件：<span>597102717@qq.com</span></p>
+            <p>资料尚未完善 <a href="#">前往完善</a></p>
+            <a href="#" class="not-select ego-btn">我要寄件</a>
+        </div>
+        <div class="member-right-info">
+            <p>我的资产</p>
+            <div class="member-asset">
+            <div class="member-account ">
+                <span>100.0</span>
+                <p>账户余额</p>
+            </div>
+            <div class="member-account useful-account">
+                <span>0.00</span>
+                <p>可用余额</p>
+            </div>
+          </div>
+            <a class="member-recharge ego-btn" href="/manage/financial/recharge">去充值</a>
+            <div class="member-search">
+              <input type="text"
+                     id="m-search"
+                     name="m-search"
+                     placeholder="请输入易购全球的快件跟踪号">
+              <div class="m-search-btn ego-btn not-select">查询</div>
+          </div>
+        </div>
+    </div>
+</section>
+<!--待办事项-->
+<section class="member-todo">
+    <div class="member-todo-contain" style="display: none">
+        <h3>待处理事项</h3>
+        <div class="panel panel-default">
+            <div class="panel-heading">我的处理事项</div>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>类型</th>
+                        <th>事项</th>
+                        <th>待处理条数</th>
+                        <th>操作</th>
+                        <th>发生时间</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>123</td>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                        <td>@mdo</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="quick-todo">
+        <a href="/logistic/index/export">
+            <span>+</span><br>
+            创建出口运单
+        </a>
+        <a href="/logistic/index/import">
+            <span>+</span><br>
+            创建进口运单
+        </a>
+    </div>
+</section>
+<!--快捷按钮-->
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/intro/intro.js"></script>
+<script>
+    $(function () {
+        var $height = $(window).height();
+        $height = $height-440;
+        $('.member-todo').css({
+            minHeight:$height
+        })
+    })
+</script>
+<script>
+    startIntro();
+    function startIntro(){
+        var intro = introJs();
+        intro.setOptions({
+            nextLabel:"下一步",
+            prevLabel:"上一步",
+            skipLabel:"跳过",
+            doneLabel:"我知道了",
+            steps: [
+                {
+                    intro: "欢迎来到丝路易购！<br/> 现在将带您了解如何使用丝路易购",
+
+                },
+                {
+                    element: document.querySelector('.member-center-contain'),
+                    intro: "这里可以看到您账户的概要信息"
+                },
+                {
+                    element: document.querySelector('.member-todo-contain'),
+                    intro: "这里可以看到您最近要处理的事项"
+                },
+                {
+                    element: document.querySelector('.member-nav ul'),
+                    intro: "这里是丝路的功能列表<br/>在这里你可以找到丝路提供的各种服务",
+                },
+                {
+                    intro: '介绍结束，现在开始使用吧',
+                }
+            ]
+        });
+        intro.start();
+    }
+</script>
+</body>
+</html>

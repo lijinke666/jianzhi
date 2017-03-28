@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <!--[if lt IE 9]>
+    <script src="//cdn.bootcss.com/html5shiv/r29/html5.min.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/cropper/cropper.min.css">
+    <link rel="stylesheet" href="../static/lib/sitelogo/sitelogo.css">
+    <link rel="stylesheet" href="../static/lib/citypicker/city-picker.css">
+    <link rel="stylesheet" href="../src/css/personalcenter.css">
+</head>
+
+<body>
+<!--头部-->
+<section class="member-header not-select">
+        <img src="../static/image/member/LOGO.png" alt="">
+        <div class="member-header-right">
+            <div class="member-header-usericon">
+                <img src="../static/image/member/Head-portrait.png" alt="">
+            </div>
+            <span>易购全球</span>
+            <a href="javascript:void(0)">安全退出</a> |
+            <a href="javascript:void(0)">返回首页</a>
+        </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">个人中心</a></li>
+                <li class="active">用户信息</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>用户信息</span>
+            </div>
+            <div class="person-center-info">
+                <!--左侧信息导航-->
+                <div class="person-center-info-left not-select">
+                    <div id="crop-avatar" class="person-center-info-usericon">
+                        <div class="avatar-view" title="点击更换头像">
+                            <img src="../static/image/member/Head-portrait.png">
+                        </div>
+                    </div>
+                    <p>HI! <span>易购全球</span></p>
+                    <ul>
+                        <li class="person-center-active"><a href="#">用户信息</a></li>
+                        <li><a href="#">账户安全</a></li>
+                        <li><a href="#">实名认证</a></li>
+                        <li><a href="#">地址管理</a></li>
+                    </ul>
+                </div>
+                <!--右侧信息显示-->
+                <div class="person-center-info-right">
+
+                    <!--提示框-->
+                    <div class="alert alert-warning alert-dismissible" role="alert">
+                        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+                    </div>
+                    <!--/提示框-->
+                    <form action="">
+                        <table>
+                            <tr>
+                                <td class="per-cen-left">用户名：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入要修改的用户名">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">手机号：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入手机号"
+                                           disabled="disabled"
+                                           value="18670851245">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">邮箱：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入电子邮箱"
+                                           disabled="disabled"
+                                           value="zhaia1158@126.com">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">个人真实姓名：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入真实姓名">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">公司名称：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入公司名称">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">销售平台：</td>
+                                <td class="per-cen-right">
+                                    <select name="" id="member-platform">
+                                        <option value="" class="member-platform-tip" disabled>出口</option>
+                                        <option value="亚马逊" selected>亚马逊</option>
+                                        <option value="速卖通">速卖通</option>
+                                        <option value="wish">wish</option>
+                                        <option value="e-bay">e-bay</option>
+                                        <option value="敦煌网">敦煌网</option>
+                                        <option value="其他">其他</option>
+                                        <option value="" class="member-platform-tip" disabled>进口</option>
+                                        <option value="淘宝天猫">淘宝天猫</option>
+                                        <option value="京东">京东</option>
+                                        <option value="个人代购">个人代购</option>
+                                        <option value="线下店铺">线下店铺</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">所在地：</td>
+                                <td class="per-cen-right">
+                                    <div id="distpicker">
+                                        <div>
+                                            <div style="position: relative;">
+                                                <input id="city-picker" class="cpicker" readonly type="text"  data-toggle="city-picker">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left">详细地址：</td>
+                                <td class="per-cen-right">
+                                    <input type="text"
+                                           placeholder="请输入详细地址">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="per-cen-left"></td>
+                                <td class="per-cen-right">
+                                    <button class="per-cen-btn ego-btn">修改</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--隐藏模态框-->
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="avatar-form" action="{{url('admin/upload-logo')}}" enctype="multipart/form-data" method="post">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传头像</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <label for="avatarInput">图片上传</label>
+                            <!---->
+                            <a href="javascript:;" class="btn btn-default a-upload">
+                                <span>选择图片</span>
+                                <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="avatar-wrapper"></div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="avatar-preview preview-lg"></div>
+                                <div class="avatar-preview preview-md"></div>
+                                <div class="avatar-preview preview-sm"></div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+                            <div class="col-md-9">
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/cropper/cropper.min.js"></script>
+<script src="../static/lib/sitelogo/sitelogo.js"></script>
+<script src="../src/js/personalcenter.js"></script>
+<script src="../static/lib/citypicker/city-picker.data.min.js"></script>
+<script src="../static/lib/citypicker/city-picker.min.js"></script>
+</html>

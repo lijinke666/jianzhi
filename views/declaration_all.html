@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>备案申报</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/declaration_member.css">
+</head>
+<body>
+<div class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</div>
+<!--导航-->
+<div class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">备案申报</a></li>
+                <li class="active">出口清单申报</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-info">
+                <ul class="declaration-options">
+                   <li class="active"><a href="#">所有表单 <span>20</span></a></li>
+                   <li><a href="#">已入库申报数据 <span>100</span></a></li>
+                </ul>
+                <div class="declaration-ctrl">
+                    <a class="ego-btn not-select" href="#">下载申报模板</a>
+                    <a href="#" class="note">查看填写说明</a>
+                    <div class="upload">
+                        <input id="bulkTemplateUpload" name="bulkTemplateUpload" type="file">
+                        <p><span class="iconfont icon-mobanshangchuan"></span> 模板上传</p>
+                    </div>
+                </div>
+                <table class="table table-hover table-bordered table-break allFormTable">
+                    <thead>
+                        <tr>
+                            <th>上传文件名</th>
+                            <th>上传时间</th>
+                            <th>当前状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>测试1.xlsx</td>
+                            <td>2016.11.11.111</td>
+                            <td>xxx</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>测试2.xlsx</td>
+                            <td>2016.11.11.111</td>
+                            <td>xxx</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>测试3.xlsx</td>
+                            <td>2016.11.11.111</td>
+                            <td class="error_info" data-error="xxx">excel格式错误</td>
+                            <td>
+                                <button type="button" class="ego-btn viewErrorBtn" data-target="#viewErrorInfo">查看错误信息</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>测试4.xlsx</td>
+                            <td>2016.11.11.111</td>
+                            <td>xxx</td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 丝路易购平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--新增商品-->
+<div class="modal fade" id="viewErrorInfo" tabindex="-1" role="dialog" aria-labelledby="viewErrorInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="viewErrorInfoLabel">查看错误信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer-ego">
+                    <button class="ego-btn" id="closeModal">知道了</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../src/js/public.js"></script>
+<script>
+    $('button.viewErrorBtn').on("click",function () {
+        var msg     = $(this).parent().parent().find('td.error_info').attr('data-error');
+        //添加字符串处理
+        var modal   = $('#viewErrorInfo');
+        modal.find('.modal-body').html(msg);
+        modal.modal();
+    });
+    $('#closeModal').on('click',function () {
+        $('#viewErrorInfo').modal('hide');
+    })
+</script>
+</html>

@@ -1,0 +1,125 @@
+/*顶部通栏*/
+.header-info{
+    min-width: 1200px;
+    height: 40px;
+    background-color: #E6E6E6;
+}
+.header-info-text{
+    width: 1200px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0 auto;
+    position: relative;
+}
+.header-info-item{
+    font-size: 14px;
+    margin-left: 30px;
+    float: right;
+}
+.header-info-item a,.header-info-item span{
+    color: #727272;
+}
+.header-info-item a:hover,.header-info-item a span:hover{
+    color: #e5821d;
+}
+/*logo*/
+.header-logo{
+    min-width: 1200px;
+    height: 100px;
+}
+.header-logo-contain{
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto;
+}
+.header-logo-contain>img{
+    float: left;
+    margin-top: 22px;
+}
+.header-log-reg{
+    float: right;
+    height: 100px;
+}
+.header-log-reg-btn{
+    margin-top: 30px;
+    width: 96px;
+    height: 35px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-size: 16px;
+}
+.header-log{
+    background-color: #e5821d;
+    margin-right: 14px;
+}
+.header-reg{
+    background-color: #344e87  ;
+}
+.header-user-center{
+    background-color: #e5821d;
+    width: 120px;
+    height: 42px;
+}
+.header-exitlog{
+    background-color: #344e87  ;
+    width: 120px;
+    height: 42px;
+}
+/*nav*/
+.header-nav{
+    position: relative;
+    min-width: 1200px;
+    height: 60px;
+    background-color: #344e87;
+    z-index: 1000;
+}
+.header-nav>ul{
+    width: 1200px;
+    margin: 0 auto;
+    height: 60px;
+}
+.header-navbar li{
+    position: relative;
+    float: left;
+    list-style:none;
+    width: 160px;
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    transition: all 200ms linear;
+    cursor: pointer;
+    overflow: hidden;
+}
+.header-nav>ul>li:hover{
+    height: auto;
+    overflow: visible;
+    background-color: #6c7fa6;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.header-nav>ul>li>a{
+    color: white;
+}
+.header-nav>ul>li>a:hover{
+    color: white;
+}
+.header-nav li>ul{
+    position: absolute;
+    background-color: #f4f3f3;
+}
+.header-nav li>ul li{
+    box-sizing: border-box;
+    border-bottom: 1px solid #b5b5b5;
+}
+.header-nav li>ul li>a{
+    color: #333;
+}
+.header-nav li>ul li:hover{
+    background-color: #e8e8e8;
+}

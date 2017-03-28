@@ -1,0 +1,146 @@
+/*网站信息*/
+.ego-site-info{
+    background-color: #3e5c9d;
+}
+.ego-site-info > div{
+    width: 1200px;
+    height: 277px;
+    margin: 0 auto;
+}
+.ego-site-item{
+    text-align: center;
+    padding-top: 119px;
+    margin-right: 115px;
+    color: white;
+    float: left;
+}
+.ego-site-item a{
+    color: inherit;
+}
+.ego-site-item a:hover{
+    color: #e5821d;
+}
+.ego-site-item h5{
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.ego-site-item h4{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.ego-site-item ul li{
+    font-size: 14px;
+    height: 26px;
+}
+/*.ego-site-item.about{
+    margin-left: 150px;
+}*/
+.ego-site-item.scan{
+    padding-top: 70px;
+    margin-right: 130px;
+}
+.ego-site-item.scan > p{
+    margin-top: 18px;
+}
+.ego-site-item.contact{
+    text-align: left;
+}
+
+/*小气泡*/
+.ego-footer-cinfo-item{
+    display: inline-block;
+    margin-top: 15px;
+    margin-right: 24px;
+    position: relative;
+}
+.ego-footer-cinfo-item > span {
+    font-size: 26px;
+}
+.ego-footer-cinfo-item:hover .ego-footer-poptips{
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    display: block\9;   /*ie8 scale 失效 换成block*/
+}
+.ego-footer-poptips{
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    display: none\9;
+    width: 150px;
+    height: 25px;
+    background-color: #e5821d;
+    border-radius: 10px;
+    position: absolute;
+    text-align: center;
+    top: -32px;
+    left: -64px;
+    -webkit-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -moz-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -ms-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    -o-transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transition: transform .35s cubic-bezier(.38,-0.03,.42,1.05);
+    transform-origin: center bottom;
+}
+.ego-footer-poptips p{
+    color: white;
+    font-size: 12px;
+    height: 25px;
+    line-height: 25px;
+}
+.ego-footer-littlearrow{
+    position: absolute;
+    left: 68px;
+    bottom: -16px;
+    height: 0;
+    width: 0;
+    border: 8px solid transparent;
+    border-top-color: #e5821d  ;
+}
+
+/*页尾*/
+.ego-footer{
+    background-color: #4764a4;
+}
+.ego-footer > div{
+    width: 1200px;
+    height: 85px;
+    margin: 0 auto;
+}
+.ego-footer p{
+    text-align: center;
+    height: 85px;
+    line-height: 85px;
+    color: white;
+    font-size: 14px;
+}
+/*回到顶部*/
+div.ego-back-top{
+    border-radius: 3px;
+    position: fixed;
+    right: 20px;
+    bottom: 120px;
+    text-align: center;
+    width: 60px;
+    height: 60px;
+    background-color: rgba(0,0,0,.6);
+    transform: scale(0);
+    transform-origin: center center;
+    transition: all 200ms linear;
+    cursor: pointer;
+}
+div.ego-back-top:hover{
+    background-color: #3a4b88;
+    transition: all 200ms linear;
+}
+div.ego-back-top span{
+    color: white;
+    font-size: 40px;
+    line-height: 50px;
+ }

@@ -1,0 +1,87 @@
+.ego-solution{
+    width: 100%;
+    background-color: white;
+}
+.ego-solution > div{
+    width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0 0 20px 0;
+    /*display: inline-block;*/
+}
+.ego-section-title{
+    padding: 73px 0 43px 0;
+    text-align: center;
+}
+.ego-solution-contain{
+    width: 100%;
+}
+.ego-solution-item{
+    float: left;
+    width: 285px;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+/*.ego-solution-item.delivery{
+    width: 795px;
+    margin-right: 15px;
+}*/
+/*.operate,.financial,.software{
+    margin-top: 15px;
+}*/
+.delivery,.operate,.financial{
+    margin-right: 20px;
+}
+.ego-solution-item .ego-solution-img{
+    width: 100%;
+    transform-origin: top center;
+    transition: all 600ms cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-solution-item .ego-solution-caption{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 73.33%;
+    background-color: rgba(0,0,0,.3);
+    color: white;
+    transition: all 300ms cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-solution-item .ego-solution-caption a{
+    color: inherit;
+}
+.ego-solution-item .ego-solution-caption a:hover{
+    color: #e5821d;
+}
+.ego-solution-item .ego-solution-caption h3{
+    height: 80px;
+    line-height: 80px;
+}
+.ego-solution-item .ego-solution-caption ul{
+    margin-top: 10px;
+}
+.ego-solution-item .ego-solution-caption ul li{
+   line-height: 36px;
+    font-size: 18px;
+}
+.ego-solution-item .ego-solution-caption p{
+   font-size: 16px;
+    margin: 10px 0;
+}
+/*移入效果*/
+.ego-solution-item:hover{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .7);
+}
+.ego-solution-item:hover .ego-solution-img{
+    margin-top: -20%;
+    transform-origin: top center;
+    transition: all 600ms cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-solution-item:hover .ego-solution-caption{
+    background-color: rgba(0,0,0,.7);
+    transition: all 300ms cubic-bezier(.38,-0.03,.42,1.05);
+    top:0;
+}

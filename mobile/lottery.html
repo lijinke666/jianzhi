@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no" >
+    <link rel="stylesheet" href="../static/lib/weui.min.css">
+    <title>易购幸运大转盘</title>
+    <style type="text/css">
+        h1,h2,h3,h4,h5,h6,ul,p{
+            margin: 0;
+            padding: 0;
+        }
+        a:link,a:visited,a:hover,a:active{ color: inherit; text-decoration: none;  }
+        a:hover{
+            color: inherit;
+        }
+        @media screen and (min-width: 320px) {
+            html {font-size: 14px;}
+        }
+
+        @media screen and (min-width: 360px) {
+            html {font-size: 16px;}
+        }
+
+        @media screen and (min-width: 400px) {
+            html {font-size: 18px;}
+        }
+
+        @media screen and (min-width: 440px) {
+            html {font-size: 20px;}
+        }
+
+        @media screen and (min-width: 480px) {
+            html {font-size: 22px;}
+        }
+
+        @media screen and (min-width: 640px) {
+            html {font-size: 28px;}
+        }
+        body{
+            background: url("../static/image/xmas/moilebg.jpg") no-repeat;
+            background-size: cover;
+            margin: 0;
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+        .container{
+            width: 100%;
+            text-align: center;
+            padding: 0 5% 0;
+            margin: 0 auto;
+            box-sizing: border-box;
+            position: relative;
+        }
+        .container.header > img{
+            width: 60%;
+            padding-top: 25%;
+        }
+        .container.body > div.imgContainer{
+            width: 70%;
+            position: absolute;
+            left: 50%;
+            top: 0;
+        }
+        .container.body > div.imgContainer > img{
+            width: 100%;
+        }
+        .container.notice{
+            margin-top: 20px;
+            color: white;
+        }
+        .container.notice > h4,p{
+            line-height: 1.5;
+        }
+        .container.notice > span{
+            color: #ffeb12;
+            font-size: 0.5em;
+        }
+        div.layer{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,.6);
+            text-align: center;
+            -webkit-transform: scale(0);
+            -moz-transform: scale(0);
+            -ms-transform: scale(0);
+            -o-transform: scale(0);
+            transform: scale(0);
+            -webkit-transition: all ease-in-out 200ms;
+            -moz-transition: all ease-in-out 200ms;
+            -ms-transition: all ease-in-out 200ms;
+            -o-transition:all ease-in-out 200ms;
+            transition: all ease-in-out 200ms;
+        }
+        div.layer div.input{
+            width: 70%;
+            margin: 50% auto 0;
+            background-color: white;
+            -webkit-border-radius:5px;
+            -moz-border-radius:5px;
+            border-radius:5px;
+        }
+        div.layer div.input h4{
+            padding: 15px 15px;
+            font-size: 1.25em;
+        }
+        div.layer div.input div.notice{
+            text-align: left;
+            color: #a7a7a7;
+            font-size: .75em;
+            padding: 5px 15px;
+            line-height: 1.25;
+        }
+        div.layer div.input div.notice > a{
+            color: #3CC51F;
+        }
+        div.layer div.input div.button{
+            padding: 10px 15px;
+        }
+        div.layer div.input div.button > button{
+            width: 100%;
+            border: none;
+            height: 45px;
+            box-sizing: border-box;
+            border-radius: 5px;
+            background-color: #3CC51F;
+            color: white;
+            font-size: 1em;
+            outline: none;
+        }
+        .cell{
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px 15px;
+        }
+        .cell input{
+            width: 100%;
+            height: 45px;
+            border: 1px solid #dddddd;
+            padding-left: 5px;
+            font-size: 1em;
+        }
+    </style>
+
+</head>
+<body ontouchstart="">
+
+
+
+
+    <div class="container header">
+        <img src="../static/image/lottery/text.png">
+    </div>
+    <div class="container body">
+        <div class="imgContainer">
+            <img class="bg" id="bg" src="../static/image/lottery/bg1.png">
+        </div>
+        <div class="imgContainer">
+            <img class="pointer" id="pointer" src="../static/image/lottery/pointer.png" >
+        </div>
+        <div class="imgContainer">
+            <img class="pointer" id="startBtn" src="../static/image/lottery/startBtn.png">
+        </div>
+    </div>
+    <div class="container notice">
+        <h4>活动规则</h4>
+        <p>本抽奖活动截止日期为2017年1月10日 <br>
+            每位用户可参加抽奖一次
+        </p>
+        <span>*本活动最终解释权归丝路易购所有</span>
+    </div>
+    <div class="layer">
+        <div class="input">
+            <h4>请输入您的手机号码</h4>
+            <div class="cell">
+                <input id="phoneNumber" type="text" placeholder="请输入您的手机号码">
+            </div>
+            <div class="notice">
+               *用于丝路工作人员联系中奖人<br>*手机号需已注册丝路易购<br>
+                若仍未注册可以 <a href="http://www.egoint.com/wap">立即注册</a>
+            </div>
+            <div class="button">
+                <button type="button" id="lotteryStart">开始抽奖</button>
+            </div>
+        </div>
+    </div>
+    <!--弹出框-->
+    <div id="dialogs">
+        <div class="js_dialog" id="ego_alert" style="display: none;">
+            <div class="weui-mask"></div>
+            <div class="weui-dialog">
+                <div class="weui-dialog__bd"></div>
+                <div class="weui-dialog__ft">
+                    <a href="javascript:;" class="weui-dialog__btn" style="color: #0bb20c">知道了</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/jQueryRotate.2.2.js"></script>
+<script src="../static/lib/jquery.easing.min.js"></script>
+<script>
+    var flag = true;
+    //页面样式初始化
+    function pageInit() {
+        var height = $(window).height();
+        var con  = $('div.imgContainer');
+        var conWidth = con.width();
+        $('body').css({
+            height: height
+        });
+        $('div.container.body').height(con.height());
+        con.css({
+            marginLeft:(-conWidth*0.5)+'px'
+        });
+        $('div.layer').css({
+            transform:'scale(1)'
+        })
+    }
+    function hideLayer() {
+        $('div.layer').css({
+            transform:'scale(0)'
+        })
+    }
+    //打开提示框
+    function egoAlert(msg) {
+        var $alert = $('#ego_alert');
+        $alert.find('div.weui-dialog__bd').html(msg);
+        $alert.fadeIn(200);
+    }
+    //关闭提示框
+    $('#dialogs').on('click', '.weui-dialog__btn', function(){
+        $(this).parents('.js_dialog').fadeOut(200);
+    });
+
+    $(document).ready(function () {
+        //页面样式初始化
+        pageInit();
+        //验证手机
+        $('#lotteryStart').on('click',function () {
+            var phone    = $('#phoneNumber').val();
+            var phoneReg = /^1[34578]\d{9}$/;
+            if(phoneReg.test(phone)){
+                hideLayer();
+                /*$.ajax({
+                 url: "",
+                 type: "",
+                 data:{},
+                 dataType: "json",
+                 beforeSend:function(){
+
+                 },
+                 success: function (data) {
+
+                 },
+                 error: function () {
+
+                 }
+                 });*/
+            }else {
+                egoAlert('请输入正确的手机号');
+                return false;
+            }
+        });
+        $("#startBtn").rotate({
+            bind:{
+                click:function(){//绑定click单击事件
+                    var a = Math.random()*360;
+                    if(flag){
+                        $('#bg').rotate({
+                            duration:10000,//转动时间间隔（转动速度）
+                            angle: 0,  //开始角度
+                            animateTo:1800+a, //转动角度，10圈+
+                            easing: $.easing.easeOutExpo, //动画扩展
+                            callback: function(){ //回调函数
+                                setTimeout(egoAlert('厉害了我的哥'),200)
+                                flag = false;
+                            }
+                        });
+                    }else {
+                        egoAlert('您已经参加过本次活动啦~')
+                    }
+                }
+            }
+        });
+    });
+</script>
+</html>

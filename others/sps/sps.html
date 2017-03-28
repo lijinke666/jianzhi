@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPS面单</title>
+    <link rel="stylesheet" href="../../static/lib/bootstrap.css">
+    <style>
+        body>div>table:not(:first-child){
+            margin-top: 10px;
+        }
+        table.waybillitem:not(:first-child){
+            margin-top: 10px;
+        }
+        tr, td {
+            box-sizing: border-box;
+        }
+        td{
+            line-height: 0;
+        }
+        .waybillitem{
+            height: 127mm;
+            font-size: 0.5em;
+            border: 1px solid black;
+        }
+        .bordered{
+            border-bottom: 1px solid black;
+        }
+        .border-right{
+            border-right: 1px solid black;
+        }
+        .address-padding{
+            padding: 3px 5px;
+        }
+        .spsTitle{
+            text-align: center;
+            font-size: 1em;
+            font-weight: 900;
+            padding: 5px 10px;
+        }
+        .qrcode{
+            border-left: 1px solid black;
+            text-align: center;
+            padding: 5px ;
+        }
+        td.fBAR > img{
+            height: 30px;
+        }
+        td.secBarCode,td.thirdBarCode{
+            text-align: center;
+        }
+        td.secBarCode > img,td.thirdBarCode > img{
+           height: 30px;
+        }
+        p{
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div align="center">
+        <table class="waybillitem" cellpadding="0" cellspacing="0">
+        <!--头部-->
+        <tr class="bordered">
+            <td colspan="12" style="padding: 0">
+                <table width="100%">
+                    <tr>
+                        <td width="30%" class="border-right">
+                            <p class="spsTitle">
+                                SPS<br>快递包裹
+                            </p>
+                        </td>
+                        <td  width="70%" style="padding: 2px 10px" class="fBAR">
+                            <img src="barcode.png" >
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--寄件-->
+        <tr class="bordered">
+            <td colspan="12" class="address-padding">
+                <table width="100%">
+                    <tr>
+                        <td width="10%" valign="top">寄件:</td>
+                        <td width="90%">
+                            <div><span>Thomas Tally</span>&nbsp;<span>023-25161425</span></div>
+                            <div>NO5,Sunny street</div>
+                            <div>Hamburg,Germany</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--收件-->
+        <tr class="bordered">
+            <td colspan="12" class="address-padding">
+                <table width="100%">
+                    <tr>
+                        <td width="10%" valign="top">收件:</td>
+                        <td width="90%">
+                            <div>汪新爱 18990555440</div>
+                            <div>安徽省 马鞍山市</div>
+                            <div>安徽省马鞍山市康嘉大景城16栋904</div>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--付款-->
+        <tr class="bordered">
+            <td colspan="12">
+                <table width="100%">
+                    <tr>
+                        <td width="40%" class="border-right">
+                            <p style="padding: 0 3px">付款方式：</p>
+                            <p style="padding: 0 3px">计费重量：</p>
+                            <p style="padding: 0 3px">报价金额：</p>
+                        </td>
+                        <td width="60%" style="padding: 5px 5px" valign="top">
+                            <p>
+                                <span>收件人：</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span>代收人：</span>
+                            </p>
+                            <p>
+                                <span>签收时间：</span><b    r/>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;年
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;月
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;日
+                                &nbsp;&nbsp;
+                                &nbsp;&nbsp;时
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--订单号-->
+        <tr class="bordered">
+            <td colspan="12">
+                <table width="100%">
+                    <tr >
+                        <td valign="top" style="padding: 3px 3px">订单号</td>
+                        <td style="padding: 3px 0 3px 5px" class="secBarCode">
+                            <img src="bar-short.png" alt="">
+                        </td>
+                        <td valign="top" style="padding: 3px 0">
+                            件数：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+                            重量：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" style="padding: 0 3px">
+                            配货信息：德国爱他美白金版800克2段
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <!--barcode-->
+        <tr class="bordered">
+            <td colspan="3"></td>
+            <td colspan="9" style="padding: 3px 10px" class="thirdBarCode">
+                <img src="bar-short.png" alt="">
+            </td>
+        </tr>
+        <!--收寄-->
+        <tr class="bordered">
+            <td colspan="12">
+                <table width="100%">
+                    <tr valign="top">
+                        <td width="50%" class="border-right">
+                            <p>寄件</p>
+                            <p style="margin-left: 10px">
+                                Hamburg,Germany<br/>
+                                转四川省成都市双流航空港<br/>
+                                黄河中路一段149号<br/>
+                                028-65596899
+                            </p>
+                        </td>
+                        <td width="50%">
+                            <p>收件</p>
+                            <p style="margin-left: 10px">
+                                王新爱 18990555440<br/>
+                                安徽省 马鞍山市<br/>
+                                安徽省马鞍山市康嘉大景城16栋904
+                            </p>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+        </tr>
+        <!--note-->
+        <tr>
+            <td colspan="12">
+                <table width="100%">
+                    <tr>
+                        <td style="padding: 3px 5px" class="bordered">备注：全程陆运</td>
+                        <td rowspan="2" class="qrcode">
+                            <img src="qr.png" alt="">
+                        </td>
+                    </tr>
+                    <tr >
+                        <td style="padding: 3px 5px">
+                            网址：www.ems.com.cn 客服电话11183
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    </div>
+
+</body>
+</html>

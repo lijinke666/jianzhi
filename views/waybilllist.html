@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>运单列表</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/datapicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="../src/css/waybilllist.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">我要寄件</a></li>
+                <li class="active">运单列表</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-info">
+                <div class="waybill-contain">
+                    <!--总览-->
+                    <div class="waybill-overview not-select">
+                        <div class="waybill-overview-item way-overview-active"><a href="">全部</a></div>
+                        <div class="waybill-overview-item"><a href="">待提交 <span>5</span></a></div>
+                        <div class="waybill-overview-item"><a href="">处理中 <span>5</span></a></div>
+                        <div class="waybill-overview-item"><a href="">待付款 <span>5</span></a></div>
+                    </div>
+                    <!--运单查询条件-->
+                    <form action="">
+                        <div class="waybill-search">
+                            <p>发运时间：</p>
+                            <div class="way-date-item">
+                                <div class="input-group date" id="start_date" data-date-format="dd-mm-yyyy">
+                                    <input type="text"
+                                           class="form-control"
+                                           name="start_date"
+                                           placeholder="开始时间">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="way-date-item">
+                                <div class="input-group date" id="end_date" data-date-format="dd-mm-yyyy">
+                                    <input type="text"
+                                           class="form-control"
+                                           name="end_date"
+                                           placeholder="结束时间">
+                                    <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-th"></span>
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="way-bill-options">
+                                <input type="text"
+                                       placeholder="运单号/订单号"
+                                       name="BillNo">
+                            </div>
+                            <button class="ego-btn waybill-search-btn">查询</button>
+                        </div>
+                    </form>
+                    <!--功能按钮-->
+                    <div class="waybill-list-operation">
+                        <button class="ego-btn wbo-btn wbo-btn-active" id="bulkSendOutBtn">批量发货</button>
+                        <button class="ego-btn wbo-btn" id="openDomesticNumber">回填国内单号</button>
+                        <button class="ego-btn wbo-btn" id="deleteConfirmBtn"><a href="#">删除</a></button>
+                        <button class="ego-btn wbo-btn" id="openPrintBill">打印面单</button>
+                        <button class="ego-btn wbo-btn"><a href="#">导出明细</a></button>
+                    </div>
+                    <!--运单列表-->
+                    <div class="waybill-list">
+                        <div class="waybill-list-table">
+                            <table class="table table-hover table-break">
+                                <thead>
+                                <tr>
+                                    <th class="way-table-check"><input type="checkbox" class="waybill-check-ctrl"></th>
+                                    <th class="way-table-fixWidth">时间</th>
+                                    <th>单号</th>
+                                    <th>路线</th>
+                                    <th class="way-table-fixWidth">入仓重量</th>
+                                    <th class="way-table-fixWidth">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn waybill-state-btn dropdown-toggle" data-toggle="dropdown">
+                                                物流状态<span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">待发货</a></li>
+                                                <li><a href="#">国内发货</a></li>
+                                                <li><a href="#">仓库收货</a></li>
+                                                <li><a href="#">国际发货</a></li>
+                                                <li><a href="#">运输中</a></li>
+                                                <li><a href="#">已签收</a></li>
+                                                <li><a href="#">问题件</a></li>
+                                            </ul>
+                                        </div>
+                                    </th>
+                                    <th class="way-table-fixWidth">
+                                        <div class="btn-group">
+                                            <button type="button" class="btn waybill-state-btn dropdown-toggle" data-toggle="dropdown">
+                                                支付状态<span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" role="menu">
+                                                <li><a href="#">预充值不足</a></li>
+                                                <li><a href="#">正常</a></li>
+                                                <li><a href="#">已付款</a></li>
+                                                <li><a href="#">余额不足</a></li>
+                                            </ul>
+                                        </div>
+                                    </th>
+                                    <th class="way-table-fixWidth">附加费用</th>
+                                    <th style="width:200px">操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <input type='hidden'   name="product_id"   value="11">
+                                        <input type="checkbox" name="checkWayBill" value="111">
+                                    </td>
+                                    <td>2016-11-03</td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>订单号：<span>1</span></p>
+                                            <p>运单号：<span class="waybillNumberSpan">ET16110353184324265111111</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>出口：中国-阿尔及利亚</p>
+                                            <p>邮政-中邮小包</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>1.00kg</p>
+                                        <p>￥165.60</p>
+                                    </td>
+                                    <td>待发货</td>
+                                    <td>待付款</td>
+                                    <td></td>
+                                    <td class="waybill-modify">
+                                        <form action="">
+                                        <button type="button" class="ego-btn btn-sm btn-primary send">确认发货</button>
+                                        <button type="button" class="ego-btn btn-sm btn-primary edit" data-href="/logistic/index/edit_export/id/1212">编辑</button>
+                                        <button type="button" class="ego-btn btn-sm btn-primary delete"> 删除 </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type='hidden'   name="product_id"   value="11">
+                                        <input type="checkbox" name="checkWayBill" value="111">
+                                    </td>
+                                    <td>2016-11-03</td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>订单号：<span>1</span></p>
+                                            <p>运单号：<span class="waybillNumberSpan">ET16110353184324265111111</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>出口：中国-阿尔及利亚</p>
+                                            <p>邮政-中邮小包</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>1.00kg</p>
+                                        <p>￥165.60</p>
+                                    </td>
+                                    <td>待发货</td>
+                                    <td>待付款</td>
+                                    <td></td>
+                                    <td class="waybill-modify">
+                                        <form action="">
+                                            <button type="button" class="ego-btn btn-sm btn-primary send">确认发货</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary" data-href="/logistic/index/edit_export/id/1212">编辑</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary delete"> 删除 </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type='hidden'   name="product_id"   value="11">
+                                        <input type="checkbox" name="checkWayBill" value="111">
+                                    </td>
+                                    <td>2016-11-03</td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>订单号：<span>1</span></p>
+                                            <p>运单号：<span class="waybillNumberSpan">ET16110353184324265111111</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>出口：中国-阿尔及利亚</p>
+                                            <p>邮政-中邮小包</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>1.00kg</p>
+                                        <p>￥165.60</p>
+                                    </td>
+                                    <td>待发货</td>
+                                    <td>待付款</td>
+                                    <td></td>
+                                    <td class="waybill-modify">
+                                        <form action="">
+                                            <button type="button" class="ego-btn btn-sm btn-primary send">确认发货</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary" data-href="/logistic/index/edit_export/id/1212">编辑</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary delete"> 删除 </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <input type='hidden'   name="product_id"   value="11">
+                                        <input type="checkbox" name="checkWayBill" value="111">
+                                    </td>
+                                    <td>2016-11-03</td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>订单号：<span>1</span></p>
+                                            <p>运单号：<span class="waybillNumberSpan">ET16110353184324265111111</span></p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="waybill-centerfix">
+                                            <p>出口：中国-阿尔及利亚</p>
+                                            <p>邮政-中邮小包</p>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <p>1.00kg</p>
+                                        <p>￥165.60</p>
+                                    </td>
+                                    <td>待发货</td>
+                                    <td>待付款</td>
+                                    <td></td>
+                                    <td class="waybill-modify">
+                                        <form action="">
+                                            <button type="button" class="ego-btn btn-sm btn-primary send">确认发货</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary" data-href="/logistic/index/edit_export/id/1212">编辑</button>
+                                            <button type="button" class="ego-btn btn-sm btn-primary delete"> 删除 </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="ego-pagination-contain">
+                            <!-- 输出的分页放在这个div里面-->
+                            <ul class="pagination">
+                                    <li><a href="#"><<</a></li>
+                                    <li class="active"><a href="#">1</a></li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">>></a></li>
+                            </ul>
+                        </div>
+                        <!--<div class="waybill-recharge clearfix">
+                            <button class="ego-btn waybill-recharge-btn">充值</button>
+                            <p>截止到
+                            <span>2016-11-03</span>：您共有5票运单未扣款，
+                            总金额￥<span>10380.24</span>
+                            最低充值金额不得低于 <span>10380.24</span>元</p>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--
+&lt;!&ndash;回填单号&ndash;&gt;
+<div class="modal fade" id="domesticNumber" tabindex="-1" role="dialog" aria-labelledby="domesticNumberLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="domesticNumberLabel">回填国内单号</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <table class="table domesticNumberTable">
+                        <thead>
+                            <tr>
+                                <td>易购单号</td>
+                                <td>国内单号</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            &lt;!&ndash;<tr>
+                                <td>Lxxxxxxxx</td>
+                                <td>
+                                    <input type="hidden" name="egoNumber">
+                                    <input type="text"
+                                           name="domesticNumber"
+                                           placeholder="">
+                                </td>
+                            </tr>&ndash;&gt;
+                        </tbody>
+                    </table>
+                    <div class="domesticNumber-footer">
+                        <button class="ego-btn domesticNumber-submit">提交</button>
+                        <p>*请正确填写单号，方便仓库收货</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+&lt;!&ndash;打印面单&ndash;&gt;
+<div class="modal fade alertModal" id="printExpressBill" tabindex="-1" role="dialog" aria-labelledby="printExpressBillLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="printExpressBillLabel">打印设置</h4>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="printBillType">
+                       <h4>请选择打印标签类型：</h4>
+                       <p>
+                           <label>
+                                <input type="radio" name="printWay" value="normal" checked="checked">标准标签纸(邮政类面单4*4，其他面单10*10)
+                           </label>
+                       </p>
+                       <p>
+                           <label>
+                               <input type="radio" name="printWay" value="a4">A4纸
+                           </label>
+                       </p>
+                        <input type="hidden" id="printbill-ids">
+                    </div>
+                    <div>
+                        <button type="button" class="ego-btn printExpressBill-btn" id="confirmPrint">打印</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+-->
+<!--发货提示-->
+<div class="modal fade alertModal" id="bulkSendOut" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="bulkSendOutLabel">批量发货</h4>
+            </div>
+            <div class="modal-body">
+                <div class="printBillType">
+                    <h4>账户余额信息:</h4>
+                    <p class="waybill-account-money">
+                        当前余额: <span class="nowBalance">￥550</span>
+                    </p>
+                   <!-- <p class="waybill-account-money">
+                        发货所需: <span class="needBalance">￥640</span>
+                    </p>
+                    <p class="waybill-account-notice" style="display: none">
+                        <span class="iconfont icon-tishi"></span> 余额不足，请充值
+                    </p>-->
+                    <label class="couponLabel" style="display: none">可用优惠券:
+                        <select name="couponChoose">
+                            <!--<option value="50">满1000减50</option>
+                            <option value="30">满300减30</option>
+                            <option value="20">立减20</option>-->
+                        </select>
+                    </label>
+                </div>
+                <div>
+                    <button class="ego-btn bulkSendOut-btn bulk-cancel">取消</button>
+                    <button class="ego-btn bulkSendOut-btn bulk-confirm">确认</button>
+                    <button class="ego-btn bulkSendOut-btn bulk-recharge" style="display: none">充值</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/datapicker/bootstrap-datetimepicker.js"></script>
+<script src="../static/lib/datapicker/bootstrap-datetimepicker.zh-CN.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/waybilllist.js"></script>
+
+</html>
+

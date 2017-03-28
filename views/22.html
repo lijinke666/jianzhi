@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+* {
+    margin: 0;
+    padding: 0;
+}
+.main-wrap {
+    position: absolute;
+    width: 100%;
+    top: 50px;/*等于header高度*/
+    bottom: 100px;/*等于footer高度*/
+    overflow: scroll;
+    background-color: #00bbff;
+}
+.header,.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: yellow;
+    text-align: center;
+    font-size: 3em;
+}
+.header {
+    height: 50px;/*等于main-wrap的top值*/
+    top: 0;
+}
+.footer {
+    height: 100px;/*等于main-wrap的bottom值*/
+    bottom: 0;
+}
+        #clickItem{
+            height: 100px;
+            background-color: #0a8226;
+        }
+    </style>
+</head>
+<body>
+<div id="clickItem"></div>
+<script>
+    var clickDiv = document.getElementById("clickItem");
+    function handler(){
+        alert(this.id+" clicked!");
+    }
+    function handler2(){
+        alert(this.id+" clicked again!");
+    }
+    //第一个参数：事件类型，需要加上"on"前缀
+    //第二个参数：处理程序
+    clickDiv.attachEvent('onclick',handler);
+    //可以添加多个处理程序，与DOM不同，IE按照添加顺序的反序执行，这里先输出again
+    clickDiv.attachEvent('onclick',handler2);
+    //IE事件处理程序移除
+    clickDiv.detachEvent('onclick',handler)
+</script>
+    <div class="main-wrap clearfix">
+        <div class="content">
+            <!--内容-->
+        </div>
+    </div>
+    <div class="footer">
+        <p>footer</p>
+    </div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script>
+/*var div = document.getElementById('myDiv');
+div.id          // id
+div.className   // class
+div.title       // 附加说明
+div.lang        // 语言
+div.dir         // 文字方向
+//获取特性 attributeName = id、class、title、lang、dir及data-xx
+div.getAttribute(attributeName)
+//区别：获取样式和事件处理时
+div.getAttribute('style')  //返回css字符串
+div.style                  //返回一个style对象
+
+div.getAttribute('onclick')//返回函数字符串
+div.onclick                //返回一个js函数
+
+//设置特性
+div.setAttribute(attributeName,value)
+//attributes属性 元素所有特性的动态集合(一个NamedNodeMap对象)
+div.attributes.getNamedItem(attributeName).nodeValue    //获取或设置特性的值
+div.attributes.removeNamedItem(attributeName).nodeValue //删除给定名称的特性，并返回特性节点
+div.attributes.setNamedItem(attributeName)              //新增一个特性
+div.attributes.item(pos).nodeValue                      //返回pos位置的节点
+
+
+    document.createElement(tagName);
+    document.createElement('<div id=\"myNewDiv\"></div>'); //IE特有
+    document.createDocumentFragment()
+
+//选择符
+document.querySelector(CssSelector)     //返回匹配的第一个元素
+document.querySelectorAll(CssSelector)  //返回匹配元素的Nodelist
+
+//class获取
+var eleList = ele.getElementsByClassName(className);
+
+
+//元素遍历
+ele.childElementCount //返回子元素的个数
+ele.firstElementChild //第一个子元素，firstChild的元素版
+ele.lastElementChild //最后一个子元素，lastChild的元素版
+ele.previousElementSibling //前一个兄弟元素 previousSibling元素版
+ele.nextElementSibling //后一个兄弟63333323454元素 nextSibling 元素版
+ele.classList.add(className)        //添加一个类
+ele.classList.contains(className)   //是否包含一个类
+ele.classList.remove(className)     //移除一个类
+ele.classList.toggle(className)     //有，移除/没有，添加
+
+    ele.innerHTML
+    ele.outerHTML
+
+    ele.style.[驼峰写法的css属性]
+ele.style.width = "100px"
+ele.style.height = "50px"
+ele.style.backgroundColor = "red"
+ele.style.borderBottom = "1px solid black"
+
+    document.defaultView.getComputedStyle(ele,[null][":after"])
+    ele.currentStyle*/
+</script>
+</html>

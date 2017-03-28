@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/reg.css">
+    <link rel="stylesheet" href="../static/lib/fontAwesome/css/font-awesome.css">
+</head>
+<body>
+    <!--头部-->
+    <header class="regLogin-header">
+        <div class="regLogin-header-contain">
+            <img src="../static/image/index/header/LOGO.png" alt="">
+        </div>
+    </header>
+    <!--中间部分-->
+    <section class="regLogin-main">
+        <div class="regLogin-mainWrap">
+            <div class="regLogin-box-bg">
+                <div class="reg-box">
+                    <div class="reg-box-title">
+                        新用户注册
+                    </div>
+                    <div class="reg-box-change">
+                        <div class="reg-way reg-way-active" id="mobile"><i class="iconfont">&#xe60b;</i><span>手机号注册</span></div>
+                        <div class="reg-way" id="email"><i class="iconfont">&#xe668;</i><span>邮箱注册</span></div>
+                    </div>
+                    <div class="reg-panel">
+                            <form action="" id="reg-form">
+                                <table>
+                                    <tr class="option-phone">
+                                        <td class="reg-form-left"><label for="user_login_phone">手机号码：</label></td>
+                                        <td class="reg-form-right" colspan="2"><input type="text" placeholder="请输入手机号" id="user_login_phone" name="user_login_phone"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reg-form-left"><label for="user_name">用户名称：</label></td>
+                                        <td class="reg-form-right" colspan="2"><input type="text" placeholder="请填写用户名称" id="user_name" name="user_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reg-form-left"><label for="user_pass">设置密码：</label></td>
+                                        <td class="reg-form-right" colspan="2"><input type="text" placeholder="请填写密码，6-18位" id="user_pass" name="user_pass"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reg-form-left"><label for="user_pass_confirm">重复密码：</label></td>
+                                        <td class="reg-form-right" colspan="2"><input type="text" placeholder="请再次输入密码" id="user_pass_confirm" name="user_pass_confirm"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reg-form-left"><label for="img_code">图形验证：</label></td>
+                                        <td class="reg-form-middle"><input type="text" placeholder="请输入图形验证码" id="img_code" name="img_code" maxlength="4"></td>
+                                        <td><div>图形</div></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="reg-form-left"><label for="verify_code">短信验证：</label></td>
+                                        <td class="reg-form-middle"><input type="text" placeholder="请输入短信验证码" id="verify_code" name="verify_code" maxlength="4"></td>
+                                        <td><button class="reg-getCode reg-getCode-disabled" disabled="disabled" >获取验证码</button></td>
+                                    </tr>
+                                </table>
+                                <p class="reg-protocol">点击注册，代表已经阅读并接受<a href="">《用户服务协议》</a></p>
+                                <button class="reg-goReg">
+                                    立即注册
+                                </button>
+                                <p class="reg-goLogin">已有账号？<a href="">立即登录>></a></p>
+                            </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--页尾-->
+    <footer class="ego-footer">
+        <div class="ego-footer-contain">
+            <div class="ego-footer-item ego-footer-about">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="">公司简介</a></li>
+                    <li><a href="">主营业务</a></li>
+                    <li><a href="">咨询我们</a></li>
+                </ul>
+            </div>
+            <div class="ego-footer-item ego-footer-newscenter">
+                <h5>新闻中心</h5>
+                <ul>
+                    <li><a href="">通知公告</a></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">培训回顾</a></li>
+                </ul>
+            </div>
+            <div class="ego-footer-item ego-footer-scan">
+                <img src="../static/image/index/footer/QR-code.png" alt="">
+                <p>
+                    扫描关注丝路易购订阅号<br/>
+                    随时获知一手平台资讯
+                </p>
+            </div>
+            <div class="ego-footer-item ego-footer-contact">
+                <h5>联系我们</h5>
+                <ul>
+                    <li>服务时间:09:00-18:00</li>
+                    <li>服务热线:028-65596899</li>
+                </ul>
+                <div class="ego-footer-conn-info">
+                    <div class="ego-footer-cinfo-item">
+                        <div class="ego-footer-icon">
+                            <!--<img src="../static/image/index/footer/company-Icon.png" alt="">-->
+                        </div>
+                        <div class="ego-footer-poptips">
+                            <p>四川丝路易购科技有限公司</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                    <div class="ego-footer-cinfo-item">
+                        <div class="ego-footer-icon">
+                            <!--<img src="../static/image/index/footer/address-Icon.png" alt="">-->
+                        </div>
+                        <div class="ego-footer-poptips">
+                            <p>成都市天府软件园D5-4</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                    <div class="ego-footer-cinfo-item">
+                        <div class="ego-footer-icon">
+                            <!--<img src="../static/image/index/footer/mailbox-Icon.png" alt="">-->
+                        </div>
+                        <div class="ego-footer-poptips">
+                            <p>6555555@126.com</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="ego-footer-siteinfo">
+            <p>Copyright © 2016 丝路易购平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+        </div>
+    </footer>
+
+
+
+</body>
+    <script src="../static/lib/jquery.js"></script>
+    <script src="../static/lib/bootstrap.js"></script>
+    <script src="../static/lib/jquery.validate.min.js"></script>
+    <script src="../src/js/reg.js"></script>
+<script>
+
+
+</script>
+</html>

@@ -1,0 +1,120 @@
+.ego-custom-banner{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.ego-custom-banner > img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.ego-declaration{
+    background-color: #fafafa;
+}
+.ego-declaration-advantage{
+    margin: 0 auto;
+    width: 1200px;
+    height: 164px;
+}
+.ego-declaration-advantage li{
+    float: left;
+    width: 400px;
+    line-height: 164px;
+    font-size: 20px;
+}
+.ego-declaration-advantage li:nth-of-type(2){
+    padding-left: 120px;
+}
+.ego-declaration-advantage li:nth-of-type(3){
+    padding-left: 150px;
+}
+.ego-declaration-advantage li span{
+    font-size: 60px;
+    color: #e5821d;
+    float: left;
+    margin-right: 10px;
+}
+/*服务内容*/
+.ego-declaration-info > div{
+    box-sizing: content-box;
+    width: 1200px;
+    margin: 0 auto;
+    border: 1px solid #dddddd;
+    background-color: white;
+    padding: 90px 0;
+    text-align: center;
+}
+.ego-declaration-service{
+    margin-top: 80px;
+    overflow: hidden;
+}
+.ego-declaration-service .item{
+    width: 400px;
+    text-align: center;
+    float: left;
+}
+.ego-declaration-service .item h3{
+    color: #3e5c9d;
+    margin-bottom: 16px;
+}
+.ego-declaration-service .item ul{
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+.ego-declaration-service .item ul li{
+    font-size: 16px;
+    line-height: 32px;
+}
+/*服务形式*/
+.ego-declaration-form{
+    padding: 60px 70px 0;
+    overflow: hidden;
+}
+.ego-declaration-form .item{
+    text-align: center;
+    width: 480px;
+    float: left;
+}
+.ego-declaration-form .item:first-child{
+    margin-right: 100px;
+}
+.ego-declaration-form .item > h3{
+    font-size: 22px;
+    font-weight: bold;
+}
+.ego-declaration-form .item > p{
+    font-size: 18px;
+    color: #333;
+    margin: 20px 0 32px 0;
+}
+.ego-declaration-form .item > div{
+    border: 2px solid #dddddd;
+}
+.ego-declaration-form .item > div .title{
+    height: 52px;
+    color: white;
+    background-color: #3e5c9d;
+    font-size: 20px;
+    line-height: 52px;
+}
+.ego-declaration-form .item > div ul{
+    text-align: left;
+    padding: 50px 0 40px 40px;
+}
+.ego-declaration-form .item > div ul li{
+    font-size: 16px;
+    line-height: 40px;
+}
+.ego-declaration-form .item > div ul li span{
+    color: #3e5c9d;
+    margin-right: 10px;
+}
+.ego-declaration-info > div > button{
+    width: 300px;
+    height: 50px;
+    margin-top: 60px;
+    font-size: 16px;
+    color: white;
+    background-color: #e5821d;
+}

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>资金明细</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/datapicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="../src/css/financialdetails.css">
+</head>
+<body>
+<section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</section>
+<!--导航-->
+<nav class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">我的资产</a></li>
+                <li class="active">资产明细</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>资产明细</span>
+            </div>
+            <div class="person-center-info">
+                <!--左侧信息导航-->
+                <div class="person-center-info-left not-select">
+                    <ul>
+                        <li class="person-center-active"><a href="#">资产明细</a></li>
+                        <li><a href="#">账户充值</a></li>
+                        <li><a href="#">账户提现</a></li>
+                    </ul>
+                </div>
+                <!--右侧信息显示-->
+                <div class="person-center-info-right">
+                    <div class="financial-detail-contain">
+                        <div class="fd-assets not-select">
+                            <div class="fd-item">
+                                <p>可用余额</p>
+                                <p><span class="iconfont icon-keyongyue fd-item-usable"></span></p>
+                                <p>￥<span>0.00</span></p>
+                            </div>
+                            <div class="fd-item">
+                                <p>冻结资金</p>
+                                <p><span class="iconfont icon-keyongyue fd-item-frozen"></span></p>
+                                <p>￥<span>0.00</span></p>
+                            </div>
+                        </div>
+                        <div class="fd-record">
+                            <div class="fd-record-overview">
+                              <div class="fd-record-time">
+                                  <span>起止时间：</span>
+                                  <form action="">
+                                      <div class="fd-record-time-item">
+                                          <div class="input-group date" id="start_date" data-date-format="dd-mm-yyyy">
+                                              <input type="text"
+                                                     class="form-control"
+                                                     name="start_date"
+                                                     placeholder="开始时间"
+                                                     readonly>
+                                              <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                      <div class="fd-record-time-item">
+                                          <div class="input-group date" id="end_date" data-date-format="dd-mm-yyyy">
+                                              <input type="text"
+                                                     class="form-control"
+                                                     name="end_date"
+                                                     placeholder="结束时间"
+                                                     readonly>
+                                              <span class="input-group-addon">
+                                                <span class="glyphicon glyphicon-th"></span>
+                                              </span>
+                                          </div>
+                                      </div>
+                                      <button class="ego-btn fd-search-btn">搜索</button>
+                                  </form>
+                              </div>
+                              <div class="fd-record-controls">
+                                  <span>操作类型：</span>
+                                  <button class="ego-btn fd-record-ctrl-btn fd-ctrl-active" id="all-record">全部</button>
+                                  <button class="ego-btn fd-record-ctrl-btn" id="transaction-record">交易记录</button>
+                                  <button class="ego-btn fd-record-ctrl-btn" id="recharge-record">充值记录</button>
+                                  <button class="ego-btn fd-record-ctrl-btn" id="deduct-record">扣款记录</button>
+                              </div>
+                            </div>
+                            <div class="fd-record-list">
+                                <p>总条数：1515条</p>
+                                <table class="table table-break table-hover">
+                                    <thead>
+                                    <tr>
+                                        <th>时间</th>
+                                        <th>交易号</th>
+                                        <th>动作</th>
+                                        <th>金额</th>
+                                        <th>余额</th>
+                                        <th>支付状态</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2016.11.10</td>
+                                        <td>168555asdf</td>
+                                        <td>付款</td>
+                                        <td>5555</td>
+                                        <td>6666</td>
+                                        <td>成功</td>
+                                    </tr>
+
+                                    </tbody>
+                                </table>
+                                <!--分页-->
+                                <nav class="ego-pagination-contain">
+                                    <ul class="ego-pagination">
+                                        <li><a href="#">上一页</a></li>
+                                        <li class="active"><a href="#">1</a></li>
+                                        <li><a href="#">2</a></li>
+                                        <li><a href="#">下一页</a></li>
+                                    </ul>
+                                    <span>共<span>100</span>条</span>
+                                    <span>
+                                        <select name="" >
+                                            <option value="5">5</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </span>
+                                    <span>条/页</span>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--隐藏模态框-->
+<div class="modal fade" id="avatar-modal" aria-hidden="true" aria-labelledby="avatar-modal-label" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <form class="avatar-form" action="{{url('admin/upload-logo')}}" enctype="multipart/form-data" method="post">
+                <div class="modal-header">
+                    <button class="close" data-dismiss="modal" type="button">&times;</button>
+                    <h4 class="modal-title" id="avatar-modal-label">上传头像</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="avatar-body">
+                        <div class="avatar-upload">
+                            <input class="avatar-src" name="avatar_src" type="hidden">
+                            <input class="avatar-data" name="avatar_data" type="hidden">
+                            <label for="avatarInput">图片上传</label>
+                            <!---->
+                            <a href="javascript:;" class="a-upload">
+                                <span>选择图片</span>
+                                <input class="avatar-input" id="avatarInput" name="avatar_file" type="file">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-9">
+                                <div class="avatar-wrapper"></div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="avatar-preview preview-lg"></div>
+                                <div class="avatar-preview preview-md"></div>
+                                <div class="avatar-preview preview-sm"></div>
+                            </div>
+                        </div>
+                        <div class="row avatar-btns">
+                            <div class="col-md-9">
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="-90" type="button" title="Rotate -90 degrees"><i class="fa fa-undo"></i> 向左旋转</button>
+                                </div>
+                                <div class="btn-group">
+                                    <button class="btn" data-method="rotate" data-option="90" type="button" title="Rotate 90 degrees"><i class="fa fa-repeat"></i> 向右旋转</button>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-success btn-block avatar-save" type="submit"><i class="fa fa-save"></i> 保存修改</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="loading" aria-label="Loading" role="img" tabindex="-1"></div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/datapicker/bootstrap-datetimepicker.js"></script>
+<script src="../static/lib/datapicker/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+<script>
+    $(document).ready(function () {
+        //起始时间
+        $("#start_date").datetimepicker({
+            format: 'yyyy-mm-dd',
+            language: 'zh-CN',
+            weekStart: 0,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        }).on('changeDate', function () {
+            $('#end_date').datetimepicker('setStartDate', $('input[name="start_date"]').val())
+        });
+        //结束时间
+        $('#end_date').datetimepicker({
+            format: 'yyyy-mm-dd',
+            language: 'zh-CN',
+            weekStart: 0,
+            todayBtn: 1,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 2,
+            minView: 2,
+            forceParse: 0,
+            pickerPosition: "bottom-left"
+        }).on('changeDate', function () {
+            $('#start_date').datetimepicker('setEndDate', $('input[name="end_date"]').val())
+        });
+    })
+</script>
+</html>

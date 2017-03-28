@@ -1,0 +1,282 @@
+/*左侧目录*/
+.person-center-info-left{
+    float: left;
+    width: 276px;
+    height: 579px;
+    text-align: center;
+}
+.person-center-info-left ul{
+    display: inline-block;
+    text-align: center;
+    width: 181px;
+}
+.person-center-info-left ul li{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: #000;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.person-center-info-left ul li:hover{
+    color: white;
+    background-color: #344e87;
+}
+.person-center-info-left ul li:hover a{
+    color: white;
+}
+.person-center-info-left ul li>a{
+    display: block;
+}
+.person-center-info-left ul li>a:hover{
+    color: white;
+}
+.person-center-active{
+    color: white;
+    background-color: #344e87;
+}
+.person-center-active>a{
+    color: white;
+}
+/*右侧工具类*/
+.person-center-info-right{
+    width: 850px;
+    border-left: 1px solid #dcdcdc;
+    min-height: 579px;
+    margin-left: 276px;
+    position: relative;
+    z-index: 0;
+}
+.financial-detail-contain{
+    padding-left: 80px;
+}
+/*资产明细*/
+.fd-item{
+    text-align: center;
+    display: inline-block;
+    margin-right: 20px;
+    width: 360px;
+    height: 208px;
+    background-color: #f6f6f6;
+    border-radius: 10px;
+    border: 1px solid #dddddd;
+}
+.fd-item p:nth-of-type(1){
+    font-size: 18px;
+    text-align: left;
+    color: black;
+    margin:  20px 0 0 30px;
+}
+.fd-item p:nth-of-type(2){
+    height: 80px;
+    line-height: 80px;
+}
+.fd-item p:nth-of-type(2) span{
+    margin-top: -20px;
+    opacity: .3;
+    font-size: 90px;
+}
+.fd-item-usable{
+    color: #e5821d;
+}
+.fd-item-frozen{
+    color: #344e87;
+}
+.fd-item p:nth-of-type(3){
+    margin-top: 26px;
+    color: #f01b1b;
+    font-size: 26px;
+}
+.fd-record-overview{
+    margin-top: 28px;
+}
+/*------------------*/
+.fd-record-time{
+    overflow: hidden;
+}
+.fd-record-time>span,
+.fd-record-controls>span{
+    font-size: 16px;
+    margin-top: 5px;
+    float: left;
+}
+.fd-record-time-item{
+    float: left;
+    width: 207px;
+    display: inline-block;
+    margin-right: 10px;
+}
+.fd-search-btn{
+    height: 34px;
+    width: 100px;
+    background-color: #344e87;
+    color: white;
+    float: left;
+    display: inline-block;
+}
+/*---------*/
+.fd-record-controls{
+    margin-top: 22px;
+}
+.fd-record-ctrl-btn{
+    position: relative;
+    margin-right: 10px;
+    height: 30px;
+    width: 80px;
+}
+.fd-record-ctrl-btn:hover{
+    background-color: #e5821d;
+    color: white;
+}
+.fd-ctrl-active{
+    background-color: #e5821d;
+    color: white;
+}
+/*----------*/
+.fd-record-list{
+    margin-top: 6px;
+}
+.fd-record-list>p{
+    text-align: right;
+}
+.table td{
+    text-align: center;
+}
+.table thead th{
+    background-color: #f6f6f6;
+}
+.ego-pagination-contain{
+    float: right;
+}
+/*账户充值*/
+.financial-detail-contain>p{
+    margin-left: 46px;
+}
+.account-recharge table td{
+    /*background-color: black;*/
+    height: 120px;
+    border-bottom: 1px solid #dddddd;
+}
+.ar-left{
+    font-size: 18px;
+    width: 180px;
+    text-align: center;
+}
+.ar-right{
+    width: 627px;
+}
+.ar-right p{
+    font-size: 18px;
+    color: #f01b1b;
+}
+.payment-list li{
+    position: relative;
+    width: 187px;
+    height: 47px;
+    box-sizing: border-box;
+    border: 2px solid #dddddd;
+    border-radius: 3px;
+    margin: 10px 10px 0 0;
+    cursor: pointer;
+    float: left;
+}
+.recharge-item+b{
+    display: none;
+    width: 19px;
+    height: 19px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: url("../../../static/image/member/payment/triangle.png");
+}
+.payment-list .payway-selected{
+    border: 2px solid #344e87;
+}
+.payment-list .payway-selected b{
+    display: block;
+}
+.recharge-item img{
+    width: 100%;
+}
+.ar-right input{
+    width: 188px;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input[type="number"]{-moz-appearance:textfield;}
+.account-recharge .recharge-btn{
+    height: 45px;
+    width: 210px;
+    color: white;
+    font-size: 16px;
+    background-color: #e5821d;
+    margin-top: 40px;
+    float: right;
+}
+/*账户提现*/
+.account-withdraw{
+    text-align: right;
+    width: 470px;
+}
+.account-withdraw .table td{
+    height: 45px;
+    border-top: none;
+}
+.account-withdraw .aw-left{
+    width: 170px;
+    text-align: right;
+    vertical-align: middle;
+    font-size: 18px;
+    color: black;
+}
+.account-withdraw .aw-right.aw-usable-money{
+    text-align: left;
+    font-size: 18px;
+    color: red;
+}
+.account-withdraw .aw-input-wrap{
+    position: relative;
+}
+.account-withdraw .aw-input-wrap span{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: #a0a0a0;
+}
+.account-withdraw .aw-right input{
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    width: 100%;
+}
+.account-withdraw form>p{
+    text-align: left;
+    padding-left: 175px;
+}
+.account-withdraw form>p span{
+    color: #e5821d;
+}
+.aw-withdraw-btn{
+    margin-top: 32px;
+    width:270px;
+    height: 40px;
+    background-color: #e5821d;
+    color: white;
+    float: right;
+}
+
+
+

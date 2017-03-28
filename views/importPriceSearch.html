@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>进口运价查询</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/animate.css">
+    <link rel="stylesheet" href="../static/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../src/css/priceSearch.css">
+</head>
+<body>
+<!--nav fixed-->
+<div class="ego-header not-select animated fadeInDown">
+    <div>
+        <img class="ego-logo" src="../static/image/index2/logo(white).png" alt="易购全球 专业跨境供应链服务平台">
+        <ul class="ego-nav">
+            <li><a href="">首页</a></li>
+            <li>
+                <div class="nav-title"><a href="">跨境物流 <div class="m-nav-arrow"></div></a></div>
+                <ul class="second-nav">
+                    <li><a href="#">出口物流</a></li>
+                    <li><a href="#">进口物流</a></li>
+                    <li><a href="#">海外仓储</a></li>
+                    <li><a href="#">通关申报</a></li>
+                </ul>
+            </li>
+            <li><a href="#">跨境商品</a></li>
+            <li><a href="#">跨境电商运营</a></li>
+            <li><a href="#">跨境金融</a></li>
+            <li><a href="#">软件技术</a></li>
+        </ul>
+        <div class="ego-log-reg">
+            <a href="">登录</a><div>|</div><a href="">注册</a>
+        </div>
+    </div>
+</div>
+<!--banner-->
+<div class="ego-price-banner">
+    <img src="../static/image/exportsec/priceSearch.jpg" alt="运价查询">
+</div>
+<!--priceSearch-->
+<div class="ego-price">
+    <div>
+        <div class="ego-price-conditions">
+            <form id="export" action="">
+                <select name="way">
+                    <option value="import">进口</option>
+                    <option value="export">出口</option>
+                </select>
+                <label class="sender">
+                    发件国家
+                    <select name="senderCountry" class="select2">
+                        <option value="zhongguo">德国</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                    </select>
+                </label>
+                <label class="receiver">
+                    收件省份
+                    <select name="receiverCountry" class="select2">
+                        <option value="11">四川</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                    </select>
+                </label>
+                <label class="weight">
+                    毛重
+                    <input type="number" placeholder="" name="weight">
+                    kg
+                </label>
+                <label class="size">
+                    尺寸
+                    <input type="text" name="length" placeholder="长(cm)">
+                    <input type="text" name="width" placeholder="宽(cm)">
+                    <input type="text" name="height" placeholder="高(cm)">
+                </label>
+                <button class="ego-btn" id="priceSearchBtn" type="button">查询</button>
+            </form>
+        </div>
+        <div class="ego-price-display">
+            <table class="table table-hover table-break">
+                <thead>
+                <tr>
+                    <th>运输方式</th>
+                    <th>集货地</th>
+                    <th>计费重量</th>
+                    <th>总价(含油)</th>
+                    <th>时效</th>
+                    <th>是否有退运费</th>
+                    <th class="mr-table-note">发货须知</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>蓉欧快铁-小包</td>
+                    <td>成都2仓</td>
+                    <td>10kg</td>
+                    <td>
+                        <span style="text-decoration:line-through;color:grey">18.27</span>
+                        <span>¥ 9.14</span>
+                    </td>
+                    <td>15-25天</td>
+                    <td>是</td>
+                    <td>
+                        <a href="javascript:void(0)"
+                           tabindex="0"
+                           class="btn mr-note-btn"
+                           role="button"
+                           data-toggle="popover"
+                           data-trigger="hover"
+                           data-placement="bottom"
+                           data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                            查看
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="ego-btn goSend">我要寄件</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>蓉欧快铁-小包</td>
+                    <td>成都2仓</td>
+                    <td>10kg</td>
+                    <td>
+                        <span style="text-decoration:line-through;color:grey">18.27</span>
+                        <span>¥ 9.14</span>
+                    </td>
+                    <td>15-25天</td>
+                    <td>是</td>
+                    <td>
+                        <a href="javascript:void(0)"
+                           tabindex="0"
+                           class="btn mr-note-btn"
+                           role="button"
+                           data-toggle="popover"
+                           data-trigger="hover"
+                           data-placement="bottom"
+                           data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                            查看
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="ego-btn goSend">我要寄件</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>蓉欧快铁-小包</td>
+                    <td>成都2仓</td>
+                    <td>10kg</td>
+                    <td>
+                        <span style="text-decoration:line-through;color:grey">18.27</span>
+                        <span>¥ 9.14</span>
+                    </td>
+                    <td>15-25天</td>
+                    <td>是</td>
+                    <td>
+                        <a href="javascript:void(0)"
+                           tabindex="0"
+                           class="btn mr-note-btn"
+                           role="button"
+                           data-toggle="popover"
+                           data-trigger="hover"
+                           data-placement="bottom"
+                           data-content="过港费１元/kg，最低50元/票（可接带电池产品，不接移动电源）手机加收0.5元/台；配套电加收1元/kg，最低10元/票">
+                            查看
+                        </a>
+                    </td>
+                    <td>
+                        <a href="#" class="ego-btn goSend">我要寄件</a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+
+            <!--未匹配到-->
+            <!--<p class="notice">
+                对不起，暂无适合您的物流方式。
+            </p>-->
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="ego-site-info">
+    <div>
+        <div class="ego-site-item about">
+            <h5>关于我们</h5>
+            <ul>
+                <li><a href="">公司简介</a></li>
+                <li><a href="">主营业务</a></li>
+                <li><a href="">公司团队</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item news">
+            <h5>新闻中心</h5>
+            <ul>
+                <li><a href="">通知公告</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">培训回顾</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item help">
+            <h5>帮助中心</h5>
+            <ul>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">使用流程</a></li>
+                <li><a href="">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item scan">
+            <img src="../static/image/index2/QRcode.png" alt="">
+            <p>
+                扫描关注易购全球订阅号 <br/>
+                随时获知一手平台资讯
+            </p>
+        </div>
+        <div class="ego-site-item contact">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="">服务时间：9:00-18:00</a></li>
+                <li><a href="">服务热线：028-65596899</a></li>
+            </ul>
+            <div class="ego-footer-conn-info">
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-gongsiming"></span>
+                    <div class="ego-footer-poptips">
+                        <p>四川丝路易购科技有限公司</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-dizhi1"></span>
+                    <div class="ego-footer-poptips">
+                        <p>成都市天府软件园D5-4</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-youxiang"></span>
+                    <div class="ego-footer-poptips">
+                        <p>6555555@126.com</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ego-footer">
+    <div>
+        <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+    </div>
+</div>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/jquery.smoove.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/select2/select2.min.js"></script>
+<script src="../static/lib/select2/zh-CN.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/priceSearch.js"> </script>
+</body>
+</html>

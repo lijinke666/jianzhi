@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>备案申报</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/declaration_member.css">
+</head>
+<body>
+<div class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</div>
+<!--导航-->
+<div class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">备案申报</a></li>
+                <li class="active">出口清单申报</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-info">
+                <ul class="declaration-options">
+                    <li><a href="#">所有表单 <span>20</span></a></li>
+                    <li class="active"><a href="#">已入库申报数据 <span>100</span></a></li>
+                </ul>
+                <div class="declaration-search">
+                    <form action="">
+                        <input type="text" placeholder="输入订单号/运单号查询">
+                        <button class="ego-btn">查询</button>
+                    </form>
+                </div>
+                <table class="table table-hover table-bordered table-break readyFormTable">
+                    <thead>
+                        <tr>
+                            <th>申报时间</th>
+                            <th>订单号</th>
+                            <th>运单号</th>
+                            <th>收货人名称</th>
+                            <th>商品总数量</th>
+                            <th>总费用</th>
+                            <th>收件国</th>
+                            <th role="presentation" class="dropdown" style="width: 100px">
+                                <a id="declarationStatus" href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    申报状态
+                                    <span class="caret"></span>
+                                </a>
+                                <ul class="dropdown-menu" role="menu" aria-labelledby="declarationStatus">
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">暂存</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">申报</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">放行</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">结关</a></li>
+                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">查验</a></li>
+                                </ul>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2017.1.1</td>
+                            <td>1234564</td>
+                            <td>15232121132</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>159 CNY</td>
+                            <td>荷兰</td>
+                            <td>暂存</td>
+                        </tr>
+                        <tr>
+                            <td>2017.1.1</td>
+                            <td>1234564</td>
+                            <td>15232121132</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>159 CNY</td>
+                            <td>荷兰</td>
+                            <td>放行</td>
+                        </tr>
+                        <tr>
+                            <td>2017.1.1</td>
+                            <td>1234564</td>
+                            <td>15232121132</td>
+                            <td></td>
+                            <td>1</td>
+                            <td>159 CNY</td>
+                            <td>荷兰</td>
+                            <td>申报</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 丝路易购平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--新增商品-->
+<div class="modal fade" id="viewErrorInfo" tabindex="-1" role="dialog" aria-labelledby="viewErrorInfoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="viewErrorInfoLabel">查看错误信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer-ego">
+                <button class="ego-btn" id="closeModal">知道了</button>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../src/js/public.js"></script>
+</html>

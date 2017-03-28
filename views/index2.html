@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/animate.css">
+    <link rel="stylesheet" href="../src/css/index2.css">
+    <title>Title</title>
+    <style>
+        .specialLineBG{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #3e5c9d;
+            top: 0;
+            left: 0;
+        }
+        #map{
+            width: 1200px;
+            height: 600px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -300px;
+            margin-left: -600px;
+        }
+    </style>
+    <style>
+        .ego-solution,.ego-process,.ego-faq {
+            position: relative;
+        }
+        .ego-banner{
+            position: relative;
+            z-index: 1;
+        }
+        .ego-solution .spring{
+            position: absolute;
+            top: -200px;
+            width: 260px;
+            z-index: 0;
+        }
+        .ego-solution .spring.left{
+            left: 50%;
+            margin-left: -860px;
+        }
+        .ego-solution .spring.right{
+            right: 50%;
+            margin-right: -860px;
+        }
+        .ego-process .spring.chicken{
+            position: absolute;
+            top: -265px;
+            left: 50%;
+            margin-left: -850px;
+        }
+        .ego-faq .spring.lion{
+            width: 250px;
+            position: absolute;
+            top: -100px;
+            right: 50%;
+            margin-right: -750px;
+        }
+        .snow-canvas {
+            display: block;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            position: fixed;
+            pointer-events: none;
+            z-index: 1000000;
+        }
+    </style>
+</head>
+<body>
+    <!--nav fixed-->
+    <div class="ego-header not-select animated fadeInDown">
+        <div>
+            <img class="ego-logo" src="../static/image/index2/logo(white).png" alt="易购全球 专业跨境供应链服务平台">
+            <ul class="ego-nav">
+                <li><a href="">首页</a></li>
+                <li>
+                    <div class="nav-title">跨境物流 <div class="m-nav-arrow"></div></div>
+                    <ul class="second-nav">
+                        <li><a href="#">出口物流</a></li>
+                        <li><a href="#">进口物流</a></li>
+                        <li><a href="#">海外仓储</a></li>
+                        <li><a href="#">通关申报</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">跨境商品</a></li>
+                <li><a href="#">跨境电商运营</a></li>
+                <li><a href="#">跨境金融</a></li>
+                <li><a href="#">软件技术</a></li>
+            </ul>
+            <div class="ego-log-reg">
+               <a href="">登录</a><div>|</div><a href="">注册</a>
+            </div>
+        </div>
+    </div>
+    <!--banner-->
+    <div class="ego-banner not-select">
+        <div id="ego-banner-panel" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#ego-banner-panel" data-slide-to="0" class="active"></li>
+                <li data-target="#ego-banner-panel" data-slide-to="1"></li>
+                <li data-target="#ego-banner-panel" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="../static/image/index2/banner(2).jpg" alt="蓉欧快铁">
+                    <div class="ego-banner-caption">
+                        <a href="#">
+                            <h1 class="animated fadeInDown">蓉欧大件货物<br/>低价狂销<span style="font-size: 16px">(300kg以上)</span></h1>
+                            <p class="animated fadeInUp">配送区域覆盖欧洲28国<br/>支持英、法、德、意、西FBA入仓<br/></p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/image/index2/banner(2).jpg" alt="国际快递 成都直发">
+                    <div class="ego-banner-caption">
+                        <a href="/export/1">
+                            <h1 class="animated fadeInRight">国际快递 成都直发<br/>DHL/Fedex/TNT/Aramex</h1>
+                            <p class="animated fadeInUp">通达全球220+目的地<br/>全程可追踪 4-7天签收<br/>北美、欧洲、澳洲价格优势大</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/image/index2/ro.jpg" alt="蓉欧快铁">
+                    <div class="specialLineBG">
+                        <div id="map"></div>
+                    </div>
+                    <div class="ego-banner-caption">
+                        <a href="">
+                            <h1 class="animated fadeInRight">蓉欧快铁</h1>
+                            <p class="animated fadeInUp">电商小包新选择，秒杀所有欧线快递价</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="../static/image/index2/EUEXP.jpg" alt="中欧双清含税专线">
+                    <div class="ego-banner-caption">
+                        <a href="">
+                            <h1 class="animated fadeInRight">中欧双清含税专线<br/>解决您的VAT麻烦</h1>
+                            <p class="animated fadeInLeft">最快7天签收，可收带电带磁货物</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <a class="left carousel-control" href="#ego-banner-panel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#ego-banner-panel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+    <!--solution-->
+    <div class="ego-solution">
+        <div class="spring left">
+            <img src="../static/image/index2/spring/denglong.png">
+        </div>
+        <div class="spring right">
+            <img src="../static/image/index2/spring/denglong.png">
+        </div>
+        <div>
+            <div class="ego-section-title not-select move-item" data-move-y="-100px">
+                <img src="../static/image/index2/solution/solution.png" alt="解决方案">
+            </div>
+            <div class="ego-solution-contain">
+                <!--跨境物流-->
+                <div class="ego-solution-item delivery move-item" data-move-x="-100px" data-move-y="-50px">
+                    <img src="../static/image/index2/solution/delivery.jpg" alt="" class="ego-solution-img">
+                    <div class="ego-solution-caption">
+                        <h3>跨境物流</h3>
+                        <ul>
+                            <li><a href="#">进口物流</a></li>
+                            <li><a href="#">出口物流</a></li>
+                            <li><a href="#">海外仓储</a></li>
+                            <li><a href="#">通关申报</a></li>
+                        </ul>
+                        <p><a href="#">进入专区>></a></p>
+                    </div>
+                </div>
+                <!--跨境电商-->
+                <!--<div class="ego-solution-item e-commercial move-item" data-move-x="100px" data-move-y="-50px">
+                    <img src="../static/image/index2/solution/e-commercial.jpg" alt="" class="ego-solution-img">
+                    <div class="ego-solution-caption">
+                        <h3>跨境商品</h3>
+                        <ul>
+                            <li><a href="#">进口商品供销</a></li>
+                            <li><a href="#">出口商品供销</a></li>
+                            <li><a href="#">在线收款发货</a></li>
+                            <li><a href="#">在线通关申报</a></li>
+                        </ul>
+                        <p><a href="#">进入专区>></a></p>
+                    </div>
+                </div>-->
+                <!--跨境电商运营-->
+                <div class="ego-solution-item operate move-item" data-move-x="-100px" data-move-y="100px">
+                    <img src="../static/image/index2/solution/operate.jpg" alt="" class="ego-solution-img">
+                    <div class="ego-solution-caption">
+                        <h3>跨境电商运营</h3>
+                        <ul>
+                            <li><a href="#">商务培训</a></li>
+                            <li><a href="#">运营咨询</a></li>
+                            <li><a href="#">店铺代运营</a></li>
+                        </ul>
+                        <p><a href="#">进入专区>></a></p>
+                    </div>
+                </div>
+                <!--跨境金融-->
+                <div class="ego-solution-item financial move-item" data-move-y="100px">
+                    <img src="../static/image/index2/solution/financial.jpg" alt="" class="ego-solution-img">
+                    <div class="ego-solution-caption">
+                        <h3>跨境金融</h3>
+                        <ul>
+                            <li><a href="#">外币结汇</a></li>
+                            <li><a href="#">金融供应链</a></li>
+                        </ul>
+                        <p><a href="#">进入专区>></a></p>
+                    </div>
+                </div>
+                <!--软件技术-->
+                <div class="ego-solution-item software move-item" data-move-x="100px" data-move-y="100px">
+                    <img src="../static/image/index2/solution/software.jpg" alt="" class="ego-solution-img">
+                    <div class="ego-solution-caption">
+                        <h3>跨境物流</h3>
+                        <ul>
+                            <li><a href="#">CRM</a></li>
+                            <li><a href="#">ERP</a></li>
+                            <li><a href="#">WMS</a></li>
+                            <li><a href="#">BI</a></li>
+                        </ul>
+                        <p><a href="#">进入专区>></a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--advantages-->
+    <div class="ego-advantages">
+        <div>
+            <div class="ego-section-title not-select move-item" data-move-y="-100px">
+                <img src="../static/image/index2/advantage/advantage.png" alt="我们的优势">
+            </div>
+            <div class="ego-advantages-contain">
+                <div class="ego-advantages-item move-item"  data-move-y="100px">
+                    <div class="ego-advantages-img">
+                        <img src="../static/image/index2/advantage/Two-waychannel.jpg" alt="进出口双向通道">
+                    </div>
+                    <div class="ego-advantages-notice">
+                        <h3>进出口双向通道</h3>
+                        <p>
+                            物流、商品、通关服务均涵盖进出口双向通道 <br/>
+                            一站式满足用户多样化需求
+                        </p>
+                    </div>
+                </div>
+                <div class="ego-advantages-item move-item"  data-move-y="100px">
+                    <div class="ego-advantages-img">
+                        <img src="../static/image/index2/advantage/Supplychain.jpg" alt="供应链节点全覆盖">
+                    </div>
+                    <div class="ego-advantages-notice">
+                        <h3>供应链节点全覆盖</h3>
+                        <p>
+                            物流、通关、仓储、商品供销、运营金融等<br/>
+                            360°全覆盖
+                        </p>
+                    </div>
+                </div>
+                <div class="ego-advantages-item move-item" data-move-y="-100px">
+                    <div class="ego-advantages-img">
+                        <img src="../static/image/index2/advantage/Partner.jpg" alt="精选优质合作伙伴">
+                    </div>
+                    <div class="ego-advantages-notice">
+                        <h3>精选优质合作伙伴</h3>
+                        <p>
+                            与全球知名企业长期共享服务资源 <br/>
+                            优质稳定
+                        </p>
+                    </div>
+                </div>
+                <div class="ego-advantages-item move-item" data-move-y="-100px">
+                    <div class="ego-advantages-img">
+                        <img src="../static/image/index2/advantage/service.jpg" alt="">
+                    </div>
+                    <div class="ego-advantages-notice">
+                        <h3>竞争性价格 标准化服务</h3>
+                        <p>
+                            为客户提供无缝对接的流程体验 <br/>
+                            简单化的收费标准
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--process-->
+    <div class="ego-process">
+        <img src="../static/image/index2/spring/ji.png" class="spring chicken">
+        <div>
+            <div class="ego-section-title not-select move-item" data-move-y="-100px">
+                <img src="../static/image/index2/process/process.png" alt="使用流程">
+            </div>
+            <div class="ego-process-contain not-select">
+                <div class="ego-process-item pro-reg move-item" data-move-x="-100px">
+                    <span class="iconfont icon-zhuce1"></span>
+                    登录注册
+                </div>
+                <div class="ego-process-item pro-type move-item" data-move-x="100px">
+                    选择业务类型
+                    <span class="iconfont icon-yewuleixing"></span>
+                </div>
+                <div class="ego-process-item pro-certificate move-item" data-move-x="-100px">
+                    <span class="iconfont icon-wanshanzizhi"></span>
+                    完善资质
+                </div>
+                <div class="ego-process-item pro-open move-item" data-move-x="100px">
+                    业务开启
+                    <span class="iconfont icon-yewukaiqi"></span>
+                </div>
+                <div class="ego-process-item pro-pay move-item" data-move-x="-100px">
+                    <span class="iconfont icon-xianshangzhifu"></span>
+                    线上支付
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <!--faq&notice-->
+    <div class="ego-faq">
+        <img src="../static/image/index2/spring/shizi.png" class="spring lion">
+        <div>
+            <div class="ego-section-title not-select move-item" data-move-y="-100px">
+                <img src="../static/image/index2/faq/Notice&FAQ.png" alt="通知公告">
+            </div>
+            <div class="ego-faq-contain">
+                <div class="ego-faq-item news move-item"  data-move-y="-200px">
+                    <img src="../static/image/index2/faq/Notice.jpg" alt="通知公告">
+                    <div class="ego-faq-title not-select">
+                        <p><span class="iconfont icon-tongzhigonggao1"></span> 通知公告</p>
+                        <div class="ego-faq-more">
+                            <a href="#">+ 更多内容</a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#"><span>[支付]</span> 易购全球平台产生的物流费用如何支付？</a></li>
+                        <li><a href="#"><span>[物流]</span> 运单信息如何追踪？</a></li>
+                        <li><a href="#"><span>[物流]</span> 平台上物流发运的流程是什么？</a></li>
+                        <li><a href="#"><span>[商品]</span> 关于跨境购分销平台免费招商入驻的公告</a></li>
+                        <li><a href="#"><span>[申报]</span> 关于第三方代推申报数据的公告？</a></li>
+                        <li><a href="#"><span>[物流]</span> 运单信息如何追踪？</a></li>
+                    </ul>
+                </div>
+                <div class="ego-faq-item faq move-item"  data-move-y="200px">
+                    <img src="../static/image/index2/faq/FAQ.jpg" alt="常见问题">
+                    <div class="ego-faq-title">
+                        <p><span class="iconfont icon-FAQ1"></span> 常见问题</p>
+                        <div class="ego-faq-more">
+                            <a href="#">+ 更多内容</a>
+                        </div>
+                    </div>
+                    <ul>
+                        <li><a href="#"><span>[支付]</span> 易购全球平台产生的物流费用如何支付？</a></li>
+                        <li><a href="#"><span>[物流]</span> 运单信息如何追踪？</a></li>
+                        <li><a href="#"><span>[物流]</span> 平台上物流发运的流程是什么？</a></li>
+                        <li><a href="#"><span>[商品]</span> 关于跨境购分销平台免费招商入驻的公告</a></li>
+                        <li><a href="#"><span>[申报]</span> 关于第三方代推申报数据的公告？</a></li>
+                        <li><a href="#"><span>[物流]</span> 运单信息如何追踪？</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--partner-->
+    <div class="ego-partner not-select">
+        <div>
+            <div class="ego-section-title not-select move-item" data-move-y="-100px">
+                <img src="../static/image/index2/partner/partner.png" alt="合作伙伴">
+            </div>
+            <div class="ego-partner-contain">
+                <div class="ego-partner-box active">
+                    <div class="ego-partner-item chinapost"><a href="http://www.chinapost.com.cn"></a></div>
+                    <div class="ego-partner-item milanoo"><a href="http://www.milanoo.cn"></a></div>
+                    <div class="ego-partner-item amazon"><a href="https://www.amazon.com"></a></div>
+                    <div class="ego-partner-item ebay"><a href="http://www.ebay.com"></a></div>
+                    <div class="ego-partner-item oneworld"><a href="http://www.oneworldexpress.cn"></a></div>
+                    <div class="ego-partner-item EMS"><a href="http://www.ems.com.cn"></a></div>
+                    <div class="ego-partner-item Fedex"><a href="http://www.fedex.com/cn"></a></div>
+                        <div class="ego-partner-item TNT"><a href="https://www.tnt.com"></a></div>
+                </div>
+                <div class="ego-partner-box">
+                    <div class="ego-partner-item aramex"><a href="https://www.aramex.com"></a></div>
+                    <div class="ego-partner-item sinotrans"><a href="http://www.sinotrans.com"></a></div>
+                    <div class="ego-partner-item _17track"><a href="http://www.17track.net/zh-cn"></a></div>
+                </div>
+            </div>
+            <div class="ego-partner-controls">
+                <div class="ctrl-btn active first"></div>
+                <div class="ctrl-btn second"></div>
+            </div>
+        </div>
+    </div>
+    <!--footer-->
+    <div class="ego-site-info">
+        <div>
+            <div class="ego-site-item about">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="">公司简介</a></li>
+                    <li><a href="">主营业务</a></li>
+                    <li><a href="">公司团队</a></li>
+                </ul>
+            </div>
+            <div class="ego-site-item news">
+                <h5>新闻中心</h5>
+                <ul>
+                    <li><a href="">通知公告</a></li>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">培训回顾</a></li>
+                </ul>
+            </div>
+            <!--<div class="ego-site-item help">
+                <h5>帮助中心</h5>
+                <ul>
+                    <li><a href="">常见问题</a></li>
+                    <li><a href="">使用流程</a></li>
+                    <li><a href="">网站地图</a></li>
+                </ul>
+            </div>-->
+            <div class="ego-site-item scan">
+                <img src="../static/image/index2/QRcode.png" alt="">
+                <p>
+                    扫描关注易购全球订阅号 <br/>
+                    随时获知一手平台资讯
+                </p>
+            </div>
+            <div class="ego-site-item contact">
+                <h4>联系我们</h4>
+                <ul>
+                    <li><a href="">服务时间：9:00-18:00</a></li>
+                    <li><a href="">服务热线：028-65596899</a></li>
+                </ul>
+                <div class="ego-footer-conn-info">
+                    <div class="ego-footer-cinfo-item">
+                        <span class="iconfont icon-gongsiming"></span>
+                        <div class="ego-footer-poptips">
+                            <p>四川丝路易购科技有限公司</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                    <div class="ego-footer-cinfo-item">
+                        <span class="iconfont icon-dizhi1"></span>
+                        <div class="ego-footer-poptips">
+                            <p>成都市天府软件园D5-4</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                    <div class="ego-footer-cinfo-item">
+                        <span class="iconfont icon-youxiang"></span>
+                        <div class="ego-footer-poptips">
+                            <p>6555555@126.com</p>
+                            <div class="ego-footer-littlearrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ego-footer">
+        <div>
+            <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+        </div>
+    </div>
+    <div class="ego-back-top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/jquery.smoove.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/echarts.min.js"></script>
+<script src="../src/js/index2.js"></script>
+<script src="../src/js/indexTop.js"></script>
+<script src="../src/js/specialline.js"></script>
+<script>
+</script>
+</html>

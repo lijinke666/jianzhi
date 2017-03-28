@@ -1,0 +1,140 @@
+@import "common.css";
+@import "reg/regLoginHeader.css";
+@import "reg/regLoginContent.css";
+@import "footer.css";
+.regLogin-mainWrap{
+    background: url("../../static/image/login/Sign.jpg") center center;
+}
+.regLogin-box-bg{
+    margin-left: -200px;
+    left: 50%;
+    margin-top: -206px;
+    top: 45%;
+    height: 457px;
+}
+.login-box{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.login-box-title{
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+    background-color: #344e87  ;
+    color: white;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.login-panel{
+    width: 100%;
+    padding: 20px 14px 0;
+}
+.login-panel input:not(#login-remember){
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.login-panel table td{
+    vertical-align: middle;
+    height: 45px;
+}
+.log-form-left{
+    width: 70px;
+    text-align: right;
+}
+.log-form-right input{
+    width: 260px;
+}
+.log-form-right{
+    position: relative;
+}
+.log-form-middle input{
+    width: 148px;
+}
+.log-form-middle{
+    width: 160px;
+    position: relative;
+}
+.log-go-login{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    border-radius: 5px;
+    background-color: #e5821d;
+    color: white;
+    border: none;
+}
+.log-third-way{
+    margin-top: 30px;
+    text-align: center;
+}
+.log-third-way-title{
+    height: 30px;
+    position: relative;
+}
+.log-third-way-title p{
+    position: relative;
+    height: 30px;
+    width: 134px;
+    line-height: 30px;
+    display: inline-block;
+    background-color: white;
+    z-index: 10;
+}
+.log-third-way-title .login-line{
+    position: absolute;
+    width: 100%;
+    top: 14px;
+    height: 0;
+    border-bottom: 1px solid #dddddd;
+    z-index: 5;
+}
+.log-third-way .login-way{
+    cursor: pointer;
+    margin-top: 16px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.log-third-way .login-info{
+    margin-top: 16px;
+    color: black;
+    font-size: 12px;
+}
+.login-info a:hover{
+    color: #e5821d;
+}
+.log-third-way .login-info a span,.log-third-way .login-info span{
+    color: black;
+    font-size: 12px;
+}
+.log-tips{
+    margin-top: 10px;
+}
+.log-tips input[type='checkbox']{
+    float: left;
+}
+.log-tips a span{
+    color: #344e87  ;
+    float: right;
+}
+input.error{
+    color: #d75148;
+    border: 2px solid #d75148!important;
+}
+label.error{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    font-size: 12px;
+    color: #d75148;
+    background-color: white;
+}
+input.valid{
+    border: 2px solid #30a735!important;
+}

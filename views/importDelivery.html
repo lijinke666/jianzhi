@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>进口物流</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/animate.css">
+    <link rel="stylesheet" href="../static/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../src/css/importDelivery.css">
+</head>
+<body>
+<!--nav fixed-->
+<div class="ego-header not-select animated fadeInDown">
+    <div>
+        <img class="ego-logo" src="../static/image/index2/logo(white).png" alt="易购全球 专业跨境供应链服务平台">
+        <ul class="ego-nav">
+            <li><a href="">首页</a></li>
+            <li>
+                <div class="nav-title"><a href="">跨境物流 <div class="m-nav-arrow"></div></a></div>
+                <ul class="second-nav">
+                    <li><a href="#">出口物流</a></li>
+                    <li><a href="#">进口物流</a></li>
+                    <li><a href="#">海外仓储</a></li>
+                    <li><a href="#">通关申报</a></li>
+                </ul>
+            </li>
+            <li><a href="#">跨境商品</a></li>
+            <li><a href="#">跨境电商运营</a></li>
+            <li><a href="#">跨境金融</a></li>
+            <li><a href="#">软件技术</a></li>
+        </ul>
+        <div class="ego-log-reg">
+            <a href="">登录</a><div>|</div><a href="">注册</a>
+        </div>
+    </div>
+</div>
+<!--search-->
+<div class="ego-search">
+    <div class="ego-search-box animated fadeInUp">
+        <div class="ego-search-wrap">
+            <div class="ego-search-nav not-select">
+                <div class="ego-search-type price active">
+                    <span class="iconfont icon-yunjiachaxun"></span>
+                    <p>运价查询</p>
+                </div>
+                <div class="ego-search-type package">
+                    <span class="iconfont icon-baoguochaxun"></span>
+                    <p>包裹查询</p>
+                </div>
+                <div class="ego-search-type tax">
+                    <span class="iconfont icon-shuifeichaxun"></span>
+                    <p>税率查询</p>
+                </div>
+            </div>
+            <div class="ego-search-contain">
+                <!--运价查询-->
+                <div class="ego-search-item price active">
+                    <div class="ego-search-title">
+                        <div class="titleItem active first">出口物流</div>
+                        <div class="titleItem second">进口物流</div>
+                    </div>
+                    <!--出口物流运价查询-->
+                    <div class="container-fluid first active">
+                        <form action="" id="exportSearch">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">目的地</div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <select name="exportCountry" class="select2">
+                                        <option value="" disabled selected style="display: none">请选择目的国家</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">包裹重量</div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <input type="text" name="weight" placeholder="111">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">尺寸</div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="length" placeholder="长(CM)">
+                                </div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="width" placeholder="宽(CM)">
+                                </div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="height" placeholder="高(CM)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-lg-6 col-xs-offset-3 col-xs-6">
+                                    <button class="ego-search-btn" id="exportSearchBtn" type="button">
+                                        运价查询
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--进口物流运价查询-->
+                    <div class="container-fluid second">
+                        <form action="" id="importSearch">
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">来源国</div>
+                                <div class="col-lg-4 col-xs-4">
+                                    <select name="importCountry" class="select2">
+                                        <option value="" disabled selected style="display: none">请选择来源国</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                    </select>
+                                </div>
+                                <div class="col-lg-1 col-xs-1 div-3">省份</div>
+                                <div class="col-lg-4 col-xs-4">
+                                    <select name="province" class="select2">
+                                        <option value="" disabled selected style="display: none">请选择省份</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                        <option value="1">a</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">包裹重量</div>
+                                <div class="col-lg-9 col-xs-9">
+                                    <input type="text" name="weight" placeholder="请填写货物重量(KG)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3 col-xs-3 div-1">尺寸</div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="length" placeholder="长(CM)">
+                                </div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="width" placeholder="宽(CM)">
+                                </div>
+                                <div class="col-lg-3 col-xs-3">
+                                    <input type="text" name="height" placeholder="高(CM)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-lg-6 col-xs-offset-3 col-xs-6">
+                                    <button class="ego-search-btn" id="importSearchBtn">
+                                        运价查询
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/运价查询-->
+
+                <!--包裹查询-->
+                <div class="ego-search-item package">
+                    <div class="ego-search-title">
+                        <div class="titleItem active first">易购单号查询</div>
+                        <div class="titleItem second">第三方单号查询</div>
+                    </div>
+                    <!--易购单号查询-->
+                    <div class="container-fluid first active">
+                        <form action="" id="egoWayBillSearch">
+                            <div class="row">
+                                <textarea  class="col-lg-12 wayBillTextArea" cols="17" rows="10" placeholder="在此输入易购单号，多个单号请回车隔开，一次最多10条"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-lg-6">
+                                    <button class="ego-search-btn" type="button" id="egoWayBillSearchBtn">
+                                        包裹查询
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--第三方单号查询-->
+                    <div class="container-fluid second">
+                        <form action="" id="thirdWayBillSearch">
+                            <div class="row">
+                                <textarea  class="col-lg-12 wayBillTextArea thirdway" cols="17" rows="10" placeholder="在此输入易购单号，多个单号请回车隔开，一次最多10条"></textarea>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 div-12">
+                                    <select name="thirdWayCompanyName" class="select2">
+                                        <option value="" disabled selected style="display: none">请选择第三方快递公司名称</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-offset-3 col-lg-6">
+                                    <button class="ego-search-btn" id="thirdWayBillSearchBtn">
+                                        包裹查询
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/包裹查询-->
+
+                <!--税率查询-->
+                <div class="ego-search-item tax">
+                    <div class="ego-search-title">
+                        <div class="titleItem active first">行邮税号</div>
+                        <div class="titleItem second">跨境新税率</div>
+                    </div>
+                    <!--行邮税号-->
+                    <div class="container-fluid first active">
+                        <form action="" id="xyshSearch">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <select name="productName" class="select2">
+                                        <option value="" disabled selected style="display: none">输入产品品名关键字，如：奶粉</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6 col-xs-6">
+                                    <input type="text"
+                                           name="xingyoushuihao"
+                                           disabled
+                                           value="行邮申报号："
+                                           placeholder="行邮申报号："
+                                           style="cursor: not-allowed;background-color: #dddddd">
+                                </div>
+                                <div class="col-lg-6 col-xs-6">
+                                    <input type="text"
+                                           name="tax"
+                                           disabled
+                                           value="税率："
+                                           placeholder="税率："
+                                           style="cursor: not-allowed;background-color: #dddddd">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="text"
+                                           name="total_fee"
+                                           placeholder="输入商品价格：总价(CNY)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p>税费：<span></span></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <!--跨境新税率-->
+                    <div class="container-fluid second">
+                        <form action="" id="newtaxSearch">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <select name="productName" class="select2">
+                                        <option value="" disabled selected style="display: none">输入产品品名关键字，如：奶粉</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                        <option value="1">aa</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="text"
+                                           name="tax"
+                                           disabled
+                                           value="税率："
+                                           placeholder="税率："
+                                           style="cursor: not-allowed;background-color: #dddddd">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <input type="text"
+                                           name="total_fee"
+                                           placeholder="输入商品价格：总价(CNY)">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <p>税费：<span></span></p>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!--/税率查询-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--products-->
+<div class="ego-products">
+    <div>
+        <div class="ego-product-title not-select">
+            <div class="ego-products-item express active">
+                <span class="iconfont icon-zhuanxian"></span>
+                <span>直邮进口</span>
+            </div>
+            <div class="ego-products-item post">
+                <span class="iconfont icon-rongoukuaitie"></span>
+                <span>跨境申报&国内配送</span>
+            </div>
+        </div>
+        <!--直邮进口-->
+        <div class="ego-products-info express zhiyou" style="display: block">
+            <img src="../static/image/exportsec/briefintroduction.png" alt="简介">
+            <div class="ego-products-infocon">
+                <img src="../static/image/exportsec/Aircraft.jpg" alt="">
+                <div class="introInfo">
+                    <p>
+                        主要为跨境电商企业、平台、小微个体提供从国外收货、
+                        国际运输、以个人邮递物品的方式向海关申报进口、
+                        国内派送的一体化服务。目前已开通汉堡专线、阿姆斯特丹专线、
+                        法兰克福专线。
+                    </p>
+                    <div class="intro-contain">
+                        <div class="intro-item">正规清关</div>
+                        <div class="intro-item">成本较低</div>
+                        <div class="intro-item">灵活性强</div>
+                        <div class="intro-item">品类限制少</div>
+                    </div>
+                    <p>
+                        类相对较散的海外代购者、微商、电商平台等
+                        中国境内注册的电商平台或入驻平台的卖家
+                    </p>
+                </div>
+            </div>
+            <img src="../static/image/exportsec/DeliveryProcess.png" alt="流程">
+            <div class="ego-products-infocon steps">
+                <div class="process step">
+                    <span class="iconfont icon-shangmenqujian"></span>
+                    <p>上门取件/自送至指定仓库</p>
+                </div>
+                <div class="process arrow">
+                    <span class="iconfont icon-jiantou1"></span>
+                </div>
+                <div class="process step">
+                    <span class="iconfont icon-cangku1"></span>
+                    <p>海外仓集拼</p>
+                </div>
+                <div class="process arrow">
+                    <span class="iconfont icon-jiantou1"></span>
+                </div>
+                <div class="process step">
+                    <span class="iconfont icon-hangkongyunshu"></span>
+                    <p>国际航空运输</p>
+                </div>
+                <div class="process arrow">
+                    <span class="iconfont icon-jiantou1"></span>
+                </div>
+                <div class="process step">
+                    <span class="iconfont icon-rujingqingguan"></span>
+                    <p>入境邮快件申报/跨境申报</p>
+                </div>
+                <div class="process arrow">
+                    <span class="iconfont icon-jiantou1"></span>
+                </div>
+                <div class="process step">
+                    <span class="iconfont icon-dangdikuaijianpeisong"></span>
+                    <p>国内快递配送</p>
+                </div>
+            </div>
+            <img src="../static/image/exportsec/IMPORTCONSOLLINEDOORTODOORTARIFF.png" alt="">
+            <div class="ego-products-infocon">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th rowspan="2">重量段(KG)</th>
+                        <th colspan="3">荷兰</th>
+                        <th colspan="3">德国</th>
+                    </tr>
+                    <tr>
+                        <th>公布总价</th>
+                        <th>优惠总价</th>
+                        <th>派送时效</th>
+                        <th>公布总价</th>
+                        <th>优惠总价</th>
+                        <th>派送时效</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>0-1000kg</td>
+                        <td>28.00/kg</td>
+                        <td>23.80/kg</td>
+                        <td rowspan="3">6-9天</td>
+                        <td>33.00/kg</td>
+                        <td>28.05/kg</td>
+                        <td rowspan="3">8-11天</td>
+                    </tr>
+                    <tr>
+                        <td>1001-3000kg</td>
+                        <td>25.14/kg</td>
+                        <td>21.37/kg</td>
+                        <td>28.71/kg</td>
+                        <td>24.41/kg</td>
+                    </tr>
+                    <tr>
+                        <td>3001-10000kg</td>
+                        <td>24.00/kg</td>
+                        <td>20.40/kg</td>
+                        <td>28.43/kg</td>
+                        <td>24.16/kg</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">以上价格为门到门价格，收货地为四川省内。中国其他省份进口价格请在价格查询页面查看。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ego-products-info-btn">
+                <button class="ego-btn">我要寄件</button>
+            </div>
+        </div>
+        <!--跨境申报&国内配送-->
+        <div class="ego-products-info post">
+            <img src="../static/image/exportsec/briefintroduction.png" alt="简介">
+            <div class="ego-products-infocon">
+                <img src="../static/image/exportsec/pic.jpg" alt="">
+                <div class="introInfo">
+                    <p>
+                        主要为跨境电商企业、批发商、代理商、线下门店等提供成都入境跨境申报和全国派送服务。
+                    </p>
+                    <div class="intro-contain">
+                        <div class="intro-item">跨境三单申报</div>
+                        <div class="intro-item">支持全国派送 </div>
+                    </div>
+                    <p>
+                        适用于有自己的优势物流渠道，但无成都跨境申报渠道的客户
+                    </p>
+                </div>
+            </div>
+            <img src="../static/image/exportsec/DeliveryProcess.png" alt="流程">
+            <div class="ego-products-infocon steps">
+                <img src="../static/image/exportsec/importDelaStep.png" alt="配送步骤">
+            </div>
+            <img src="../static/image/exportsec/IMPORTCUSTOMSDECLARATION&DELIVERYTARIFFtariff.png" alt="简介">
+            <div class="ego-products-infocon">
+                <table class="table table-hover table-bordered">
+                    <thead>
+                    <tr>
+                        <th rowspan="2">重量段(KG)</th>
+                        <th colspan="3">荷兰</th>
+                        <th colspan="3">德国</th>
+                    </tr>
+                    <tr>
+                        <th>公布总价</th>
+                        <th>优惠总价</th>
+                        <th>派送时效</th>
+                        <th>公布总价</th>
+                        <th>优惠总价</th>
+                        <th>派送时效</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>0-1000kg</td>
+                        <td>28.00/kg</td>
+                        <td>23.80/kg</td>
+                        <td rowspan="3">6-9天</td>
+                        <td>33.00/kg</td>
+                        <td>28.05/kg</td>
+                        <td rowspan="3">8-11天</td>
+                    </tr>
+                    <tr>
+                        <td>1001-3000kg</td>
+                        <td>25.14/kg</td>
+                        <td>21.37/kg</td>
+                        <td>28.71/kg</td>
+                        <td>24.41/kg</td>
+                    </tr>
+                    <tr>
+                        <td>3001-10000kg</td>
+                        <td>24.00/kg</td>
+                        <td>20.40/kg</td>
+                        <td>28.43/kg</td>
+                        <td>24.16/kg</td>
+                    </tr>
+                    <tr>
+                        <td colspan="7">以上价格为门到门价格，收货地为四川省内。中国其他省份进口价格请在价格查询页面查看。</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="ego-products-info-btn">
+                <button class="ego-btn">我要寄件</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="ego-site-info">
+    <div>
+        <div class="ego-site-item about">
+            <h5>关于我们</h5>
+            <ul>
+                <li><a href="">公司简介</a></li>
+                <li><a href="">主营业务</a></li>
+                <li><a href="">公司团队</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item news">
+            <h5>新闻中心</h5>
+            <ul>
+                <li><a href="">通知公告</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">培训回顾</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item help">
+            <h5>帮助中心</h5>
+            <ul>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">使用流程</a></li>
+                <li><a href="">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item scan">
+            <img src="../static/image/index2/QRcode.png" alt="">
+            <p>
+                扫描关注易购全球订阅号 <br/>
+                随时获知一手平台资讯
+            </p>
+        </div>
+        <div class="ego-site-item contact">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="">服务时间：9:00-18:00</a></li>
+                <li><a href="">服务热线：028-65596899</a></li>
+            </ul>
+            <div class="ego-footer-conn-info">
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-gongsiming"></span>
+                    <div class="ego-footer-poptips">
+                        <p>四川丝路易购科技有限公司</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-dizhi1"></span>
+                    <div class="ego-footer-poptips">
+                        <p>成都市天府软件园D5-4</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-youxiang"></span>
+                    <div class="ego-footer-poptips">
+                        <p>6555555@126.com</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ego-footer">
+    <div>
+        <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+    </div>
+</div>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/jquery.smoove.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/select2/select2.min.js"></script>
+<script src="../static/lib/select2/zh-CN.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/expImpDelivery.js"></script>
+<script src="../src/js/egoSearchBox.js"></script>
+</body>
+</html>

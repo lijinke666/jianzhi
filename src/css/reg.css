@@ -1,0 +1,134 @@
+@import "common.css";
+@import "reg/regLoginHeader.css";
+@import "footer.css";
+@import "reg/regLoginContent.css";
+.regLogin-mainWrap{
+    background: url("../../static/image/login/register.jpg") center center;
+}
+.reg-box{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.reg-box-title{
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    font-size: 16px;
+
+    background-color: #344e87  ;
+    color: white;
+}
+
+
+.reg-box-change{
+    font-size: 0;
+    height: 50px;
+    text-align: center;
+}
+.reg-way{
+    display: inline-block;
+    width: 108px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: 2px solid #ddd;
+    font-size: 14px;
+    margin-right: 15px;
+    cursor: pointer;
+}
+.reg-way i{
+    color: #989898;
+    font-size: 22px;
+    margin-right: 10px;
+}
+
+.reg-way-active{
+    color: #e5821d;
+    border-bottom: 2px solid #e5821d;
+}
+.reg-way-active i{
+    color: #e5821d;
+}
+.reg-panel{
+    width: 100%;
+    padding: 20px 14px 0;
+}
+.reg-panel table td{
+    height: 45px;
+}
+.reg-panel label{
+    font-weight: normal;
+}
+.reg-panel input{
+    height: 35px;
+    border-radius: 5px;
+    border: 1px solid #dddddd;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 12px;
+}
+.reg-form-left{
+    width: 70px;
+}
+.reg-form-right input{
+    width: 280px;
+}
+.reg-form-middle input{
+    width: 165px;
+}
+.reg-getCode{
+    width: 110px;
+    height: 35px;
+    border-radius: 5px;
+    background-color: #344e87  ;
+    color: white;
+    border: none;
+}
+
+.reg-protocol{
+    font-size: 12px;
+    margin-top: 20px;
+}
+.reg-protocol a{
+    color: #0174e0;
+}
+.reg-goReg{
+    width: 100%;
+    height: 40px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background-color: #e5821d;
+    color: white;
+    border: none;
+}
+.reg-goLogin{
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+.reg-goLogin a{
+    font-size: 12px;
+    color: inherit;
+}
+.reg-form-right{
+    position: relative;
+}
+.reg-form-middle{
+    position: relative;
+}
+input.error{
+    color: #d75148;
+    border: 2px solid #d75148;
+}
+label.error{
+    position: absolute;
+    right: 10px;
+    top: 13px;
+    font-size: 12px;
+    color: #d75148;
+    background-color: white;
+}
+input.valid{
+    border: 2px solid #30a735;
+}

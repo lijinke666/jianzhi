@@ -1,0 +1,127 @@
+.ego-notice-banner{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.ego-notice-banner> img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.ego-notice-article-banner{
+    width: 100%;
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+}
+.ego-notice-article-banner> img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.ego-notice-article-banner> div{
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    top:45%;
+    color: white;
+}
+.ego-notice{
+    background-color: #fafafa;
+    padding-top: 50px;
+}
+.ego-notice > div{
+    width: 1200px;
+    min-height: 600px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    overflow: hidden;
+}
+.ego-notice-nav{
+    float: left;
+}
+.ego-notice-nav li{
+    width: 160px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background-color: #eeeeee;
+    margin-bottom: 18px;
+}
+.ego-notice-nav li a{
+    display: block;
+    color: inherit;
+}
+.ego-notice-nav li.active{
+    background-color: #3e5c9d;
+    color: white;
+}
+.ego-notice-panel{
+    width: 920px;
+    float: left;
+    min-height: 600px;
+    margin-left: 40px;
+    border: 1px solid #dddddd;
+    box-sizing: border-box;
+}
+.ego-notice-tab{
+    overflow: hidden;
+    height: 55px;
+    margin-bottom: 24px;
+}
+.ego-notice-tab li{
+    width: 306px;
+    height: 55px;
+    text-align: center;
+    line-height: 55px;
+    font-size: 18px;
+    float: left;
+    box-sizing: border-box;
+    border-right: 1px solid #dddddd;
+    background-color: #eeeeee;
+    cursor: pointer;
+}
+.ego-notice-tab li:last-child{
+    border-right: none;
+}
+.ego-notice-tab li a{
+    display: block;
+    color: inherit;
+}
+.ego-notice-tab li.active{
+    background-color: white;
+    color: #3e5c9d;
+}
+.ego-article-list{
+    padding: 10px 24px 50px 40px;
+}
+.ego-article-list > a{
+    display: block;
+    height: 100px;
+    padding: 20px 10px;
+    border-bottom: 1px solid #dddddd;
+    color: inherit;
+}
+.ego-article-list > a:hover{
+    background-color: #eeeeee;
+}
+.ego-article-list > a > h4{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.ego-article-list > a > p{
+    font-size: 14px;
+    color: #999999;
+}
+.ego-article-detail{
+    padding: 10px 24px 50px 40px;
+}
+.ego-article-detail > h4{
+    height: 88px;
+    line-height: 88px;
+    font-size: 20px;
+    border-bottom: 1px solid #dddddd;
+}

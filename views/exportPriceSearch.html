@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>出口运价查询</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/animate.css">
+    <link rel="stylesheet" href="../static/lib/select2/select2.min.css">
+    <link rel="stylesheet" href="../src/css/priceSearch.css">
+</head>
+<body>
+<!--nav fixed-->
+<div class="ego-header not-select animated fadeInDown">
+    <div>
+        <img class="ego-logo" src="../static/image/index2/logo(white).png" alt="易购全球 专业跨境供应链服务平台">
+        <ul class="ego-nav">
+            <li><a href="">首页</a></li>
+            <li>
+                <div class="nav-title"><a href="">跨境物流 <div class="m-nav-arrow"></div></a></div>
+                <ul class="second-nav">
+                    <li><a href="#">出口物流</a></li>
+                    <li><a href="#">进口物流</a></li>
+                    <li><a href="#">海外仓储</a></li>
+                    <li><a href="#">通关申报</a></li>
+                </ul>
+            </li>
+            <li><a href="#">跨境商品</a></li>
+            <li><a href="#">跨境电商运营</a></li>
+            <li><a href="#">跨境金融</a></li>
+            <li><a href="#">软件技术</a></li>
+        </ul>
+        <div class="ego-log-reg">
+            <a href="">登录</a><div>|</div><a href="">注册</a>
+        </div>
+    </div>
+</div>
+<!--banner-->
+<div class="ego-price-banner">
+    <img src="../static/image/exportsec/priceSearch.jpg" alt="运价查询">
+</div>
+<!--priceSearch-->
+<div class="ego-price">
+    <div>
+        <div class="ego-price-conditions">
+            <form id="export" action="">
+              <!--  <select name="way">
+                    <option value="export">出口</option>
+                    <option value="import">进口</option>
+                </select>-->
+                <label class="sender">
+                    发件地
+                    <select name="senderCountry" class="select2">
+                        <option value="zhongguo">中国</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                    </select>
+                </label>
+                <label class="receiver">
+                    收件地
+                    <select name="receiverCountry" class="select2">
+                        <option value="11">阿尔及利亚</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                        <option value="11">aa</option>
+                    </select>
+                </label>
+                <label class="weight">
+                    毛重
+                    <input type="number" placeholder="" name="weight">
+                    KG
+                </label>
+               <!-- <label class="size">
+                    尺寸
+                    <input type="text" name="length" placeholder="长(cm)">
+                    <input type="text" name="width" placeholder="宽(cm)">
+                    <input type="text" name="height" placeholder="高(cm)">
+                </label>-->
+                <button class="ego-btn" id="priceSearchBtn" type="button">查询</button>
+            </form>
+        </div>
+        <div class="ego-price-display">
+            <table class="table table-hover table-break">
+                <thead>
+                <tr>
+                    <th>运输方式</th>
+                    <th>集货地</th>
+                    <th>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                总价(含油)<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="priceSequence">从低到高</li>
+                                <li class="priceReverse">从高到低</li>
+                            </ul>
+                        </div>
+                    </th>
+                    <th>
+                        <div class="btn-group">
+                            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                时效<span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu" role="menu">
+                                <li class="timeSequence">从快到慢</li>
+                                <li class="timeReverse">从慢到快</li>
+                            </ul>
+                        </div>
+                    </th>
+                    <th>是否有退运费</th>
+                    <th class="mr-table-note">发货须知</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody>
+                 <tr>
+                     <td>蓉欧快铁-小包1</td>
+                     <td>成都2仓</td>
+                     <td>
+                         <span style="text-decoration:line-through;color:grey">18.27</span>
+                         <span class="realPrice">¥1.14</span>
+                     </td>
+                     <td class="time">15-25天</td>
+                     <td>是</td>
+                     <td>
+                         <button class="ego-btn note-btn" data-content="1. 限重2Kg；普通件：长+宽+高≤90cm，最大边≤60cm，长≥14cm，宽≥11cm；圆卷：17cm≤直径*2+长≤104cm，11cm≤长≤90cm； 2. 体积重计算为长宽高相乘/8000； 3. 本产品为航空挂号小包，下单需准确填写产品信息及地址邮编信息等，因客户下单错误导致货物被扣或无法妥投，责任由发货人承担； 4. 本产品起运地为成都，需客户自行寄件至指定仓库，也可使用丝路易购提供的国内快递服务； 5. 本产品可以查询，货物到达仓库后24小时内上网； 6. 下单后确认发货，账户余额高于预计金额，即可获得第三方运单号，打印面单寄往指定仓库，完成国内集货； 7. 理赔说明： (1) 因不可抗力造成的货物丢失/损坏，本公司不承担理赔责任； (2) 因客户自己原因导致货物丢失/破损/异常由发货人自行承担责任； (3) 因客户低报、错报、漏报等导致货物被扣关或延误退回等，需由发货人承担； (4) 邮件自交寄之日起30天内（含），因邮政原因仍在国内经转或出口互换局，无网上交航更新信息，视为邮件延误，理赔该邮件本次邮寄费用; (5) 邮件自收寄之日起60日内相关系统中查询确认无监管部门查扣信息，无出境信息，可视为邮件丢失理赔。或者邮件收寄之日起75日内，无收件人签收信息，且可提供收件人丢失查询或者投诉依据，可视为邮件丢失理赔，按货物实际价值进行赔偿并退还邮寄费用，最高不超过300元/件; (6) 自货物收寄起4个月内视为理赔期，超过后则无法查询和理赔。 8. 投递范围： 全球220个国家或目的地，可派送偏远地区等。">
+                             查看
+                         </button>
+                     </td>
+                     <td>
+                         <a href="#" class="ego-btn goSend">我要寄件</a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>蓉欧快铁-小包2</td>
+                     <td>成都2仓</td>
+                     <td>
+                         <span style="text-decoration:line-through;color:grey">18.27</span>
+                         <span class="realPrice">¥9.14</span>
+                     </td>
+                     <td class="time">15-25天</td>
+                     <td>是</td>
+                     <td>
+                         <button class="ego-btn note-btn" data-content="2. 限重2Kg；普通件：长+宽+高≤90cm，最大边≤60cm，长≥14cm，宽≥11cm；圆卷：17cm≤直径*2+长≤104cm，11cm≤长≤90cm； 2. 体积重计算为长宽高相乘/8000； 3. 本产品为航空挂号小包，下单需准确填写产品信息及地址邮编信息等，因客户下单错误导致货物被扣或无法妥投，责任由发货人承担； 4. 本产品起运地为成都，需客户自行寄件至指定仓库，也可使用丝路易购提供的国内快递服务； 5. 本产品可以查询，货物到达仓库后24小时内上网； 6. 下单后确认发货，账户余额高于预计金额，即可获得第三方运单号，打印面单寄往指定仓库，完成国内集货； 7. 理赔说明： (1) 因不可抗力造成的货物丢失/损坏，本公司不承担理赔责任； (2) 因客户自己原因导致货物丢失/破损/异常由发货人自行承担责任； (3) 因客户低报、错报、漏报等导致货物被扣关或延误退回等，需由发货人承担； (4) 邮件自交寄之日起30天内（含），因邮政原因仍在国内经转或出口互换局，无网上交航更新信息，视为邮件延误，理赔该邮件本次邮寄费用; (5) 邮件自收寄之日起60日内相关系统中查询确认无监管部门查扣信息，无出境信息，可视为邮件丢失理赔。或者邮件收寄之日起75日内，无收件人签收信息，且可提供收件人丢失查询或者投诉依据，可视为邮件丢失理赔，按货物实际价值进行赔偿并退还邮寄费用，最高不超过300元/件; (6) 自货物收寄起4个月内视为理赔期，超过后则无法查询和理赔。 8. 投递范围： 全球220个国家或目的地，可派送偏远地区等。">
+                             查看
+                         </button>
+                     </td>
+                     <td>
+                         <a href="#" class="ego-btn goSend">我要寄件</a>
+                     </td>
+                 </tr>
+                 <tr>
+                     <td>蓉欧快铁-小包3</td>
+                     <td>成都2仓</td>
+                     <td>
+                         <span style="text-decoration:line-through;color:grey">18.27</span>
+                         <span class="realPrice">¥10.14</span>
+                     </td>
+                     <td class="time">15-25天</td>
+                     <td>是</td>
+                     <td>
+                         <button class="ego-btn note-btn" data-content="3. 限重2Kg；普通件：长+宽+高≤90cm，最大边≤60cm，长≥14cm，宽≥11cm；圆卷：17cm≤直径*2+长≤104cm，11cm≤长≤90cm； 2. 体积重计算为长宽高相乘/8000； 3. 本产品为航空挂号小包，下单需准确填写产品信息及地址邮编信息等，因客户下单错误导致货物被扣或无法妥投，责任由发货人承担； 4. 本产品起运地为成都，需客户自行寄件至指定仓库，也可使用丝路易购提供的国内快递服务； 5. 本产品可以查询，货物到达仓库后24小时内上网； 6. 下单后确认发货，账户余额高于预计金额，即可获得第三方运单号，打印面单寄往指定仓库，完成国内集货； 7. 理赔说明： (1) 因不可抗力造成的货物丢失/损坏，本公司不承担理赔责任； (2) 因客户自己原因导致货物丢失/破损/异常由发货人自行承担责任； (3) 因客户低报、错报、漏报等导致货物被扣关或延误退回等，需由发货人承担； (4) 邮件自交寄之日起30天内（含），因邮政原因仍在国内经转或出口互换局，无网上交航更新信息，视为邮件延误，理赔该邮件本次邮寄费用; (5) 邮件自收寄之日起60日内相关系统中查询确认无监管部门查扣信息，无出境信息，可视为邮件丢失理赔。或者邮件收寄之日起75日内，无收件人签收信息，且可提供收件人丢失查询或者投诉依据，可视为邮件丢失理赔，按货物实际价值进行赔偿并退还邮寄费用，最高不超过300元/件; (6) 自货物收寄起4个月内视为理赔期，超过后则无法查询和理赔。 8. 投递范围： 全球220个国家或目的地，可派送偏远地区等。">
+                             查看
+                         </button>
+                     </td>
+                     <td>
+                         <a href="#" class="ego-btn goSend">我要寄件</a>
+                     </td>
+                 </tr>
+                </tbody>
+            </table>
+
+            <!--未匹配到-->
+            <!--<p class="notice">
+                对不起，暂无适合您的物流方式。
+            </p>-->
+        </div>
+    </div>
+</div>
+<!--footer-->
+<div class="ego-site-info">
+    <div>
+        <div class="ego-site-item about">
+            <h5>关于我们</h5>
+            <ul>
+                <li><a href="">公司简介</a></li>
+                <li><a href="">主营业务</a></li>
+                <li><a href="">公司团队</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item news">
+            <h5>新闻中心</h5>
+            <ul>
+                <li><a href="">通知公告</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">培训回顾</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item help">
+            <h5>帮助中心</h5>
+            <ul>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">使用流程</a></li>
+                <li><a href="">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="ego-site-item scan">
+            <img src="../static/image/index2/QRcode.png" alt="">
+            <p>
+                扫描关注易购全球订阅号 <br/>
+                随时获知一手平台资讯
+            </p>
+        </div>
+        <div class="ego-site-item contact">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="">服务时间：9:00-18:00</a></li>
+                <li><a href="">服务热线：028-65596899</a></li>
+            </ul>
+            <div class="ego-footer-conn-info">
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-gongsiming"></span>
+                    <div class="ego-footer-poptips">
+                        <p>四川丝路易购科技有限公司</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-dizhi1"></span>
+                    <div class="ego-footer-poptips">
+                        <p>成都市天府软件园D5-4</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <span class="iconfont icon-youxiang"></span>
+                    <div class="ego-footer-poptips">
+                        <p>6555555@126.com</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="ego-footer">
+    <div>
+        <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+    </div>
+</div>
+<div class="modal fade" id="priceNote" tabindex="-1" role="dialog" aria-labelledby="priceLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="priceLabel">增加商品信息</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="m-footer">
+                <button class="ego-btn" data-dismiss="modal">知道了</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/select2/select2.min.js"></script>
+<script src="../static/lib/select2/zh-CN.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/priceSearch.js"> </script>
+<script src="../src/js/pricelistOrder.js"> </script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"分享给你一个可以查询全球物流价格的网站，价低时效稳才是王道！","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"0","bdPos":"right","bdTop":"200"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+</body>
+</html>

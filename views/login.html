@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/login.css">
+    <link rel="stylesheet" href="../static/lib/iconfont/iconfont.css">
+    <link rel="stylesheet" href="../static/lib/fontAwesome/css/font-awesome.css">
+</head>
+<body>
+<!--头部-->
+<header class="regLogin-header">
+    <div class="regLogin-header-contain">
+        <img src="../static/image/index2/LOGO.png" alt="">
+    </div>
+</header>
+<!--中间部分-->
+<section class="regLogin-main">
+    <div class="regLogin-mainWrap">
+        <div class="regLogin-box-bg">
+            <div class="login-box not-select">
+                <div class="login-box-title">
+                    会员登录
+                </div>
+                <div class="login-panel">
+                    <form action="" id="login-form">
+                        <table>
+                            <tr>
+                                <td class="log-form-left"><label for="userName">用户名：</label></td>
+                                <td class="log-form-right" colspan="2">
+                                    <input type="text"
+                                           name="userName"
+                                           id="userName"
+                                           placeholder="请输入手机号或邮箱地址">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="log-form-left"><label for="userPassword">登录密码：</label></td>
+                                <td class="log-form-right" colspan="2">
+                                    <input type="password"
+                                           name="userPassword"
+                                           id="userPassword"
+                                           placeholder="请填写登录密码">
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                 <td class="log-form-left"><label for="imgCode">图形验证：</label></td>
+                                 <td class="log-form-middle"><input type="text"
+                                            name="imgCode"
+                                            id="imgCode"
+                                            placeholder="请输入验证码"></td>
+                                 <td><div>图形</div></td>
+                             </tr>-->
+                        </table>
+                        <div class="log-tips">
+                            <label for="login-remember"><input type="checkbox" id="login-remember">记住我</label>
+                            <a href=""><span>忘记密码？</span></a>
+                        </div>
+                        <button class="log-go-login">
+                            立即登录
+                        </button>
+                        <div class="log-third-way">
+                            <div class="log-third-way-title">
+                                <p>第三方登录</p>
+                                <div class="login-line"></div>
+                            </div>
+                            <div class="login-way">
+                                <img src="../static/image/index/banner/meun/qq-Icon.png" alt="">
+                            </div>
+                            <div class="login-way">
+                                <img src="../static/image/index/banner/meun/WeChat-Icon.png" alt="">
+                            </div>
+                            <div class="login-info">
+                                <span>没有账号？</span>
+                                <a href="#">立即注册>></a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--页尾-->
+<footer class="ego-footer">
+    <div class="ego-footer-contain">
+        <div class="ego-footer-item ego-footer-about">
+            <h5>关于我们</h5>
+            <ul>
+                <li><a href="">公司简介</a></li>
+                <li><a href="">主营业务</a></li>
+                <li><a href="">操作指引</a></li>
+            </ul>
+        </div>
+        <div class="ego-footer-item ego-footer-newscenter">
+            <h5>新闻中心</h5>
+            <ul>
+                <li><a href="">通知公告</a></li>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">培训回顾</a></li>
+            </ul>
+        </div>
+        <div class="ego-footer-item ego-footer-help">
+            <h5>帮助中心</h5>
+            <ul>
+                <li><a href="">常见问题</a></li>
+                <li><a href="">使用流程</a></li>
+                <li><a href="">网站地图</a></li>
+            </ul>
+        </div>
+        <div class="ego-footer-item ego-footer-scan">
+            <img src="../static/image/index/footer/QR-code.png" alt="">
+            <p>
+                扫描关注易购全球订阅号<br/>
+                随时获知一手平台资讯
+            </p>
+        </div>
+        <div class="ego-footer-item ego-footer-contact">
+            <h5>联系我们</h5>
+            <ul>
+                <li>服务时间:09:00-18:00</li>
+                <li>服务热线:028-65596899</li>
+            </ul>
+            <div class="ego-footer-conn-info">
+                <div class="ego-footer-cinfo-item">
+                    <div class="ego-footer-icon ego-icon-company"></div>
+                    <div class="ego-footer-poptips">
+                        <p>四川丝路易购科技有限公司</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <div class="ego-footer-icon ego-icon-address"></div>
+                    <div class="ego-footer-poptips">
+                        <p>成都市天府软件园D5-4</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+                <div class="ego-footer-cinfo-item">
+                    <div class="ego-footer-icon ego-icon-email"></div>
+                    <div class="ego-footer-poptips">
+                        <p>6555555@126.com</p>
+                        <div class="ego-footer-littlearrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ego-footer-siteinfo">
+        <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+    </div>
+</footer>
+<!--弹框-->
+   <!-- <div class="popUpBg">
+        <div class="popUpBox">
+            <div class="popUpTitle">
+                <i class="fa fa-check" aria-hidden="true"></i>
+                <p>温馨提示</p>
+            </div>
+            <p>请输入争取的密码</p>
+        </div>
+    </div>-->
+<!--jiaz-->
+<!--<div class="spinnerBg">
+<div class="spinner">
+    <div class="spinner-container container1">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container2">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+    <div class="spinner-container container3">
+        <div class="circle1"></div>
+        <div class="circle2"></div>
+        <div class="circle3"></div>
+        <div class="circle4"></div>
+    </div>
+</div>
+    <p>努力加载中</p>
+</div>-->
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/jquery.validate.min.js"></script>
+<script src="../src/js/popUp.js"></script>
+<script src="../src/js/login.js"></script>
+</html>

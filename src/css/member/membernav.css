@@ -1,0 +1,109 @@
+.member-nav{
+    width: 100%;
+    min-width: 1200px;
+    height: 50px;
+    background-color: white;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    border-bottom: 1px solid #dcdcdc;
+    z-index: 1000;
+}
+.member-nav>ul{
+    display: inline-block;
+    min-width: 1200px;
+    height: 50px;
+    margin-left: 70px;
+    color: #333;
+}
+.member-nav>ul>li{
+    box-sizing: border-box;
+    border-color: #cccccc;
+    width: 126px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    float: left;
+    margin-right: 30px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    padding: 0 5px;
+    font-size: 16px;
+}
+.member-nav>ul>li:hover:not(.m-nav-index){
+    height: auto;
+    overflow: visible;
+    background-color: white;
+    border-bottom: 1px solid #cccccc;
+    border-left: 1px solid #cccccc;
+    border-right: 1px solid #cccccc;
+}
+.member-nav>ul>li:hover .m-nav-arrow{
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.member-nav>ul>li>.iconfont{
+    margin-right: 10px;
+    color: #808080;
+}
+.member-nav>ul>li>span{
+    color: #333;
+}
+.m-nav-arrow{
+    display: inline-block;
+    margin-bottom: 2px;
+    margin-left: 5px;
+    height: 0;
+    width: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #5b5b5b;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+.m-nav-dropDown{
+    width: 100%;
+}
+.m-nav-dropDown li{
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    margin: 0 -5px 0 -5px;
+    -webkit-transition: all 100ms linear;
+    -moz-transition: all 100ms linear;
+    -o-transition: all 100ms linear;
+    transition: all 100ms linear;
+
+}
+.m-nav-dropDown li:hover:not(.m-nav-secTitle){
+    background-color: #e5821d;
+    color: white;
+    -webkit-transition: all 100ms linear;
+    -moz-transition: all 100ms linear;
+    -o-transition: all 100ms linear;
+    transition: all 100ms linear;
+}
+.m-nav-dropDown li.m-nav-secTitle{
+    height: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: left;
+    padding-left: 10px;
+    background-color: #E6E6E6;
+}
+.m-nav-dropDown li:hover a{
+    color: white;
+}

@@ -1,0 +1,132 @@
+.ego-notice-banner{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+}
+.ego-notice-banner> img{
+    position: absolute;
+    left: 50%;
+    margin-left: -960px;
+}
+.ego-about > div{
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+}
+.ego-introduce{
+    padding: 66px 0;
+    overflow: hidden;
+}
+.ego-introduce  > img{
+    float: right;
+    margin-left: 79px;
+}
+.ego-introduce  > p{
+    font-size: 18px;
+    line-height: 36px;
+    padding-top: 10px;
+}
+.ego-introduce  > p:nth-of-type(2){
+    margin-top: 20px;
+}
+.ego-service-intro{
+    overflow: hidden;
+}
+.ego-service-intro .item{
+    float: left;
+    margin-right: 95px;
+}
+.ego-service-intro .item:last-child{
+    margin-right: 0;
+}
+.ego-service-intro .item .circle{
+    width: 164px;
+    height: 164px;
+    line-height: 164px;
+    font-size: 20px;
+    color: #3e5c9d;
+    text-align: center;
+}
+.ego-service-intro .item .circle span.iconfont{
+    font-size: 90px;
+    color: #e5821d;
+}
+.ego-service-intro .item ul li{
+    text-align: center;
+    font-size: 16px;
+    line-height: 32px;
+}
+.ego-service-intro .item ul li:first-child{
+    font-size: 20px;
+    color: #3e5c9d;
+}
+.ego-notice-banner.development{
+    height: 700px;
+}
+ul.ego-mediaContain{
+    font-size: 0;
+    height: 580px;
+}
+ul.ego-mediaContain li{
+    float: left;
+    width: 380px;
+    height: 250px;
+    position: relative;
+    margin-right: 30px;
+    margin-top: 30px;
+    overflow: hidden;
+    -webkit-transform-origin: center center;
+    -moz-transform-origin: center center;
+    -ms-transform-origin: center center;
+    -o-transform-origin:center center;
+    transform-origin: center center ;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+ul.ego-mediaContain li:nth-of-type(3),
+ul.ego-mediaContain li:nth-of-type(6){
+    margin-right: 0;
+}
+ul.ego-mediaContain li > img{
+    width: 100%;
+    height: 100%;
+}
+ul.ego-mediaContain li > a{
+    display: block;
+    position: absolute;
+    bottom: -90px;
+    left: 0;
+    height: 150px;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background-color: rgba(0,0,0,.4);
+    font-size: 16px;
+    vertical-align: baseline;
+    padding-top: 8px;
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+}
+ul.ego-mediaContain li:hover{
+    -webkit-transition: all 200ms linear;
+    -moz-transition: all 200ms linear;
+    -ms-transition: all 200ms linear;
+    -o-transition: all 200ms linear;
+    transition: all 200ms linear;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+    box-shadow: 0 3px 9px rgba(0,0,0,.5);
+}
+ul.ego-mediaContain li:hover > a{
+    bottom: -60px;
+}

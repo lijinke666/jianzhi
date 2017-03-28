@@ -1,0 +1,48 @@
+.ego-advantages{
+    width: 100%;
+    /*background-color: rgb(250,250,250);*/
+}
+.ego-advantages .ego-section-title{
+    padding: 54px 0 30px 0;
+}
+.ego-advantages > div{
+    width: 1200px;
+    margin: 0 auto;
+}
+.ego-advantages-contain{
+    overflow: visible;
+    height: 780px;
+    padding-bottom: 30px;
+}
+.ego-advantages-item{
+    width: 541px;
+    height: 350px;
+    float: left;
+    margin-top: 28px;
+    cursor: pointer;
+}
+.ego-advantages-item:hover{
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    -moz-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+.ego-advantages-item:nth-of-type(1),
+.ego-advantages-item:nth-of-type(3){
+    margin-right: 115px;
+}
+.ego-advantages-item .ego-advantages-img > img {
+    width: 100%;
+}
+.ego-advantages-item .ego-advantages-notice{
+    text-align: center;
+}
+.ego-advantages-item .ego-advantages-notice h3{
+    font-size: 20px;
+    color: #3e5c9d;
+    margin: 29px 0 20px 0;
+}
+.ego-advantages-item .ego-advantages-notice p{
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 32px;
+}

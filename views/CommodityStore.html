@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>商品库</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../static/lib/datapicker/bootstrap-datetimepicker.css">
+    <link rel="stylesheet" href="../src/css/commodityStore.css">
+</head>
+<body>
+<div class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+        <div class="member-header-usericon">
+            <img src="../static/image/member/Head-portrait.png" alt="">
+        </div>
+        <span>易购全球</span>
+        <a href="javascript:void(0)">安全退出</a> |
+        <a href="javascript:void(0)">返回首页</a>
+    </div>
+</div>
+<!--导航-->
+<div class="member-nav clearfix not-select">
+    <ul>
+        <li class="m-nav-index">
+            <div class="m-nav-item">
+                <span class="iconfont icon-huiyuanshouyeICON"></span>
+                <span>首页</span>
+            </div>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-woyaojijianICON"></span>
+                <span>我要寄件</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">出口寄件</a></li>
+                <li><a href="#">进口寄件</a></li>
+                <li><a href="#">运单列表</a></li>
+                <li><a href="#">账单明细</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-kuajingshangpinICON"></span>
+                <span>跨境商品</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li class="m-nav-secTitle">供货</li>
+                <li><a href="#">发布商品</a></li>
+                <li><a href="#">商品管理</a></li>
+                <li><a href="#">货源订单</a></li>
+                <li class="m-nav-secTitle">分销</li>
+                <li><a href="#">分销订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-beianshenbaoICON"></span>
+                <span>备案申报</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">商品备案</a></li>
+                <li><a href="#">订单申报</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodedingdanICON"></span>
+                <span>我的订单</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的订单</a></li>
+                <li><a href="#">我的订单</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-wodezichanICON"></span>
+                <span>我的资产</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+                <li><a href="#">我的资产</a></li>
+            </ul>
+        </li>
+        <li>
+            <div class="m-nav-item">
+                <span class="iconfont icon-yonghuzhongxinICON"></span>
+                <span>用户中心</span>
+                <div class="m-nav-arrow"> </div>
+            </div>
+            <ul class="m-nav-dropDown">
+                <li><a href="#">用户中心</a></li>
+            </ul>
+        </li>
+    </ul>
+</div>
+<!--会员中心-->
+<section class="person-center">
+    <div class="person-center-contain">
+        <div class="person-bread-nav">
+            <span>您的位置：</span>
+            <ol class="breadcrumb">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">我要寄件</a></li>
+                <li class="active">商品库</li>
+            </ol>
+        </div>
+        <div class="person-center-wrap">
+            <div class="person-center-title">
+                <span class="iconfont icon-yonghuxinxixiushi"></span>
+                <span>商品库</span>
+            </div>
+            <div class="person-center-info">
+                <div class="commodity-ctrl">
+                    <button class="ego-btn" id="addCommodityBtn">新增</button>
+                    <button class="ego-btn" id="deleteCommodityBtn">删除</button>
+                      <form action="" id="commoditySearch" class="commoditySearch">
+                        <button class="ego-btn">查询</button>
+                        <input type="text" name="searchCondition" placeholder="请输入SKU编号、商品名称">
+                    </form>
+                </div>
+                <table class="table table-bordered table-hover commodityList">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" class="waybill-check-ctrl"></th>
+                            <th>SKU</th>
+                            <th>规格型号</th>
+                            <th>商品名称(中文)</th>
+                            <th>HS编码</th>
+                            <th>净重</th>
+                            <th>申报单位</th>
+                            <th>申报单价</th>
+                            <th>申报币别</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkCommodity">
+                                <input type="hidden" name="commodityId" value="1"><!--商品ID-->
+                            </td>
+                            <td>1234567891</td>
+                            <td>奶粉1段 850g</td>
+                            <td>一个中文名称1</td>
+                            <td style="display: none">an english name1</td>
+                            <td>1234568791  </td>
+                            <td style="display: none">12345687912345678</td>
+                            <td>0.1234</td>
+                            <td>2</td>
+                            <td>0.1232</td>
+                            <td>3</td>
+                            <td>
+                                <button class="ego-btn modifyCommodity">编辑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkCommodity">
+                                <input type="hidden" name="commodityId" value="2"><!--商品ID-->
+                            </td>
+                            <td>1234567891</td>
+                            <td>奶粉1段 850g</td>
+                            <td>一个中文名称2</td>
+                            <td style="display: none">an english name2</td>
+                            <td>1234568791  </td>
+                            <td style="display: none">122222222222</td>
+                            <td>0.1234</td>
+                            <td>2</td>
+                            <td>0.1232</td>
+                            <td>2</td>
+                            <td>
+                                <button class="ego-btn modifyCommodity">编辑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkCommodity">
+                                <input type="hidden" name="commodityId" value="3"><!--商品ID-->
+                            </td>
+                            <td>1234567891</td>
+                            <td>奶粉1段 850g</td>
+                            <td>一个中文名称3</td>
+                            <td style="display: none">an english name3</td>
+                            <td>1234568791  </td>
+                            <td style="display: none">1233333333333333</td>
+                            <td>0.1234</td>
+                            <td>3</td>
+                            <td>0.1232</td>
+                            <td>3</td>
+                            <td>
+                                <button class="ego-btn modifyCommodity">编辑</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" name="checkCommodity">
+                                <input type="hidden" name="commodityId" value="4"><!--商品ID-->
+                            </td>
+                            <td>1234567891</td>
+                            <td>奶粉1段 850g</td>
+                            <td>一个中文名称4</td>
+                            <td style="display: none">an english name4</td>
+                            <td>1234568791  </td>
+                            <td style="display: none">12344444444444</td>
+                            <td>0.1234</td>
+                            <td>4</td>
+                            <td>0.1232</td>
+                            <td>4</td>
+                            <td>
+                                <button class="ego-btn modifyCommodity">编辑</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
+<!--会员中心页尾-->
+<footer class="member-footer">
+    <p>Copyright © 2016 丝路易购平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+</footer>
+<!--新增商品-->
+<div class="modal fade" id="addCommodityModal" tabindex="-1" role="dialog" aria-labelledby="addLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="addLabel">增加商品信息</h4>
+            </div>
+            <div class="modal-body">
+                <form action="" id="commodityInfoForm">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">SKU</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="hidden" name="commodityId" value="123">
+                                <input type="text" name="skuCode" placeholder="商品编号">
+                            </div>
+                            <div class="col-lg-2 col-xs-2 ego-label">规格型号</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="text" name="specification" placeholder="品牌、型号、成分等">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">商品中文名称</div>
+                            <div class="col-lg-10 col-xs-10 ego-input">
+                                <input type="text" name="nameZH" placeholder="请填写商品中文名称，尽可能详细">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">商品英文名称</div>
+                            <div class="col-lg-10 col-xs-10 ego-input">
+                                <input type="text" name="nameEN" placeholder="请填写商品英文名称">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">HS编码/行邮税号</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="text" name="hsCode" placeholder="出口为10位HS编码/进口为8位行邮税号">
+                                <a href="#" class="searchLink">查询链接</a>
+                            </div>
+                            <div class="col-lg-2 col-xs-2 ego-label">条形码</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="text" name="barCode" placeholder="没有填“无”">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">净重(kg)</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="text" name="weight" placeholder="请填写单件净重">
+                            </div>
+                            <div class="col-lg-2 col-xs-2 ego-label">申报单位</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <select name="declareUnits">
+                                    <!--用作placeHolder，勿删-->
+                                    <option value="" disabled selected style="display: none">申报单位</option>
+                                    <!--/end-->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-2 col-xs-2 ego-label">申报单价</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <input type="text" name="price" placeholder="请填写申报单价">
+                            </div>
+                            <div class="col-lg-2 col-xs-2 ego-label">申报币别</div>
+                            <div class="col-lg-4 col-xs-4 ego-input">
+                                <select name="declareCurrency">
+                                    <!--用作placeHolder，勿删-->
+                                    <option value="" disabled selected style="display: none">申报币别</option>
+                                    <!--/end-->
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--!!!!-->
+                    <div class="save">
+                        <button type="button" class="ego-btn save">保存</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../src/js/public.js"></script>
+<script src="../src/js/commodityStore.js"></script>
+<script>
+
+</script>
+</html>

@@ -1,0 +1,66 @@
+h1,h2,h3,h4,h5,h6,ul,p{
+    margin: 0;
+    padding: 0;
+}
+a:link,a:visited,a:hover,a:active{ color: inherit; text-decoration: none;  }
+a:hover{
+    color: inherit;
+}
+@media screen and (min-width: 320px) {
+    html {font-size: 14px;}
+}
+
+@media screen and (min-width: 360px) {
+    html {font-size: 16px;}
+}
+
+@media screen and (min-width: 400px) {
+    html {font-size: 18px;}
+}
+
+@media screen and (min-width: 440px) {
+    html {font-size: 20px;}
+}
+
+@media screen and (min-width: 480px) {
+    html {font-size: 22px;}
+}
+
+@media screen and (min-width: 640px) {
+    html {font-size: 28px;}
+}
+body{
+    background: url("../static/image/xmas/moilebg.jpg") no-repeat;
+    background-size: cover;
+    margin: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.border-1px{
+    position: relative
+}
+.border-1px:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid black;
+}
+@media (-webkit-min-device-pixel-ratio: 1.5),(min-device-pixel-ratio: 1.5){
+    .border-1px:after{
+        -webkit-transform :scaleY(0.7);
+        transform :scaleY(0.7);
+    }
+}
+@media (-webkit-min-device-pixel-ratio: 2),(min-device-pixel-ratio: 2){
+    .border-1px:after{
+        -webkit-transform :scaleY(0.5);
+        transform :scaleY(0.5);
+    }
+}
+

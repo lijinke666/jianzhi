@@ -1,0 +1,138 @@
+.ego-partner{
+    background-color: rgb(250,250,250);
+}
+
+.ego-partner > div{
+    width: 1200px;
+    margin: 0 auto;
+    height: 514px;
+}
+.ego-partner-contain{
+    position: relative;
+}
+.ego-partner-box{
+    height: 236px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transform-origin: center center;
+}
+.ego-partner-box.active{
+    transform: scale(1);
+    transition: all 1s cubic-bezier(.38,-0.03,.42,1.05);
+}
+.ego-partner-item{
+    float: left;
+    width: 219px;
+    height: 103px;
+    margin-right: 108px;
+    margin-top: 10px;
+    cursor: pointer;
+    background: url("../../../static/image/index2/partner/allparters.png") no-repeat;
+}
+.ego-partner-item > a{
+    display: block;
+    width: 100%;
+    height:100%;
+}
+/*.ego-partner-item :hover{
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}*/
+.ego-partner-item:nth-of-type(4),
+.ego-partner-item:nth-of-type(8){
+    margin-right: 0;
+}
+.ego-partner-item.chinapost{
+    background-position: 0 0;
+}
+.ego-partner-item.chinapost:hover{
+    background-position: -219px 0;
+}
+.ego-partner-item.amazon{
+    background-position: 0 -103px;
+}
+.ego-partner-item.amazon:hover{
+    background-position: -219px -103px;
+}
+.ego-partner-item.ebay{
+    background-position: 0 -206px;
+}
+.ego-partner-item.ebay:hover{
+    background-position: -219px -206px;
+}
+.ego-partner-item.changhong{
+    background-position: 0 -309px;
+}
+.ego-partner-item.changhong:hover{
+    background-position: -219px -309px;
+}
+.ego-partner-item.EMS{
+    background-position: 0 -412px;
+}
+.ego-partner-item.EMS:hover{
+    background-position: -235px -412px;
+}
+.ego-partner-item.Fedex{
+    background-position: 0 -515px;
+}
+.ego-partner-item.Fedex:hover{
+    background-position: -219px -515px;
+}
+.ego-partner-item.TNT{
+    background-position: 0 -618px;
+}
+.ego-partner-item.TNT:hover{
+    background-position: -219px -618px;
+}
+.ego-partner-item.Russian{
+    background-position: 0 -721px;
+}
+.ego-partner-item.Russian:hover{
+    background-position: -219px -721px;
+}
+.ego-partner-item.milanoo{
+    background-position: 0 -824px;
+}
+.ego-partner-item.milanoo:hover{
+    background-position: -219px -824px;
+}
+.ego-partner-item._17track{
+    background: url("../../../static/image/index2/partner/_17TRACK.png") no-repeat -220px 0;
+}
+.ego-partner-item._17track:hover{
+    background-position: 0 0;
+}
+.ego-partner-item.oneworld{
+    background: url("../../../static/image/index2/partner/oneworld.png") no-repeat -219px 0;
+}
+.ego-partner-item.oneworld:hover{
+    background-position: 0 0;
+}
+.ego-partner-item.aramex{
+    background: url("../../../static/image/index2/partner/aramex.png") no-repeat 0 0;
+}
+.ego-partner-item.aramex:hover{
+    background-position: -219px 0;
+}
+.ego-partner-item.sinotrans{
+    background: url("../../../static/image/index2/partner/sinotrans.png") no-repeat 0 0;
+}
+.ego-partner-item.sinotrans:hover{
+    background-position: -219px 0;
+}
+.ego-partner-controls{
+    text-align: center;
+    margin-top: 236px;
+}
+.ego-partner-controls .ctrl-btn{
+    cursor: pointer;
+    display: inline-block;
+    width: 53px;
+    height: 6px;
+    margin-right: 10px;
+    background-color: #dddddd;
+}
+.ego-partner-controls .ctrl-btn.active{
+    background-color: #3e5c9d;
+}

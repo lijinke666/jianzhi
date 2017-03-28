@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script type="text/javascript">
+        function browserRedirect() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                return 'phone'
+            } else {
+                return 'pc'
+            }
+        }
+    </script>
+    <meta charset="UTF-8">
+    <title>易购圣诞重磅活动</title>
+    <link rel="stylesheet" href="../static/lib/bootstrap.css">
+    <link rel="stylesheet" href="../src/css/xmas.css">
+</head>
+<body>
+    <div class="banner-bg">
+        <div class="x-container">
+            <img  class="banner-text" src="../static/image/xmas/bannertext.png">
+        </div>
+        <div class="x-container bg-footer">
+            <img src="../static/image/xmas/bannerpic.png">
+        </div>
+        <div class="next">
+                <span class="glyphicon glyphicon-chevron-down"></span>
+        </div>
+    </div>
+    <div class="x-container xmas-1">
+        <div class="xmas xmas-1">
+            <img class="bell" src="../static/image/xmas/xmas1/Smallbell.png">
+            <div class="title">
+                活动一：注册即有机会获取神秘大礼<br/>
+                活动时间：12月22日-1月10日
+            </div>
+            <h3>获奖名单：</h3>
+            <div class="goods">
+                <img src="../static/image/xmas/xmas1/Snowtitle.png">
+                <table>
+                    <tr>
+                        <td style="width: 200px">用户名</td>
+                        <td style="width: 380px">手机号</td>
+                        <td style="width: 211px">中奖礼品</td>
+                    </tr>
+                    <tr>
+                        <td>李*波</td>
+                        <td>158****3065</td>
+                        <td>小米空气净化器2</td>
+                    </tr>
+                    <tr>
+                        <td>张*</td>
+                        <td>181****8213</td>
+                        <td>星巴克保温杯</td>
+                    </tr>
+                    <tr>
+                        <td>林*菲</td>
+                        <td>131****5023</td>
+                        <td>星巴克保温杯</td>
+                    </tr>
+                    <tr>
+                        <td>童*达</td>
+                        <td>134****7282</td>
+                        <td>小米手环2</td>
+                    </tr>
+                    <tr>
+                        <td>裴*俊</td>
+                        <td>180****4860</td>
+                        <td>小米手环2</td>
+                    </tr>
+                    <tr>
+                        <td>*昊</td>
+                        <td>139****4153</td>
+                        <td>小米蓝牙音箱</td>
+                    </tr>
+                    <tr>
+                        <td>*敏</td>
+                        <td>136****2663</td>
+                        <td>小米蓝牙音箱</td>
+                    </tr>
+                    <tr>
+                        <td>李*怡 </td>
+                        <td>135****2751</td>
+                        <td>小米蓝牙音箱</td>
+                    </tr>
+                    <tr>
+                        <td>*林</td>
+                        <td>181****9979</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                    <tr>
+                        <td>*佳</td>
+                        <td>185****2226</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                    <tr>
+                        <td>段*波</td>
+                        <td>139****4570</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                    <tr>
+                        <td>尹*飞</td>
+                        <td>159****4402</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                    <tr>
+                        <td>*巍</td>
+                        <td>189****8878</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                    <tr>
+                        <td>姚*毅</td>
+                        <td>133****9966</td>
+                        <td>跨境电商进阶书籍</td>
+                    </tr>
+                </table>
+            </div>
+            <div style="padding: 20px 0;font-size: 24px">
+                更多书籍获奖者，不在此一一罗列
+            </div>
+            <img class="QRcode" src="../static/image/xmas/xmas1/QRcode.png">
+        </div>
+    </div>
+    <div class="x-container xmas-2">
+        <div class="xmas xmas-2">
+            <img class="hat" src="../static/image/xmas/xmas2/Hat.png">
+            <div class="title">
+                活动二：所有在线寄件均享受9.5折优惠<br>
+                活动时间：12月22日-1月22日
+            </div>
+            <p style="font-size: 24px;font-weight: bold     ">
+                发货总额排名前十的名单
+            </p>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th style="width:150px;text-align: center;color: white">用户名</th>
+                        <th style="width:300px;text-align: center;color: white">手机号</th>
+                        <th style="width:150px;text-align: center;color: white">发货总额</th>
+                        <th style="width:191px;text-align: center;color: white">返现总额</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>李*宇</td>
+                        <td>158****3065</td>
+                        <td>5642.58</td>
+                        <td>282.13</td>
+                    </tr>
+                    <tr>
+                        <td>张*贤</td>
+                        <td>181****1693</td>
+                        <td>4725.69</td>
+                        <td>236.28</td>
+                    </tr>
+                    <tr>
+                        <td>孙*巧</td>
+                        <td>157****7122</td>
+                        <td>4251.36</td>
+                        <td>212.57</td>
+                    </tr>
+                    <tr>
+                        <td>王*捷</td>
+                        <td>180****4860</td>
+                        <td>3529.09</td>
+                        <td>176.45</td>
+                    </tr>
+                    <tr>
+                        <td>谢*成</td>
+                        <td>181****8021</td>
+                        <td>2782.3</td>
+                        <td>139.12</td>
+                    </tr>
+                    <tr>
+                        <td>刘*敏</td>
+                        <td>152****6902</td>
+                        <td>2214.68</td>
+                        <td>110.73</td>
+                    </tr>
+                    <tr>
+                        <td>周*</td>
+                        <td>135****8349</td>
+                        <td>1036.07</td>
+                        <td>51.80</td>
+                    </tr>
+                    <tr>
+                        <td>丁*军</td>
+                        <td>134****3173</td>
+                        <td>598.23</td>
+                        <td>29.91</td>
+                    </tr>
+                    <tr>
+                        <td>李*</td>
+                        <td>181****9979</td>
+                        <td>567.41</td>
+                        <td>28.37</td>
+                    </tr>
+                    <tr>
+                        <td>魏*</td>
+                        <td>139****5908</td>
+                        <td>428.96</td>
+                        <td>21.45</td>
+                    </tr>
+                    <tr>
+                        <td colspan="4" style="text-align: left">
+                            备注：<br>
+                            1.发货总额指用户已支付成功的运费总额；<br>
+                            2.返现总额=发货总额*5%。
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+        </div>
+    </div>
+    <div class="x-container xmas-3">
+        <div class="xmas xmas-3">
+            <img class="claus" src="../static/image/xmas/xmas3/SantaClaus.png">
+            <div class="title">
+                活动三：活动期间发货量最大的用户赢取2017年VIP超级席位<br>
+                活动时间：12月22日-1月22日
+            </div>
+            <h3>2017超级VIP席位获得者：</h3>
+            <p style="font-size: 24px;margin-top: 48px">李*宇 158****3065</p>
+        </div>
+    </div>
+    <div class="x-container">
+        <p style="color: white;font-size: 16px;margin-top: 20px">备注：1.活动二、三不用参与抽奖，发货既享优惠；2.所有活动解释权归丝路易购平台方所有。</p>
+    </div>
+    <div class="x-container return">
+        <div>
+            <a href="http://nb.egoint.com">返回首页</a>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </div>
+        <div class="x-container page-footer">
+            <img src="../static/image/xmas/footer.png" alt="">
+        </div>
+    </div>
+    <!---->
+    <canvas class="snow-canvas" speed="1" interaction="false" size="2" count="80" opacity="0.00001" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" wind-power="0" image="false" width="1366" height="667"></canvas>
+    <canvas class="snow-canvas" speed="2" interaction="true" size="6" count="30" start-color="rgba(253,252,251,1)" end-color="rgba(251,252,253,0.3)" opacity="0.00001" wind-power="2" image="false" width="1366" height="667"></canvas>
+    <canvas class="snow-canvas" speed="3" interaction="true" size="12" count="20" wind-power="-5" image="../static/image/xmas/snow.png" width="1366" height="667"></canvas>
+    <div class="shareBox">
+        <div class="bdsharebuttonbox">
+            <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><br>
+            <a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><br>
+            <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><br>
+            <a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        </div>
+        <div class="finger">
+            <img src="../static/image/xmas/finger.png">
+            <p>点此可以分享</p>
+        </div>
+    </div>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/snow-plugin.js"></script>
+<script>
+    $(document).ready(function () {
+        if(browserRedirect()=='pc'){
+            var height = $(window).height();
+            $('div.banner-bg').css({
+                height:height+"px"
+            });
+            $('div.next').on('click',function () {
+                $('html,body').animate({
+                    scrollTop:height+50
+                },600)
+            });
+            window.onscroll = function () {
+                var $shareBox = $('div.shareBox');
+                if ($(window).scrollTop() >= height ) {
+                    $shareBox.addClass('active');
+                }else {
+                    $shareBox.removeClass('active');
+                }
+            };
+        }
+        $('div.top').on('click',function () {
+            $('html,body').animate({
+                scrollTop:0
+            },600)
+        });
+    });
+    $(".snow-canvas").snow();
+</script>
+<script>
+    window._bd_share_config={"common":{"bdSnsKey":{}, "bdText":"活久见，跨境物流费用竟然也能抽奖赢奖品，旺季竟然运费还打折！", "bdMini":"1", "bdMiniList":false, "bdPic":"http://nb.egoint.com/static/image/xmas/promotion.png", "bdStyle":"1","bdSize":"32"}, "share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+</script>
+</html>

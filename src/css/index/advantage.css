@@ -1,0 +1,50 @@
+.ego-advantage{
+    min-width: 1200px;
+    height: 500px;
+    position: relative;
+}
+.ego-advantage-contain{
+    width: 1200px;
+    margin: 0  auto;
+    text-align: center;
+    font-size: 0;
+}
+.ego-advantage-contain>img{
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.ego-advantage-item{
+    display: inline-block;
+    width: 550px;
+    box-sizing: border-box;
+    height: 160px;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 18px;
+}
+.ego-advantage-item>img,.ego-advantage-item>div{
+    float: left;
+}
+.ego-advantage-item div{
+    margin-left: 30px;
+    margin-top: 15px;
+}
+.ego-advantage-item div p{
+    font-size: 16px;
+    color: #000;
+    margin-bottom: 10px;
+}
+.ego-advantage-item div span{
+    font-size: 14px;
+    color: #333;
+}
+.ego-advantage-border-item1{
+    border-bottom: 1px dashed #b4b4b4;
+    border-right: 1px dashed #b4b4b4;
+}
+.ego-advantage-border-item2{
+    border-right: 1px dashed #b4b4b4;
+}
+.ego-advantage-border-item3{
+    border-bottom: 1px dashed #b4b4b4;
+}
