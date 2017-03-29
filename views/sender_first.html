@@ -124,19 +124,19 @@
                     <div class="pull-right sender-progress">
                         <ul class="none">
                             <!-- 当前模块rotate  添加active-->
-                            <li class="rotate active">1</li>
+                            <li class="rotate active">1 <span class="info">填写寄件信息</span></li>
                             <li class="line">
                             </li>
-                            <li class="rotate ">2</li>
+                            <li class="rotate">2 <span class="info">填写产品信息</span></li>
                             <li class="line">
                             </li>
-                            <li class="rotate ">3</li>
+                            <li class="rotate ">3 <span class="info">运价匹配</span></li>
                             <li class="line">
                             </li>
-                            <li class="rotate ">4</li>
+                            <li class="rotate ">4 <span class="info">生成运单</span></li>
                         </ul>
                     </div>
-                    <button class="btn btn-warning btn-import">批量模板导入</button>
+                    <button type="button" class="btn btn-warning btn-import" data-toggle="modal" data-target="#importModal">批量模板导入</button>
                 </div>
                 <div class="sender-content">
                     <!--收货地址-->
@@ -163,7 +163,7 @@
                                     </div>
                                 </li>
                                 <li class="item select-item" data-id="2">
-                                    <a href="javascript:;" class="set-address text-center">默认地址</a>
+                                    <a href="javascript:;" class="set-address text-center">设为默认</a>
                                     <p class="info">
                                         <span class="name">朝日天</span>
                                         <span class="tellphone">18181357777</span>
@@ -235,7 +235,7 @@
                     </section>
                 </div>
                 <div class="sender-page">
-                    <button type="submit" class="btn btn-next" >下一步</button>
+                    <button type="submit" class="btn btn-next">下一步</button>
                 </div>
             </form>
         </div>
@@ -244,6 +244,7 @@
     <footer class="member-footer">
         <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
     </footer>
+    <!---新增地址-->
     <div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" data-keyboard="false" aria-labelledby="addAddressModal">
         <div class="modal-dialog" role="document">
             <div class="modal-content sender-add-address-modal">
@@ -257,7 +258,7 @@
                             <label class="col-sm-3 control-label">类型：</label>
                             <div class="col-sm-8">
                                 <input type="radio" class="hidden" id="out" name="selectType" checked/><label for="out" class="out type">出口</label>
-                                <input type="radio" class="hidden" id="in" name="selectType"/><label for="in" class="in type">进口</label>
+                                <input type="radio" class="hidden" id="in" name="selectType" /><label for="in" class="in type">进口</label>
                             </div>
                         </div>
                         <div class="form-group form-group-xs">
@@ -301,7 +302,7 @@
                         <div class="form-group form-group-xs">
                             <label class="col-sm-3 control-label">邮编：</label>
                             <div class="col-sm-8">
-                                <input type="text" name="zipcode" class="form-control" minlength="6" maxlength="6" required>
+                                <input type="text" name="zipcode" class="form-control" digits="true" minlength="6" maxlength="6" required>
                             </div>
                         </div>
                         <div class="form-group form-group-xs">
@@ -321,7 +322,104 @@
             </div>
         </div>
     </div>
-
+    <!--模板导入-->
+    <!-- Modal -->
+    <div class="modal fade  bs-example-modal-lg importModal" id="importModal" tabindex="-1" data-keyboard="false" role="dialog"
+        aria-labelledby="myModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="importModalLabel">选择模板 <span>( 请先在"用户信息-地址管理" 中维护默认<a href="#">寄件地址</a> )</span></h4>
+                </div>
+                <div class="modal-body">
+                    <div class="import-modal-content">
+                        <div class="pull-left tabel-show-btn">
+                            <button type="button" class="btn btn-primary btn-dowload" data-type="sku">SKU模板下载</button>
+                        </div>
+                        <div class="pull-left tabel-show-content">
+                            <h5>模板样式：</h5>
+                            <div class="tabel-show-section">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td>订单号码</td>
+                                            <td>物流类型</td>
+                                            <td>物流方式</td>
+                                            <td>收件人姓名</td>
+                                            <td>电话</td>
+                                            <td>详细地址</td>
+                                            <td>城市</td>
+                                            <td>州/郡/省</td>
+                                            <td>邮编</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>邮政</td>
+                                            <td>11-e邮宝</td>
+                                            <td>Kill MIll</td>
+                                            <td>415 461 0467</td>
+                                            <td>中国高新区</td>
+                                            <td>成都</td>
+                                            <td>高新区</td>
+                                            <td>631300</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h5>适用类型：</h5>
+                            <p>1.如果你直接使用<a href="#">商品库</a>中的商品信息,请下载此模板 ;</p>
+                            <p>2.如果1个订单有多件商品,请下载此模板(需提前到<a href="#">商品库</a>中维护)。</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="import-modal-content">
+                        <div class="pull-left tabel-show-btn">
+                            <button type="button" class="btn btn-primary btn-dowload" data-type="sku">商品模板下载</button>
+                        </div>
+                        <div class="pull-left tabel-show-content">
+                            <h5>模板样式：</h5>
+                            <div class="tabel-show-section">
+                                <table class="table table-bordered table-hover">
+                                    <thead>
+                                        <tr>
+                                            <td>订单号码</td>
+                                            <td>物流类型</td>
+                                            <td>物流方式</td>
+                                            <td>收件人姓名</td>
+                                            <td>电话</td>
+                                            <td>详细地址</td>
+                                            <td>城市</td>
+                                            <td>州/郡/省</td>
+                                            <td>邮编</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>邮政</td>
+                                            <td>11-e邮宝</td>
+                                            <td>Kill MIll</td>
+                                            <td>415 461 0467</td>
+                                            <td>中国高新区</td>
+                                            <td>成都</td>
+                                            <td>高新区</td>
+                                            <td>631300</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <h5>适用类型：</h5>
+                            <p>1.如果商品库中无可用商品信息,请下载此模板</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 <script src="../static/lib/jquery.js"></script>
 <script src="../static/lib/bootstrap.js"></script>
@@ -331,26 +429,26 @@
     $(function () {
         //增加地址
         $('form[name="add-address-form"]').validate({
-            errorClass: 'v-error', 
+            errorClass: 'v-error',
             errorElement: 'span',
             debug: true,
             messages: {
                 cellphone: {
-                    required: "请输入手机号码", 
+                    required: "请输入手机号码",
                     minlength: "请输入正确的手机号"
-                }, 
-                postcode: { 
-                    required: "请输入邮编",
-                    digits: "请输入正确的邮编" 
-                }, 
-                idcard:{
-                    required:"请输入身份证号"
                 },
-                zipCode: { 
+                postcode: {
+                    required: "请输入邮编",
+                    digits: "请输入正确的邮编"
+                },
+                idcard: {
+                    required: "请输入身份证号"
+                },
+                zipCode: {
                     required: "请输入与邮编"
-                 }
-            }, 
-            submitHandler : function(form){
+                }
+            },
+            submitHandler: function (form) {
                 alert($(form).serialize())
                 $.ajax({
                     url: "",
@@ -390,7 +488,7 @@
                     data: $(form).serialize(),
                     dataType: "json",
                     success: function (data) {
-                        location.href="./sender_two.html"
+                        location.href = "./sender_two.html"
                     },
                     error: function () {
                     }
@@ -406,7 +504,7 @@
         //         var arr = item.split("=");
         //         obj.push({name:arr[0],value:arr[1]})
         //     })
-            
+
         //     sessionStorage.setItem(formName, JSON.stringify(obj))
         // }
         var $height = $(window).height();
