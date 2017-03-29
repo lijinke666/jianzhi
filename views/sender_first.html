@@ -6,7 +6,7 @@
     <title>会员中心</title>
     <link rel="stylesheet" href="../static/lib/bootstrap.css">
     <link rel="stylesheet" href="../src/css/member.css">
-    <link rel="stylesheet" href="../src/css/senderFirst.css">
+    <link rel="stylesheet" href="../src/css/sender.css">
     <style>
 
     </style>
@@ -119,316 +119,358 @@
                     <li class="active">出口寄件</li>
                 </ol>
             </div>
-            <div class="sender-header">
-                <div class="pull-right sender-progress">
-                    <ul class="none">
-                        <!-- 当前模块rotate  添加active-->
-                        <li class="rotate active">1</li>
-                        <li class="line">
-                        </li>
-                        <li class="rotate ">2</li>
-                        <li class="line">
-                        </li>
-                        <li class="rotate ">3</li>
-                        <li class="line">
-                        </li>
-                        <li class="rotate ">4</li>
-                    </ul>
-                </div>
-                <button class="btn btn-warning btn-import">批量模板导入</button>
-            </div>
-            <div class="sender-content">
-                <!--收货地址-->
-                <section id="userInfo" class="sender-user-info" data-page='1'>
-                    <div class="user-info-header">
-                        <i></i>
-                        <h4>出口寄件</h4>
-                    </div>
-                    <div class="user-info-content">
-                        <h4 class="title">发件人信息</h4>
-                        <ul class="clearfix user-info-select-box">
-                            <li class="item select-item active" data-id="1">
-                                <a href="javascript:;" class="set-address text-center">默认地址</a>
-                                <p class="info">
-                                    <span class="name">朝日天</span>
-                                    <span class="tellphone">18181357777</span>
-                                </p>
-                                <div class="address">
-                                    四川省成都市高新区天府软件圆D54楼001号
-                                </div>
-                                <div class="operation">
-                                    <a href="javascript:;" class="update">修改</a>
-                                    <a href="javascript:;" class="delete">删除</a>
-                                </div>
+            <form action="#" name="add-userInfo-form" class="form-inline">
+                <div class="sender-header">
+                    <div class="pull-right sender-progress">
+                        <ul class="none">
+                            <!-- 当前模块rotate  添加active-->
+                            <li class="rotate active">1</li>
+                            <li class="line">
                             </li>
-                            <li class="item select-item" data-id="2">
-                                <a href="javascript:;" class="set-address text-center">默认地址</a>
-                                <p class="info">
-                                    <span class="name">朝日天</span>
-                                    <span class="tellphone">18181357777</span>
-                                </p>
-                                <div class="address">
-                                    四川省成都市高新区天府软件圆D54楼001号
-                                </div>
-                                <div class="operation">
-                                    <a href="javascript:;" class="update">修改</a>
-                                    <a href="javascript:;" class="delete">删除</a>
-                                </div>
+                            <li class="rotate ">2</li>
+                            <li class="line">
                             </li>
-                            <li class="item add-item">
-                                <a href="javascript:;" class="add-address">
-                                    <i>+</i>
-                                    <div>增加地址</div>
-                                </a>
+                            <li class="rotate ">3</li>
+                            <li class="line">
                             </li>
+                            <li class="rotate ">4</li>
                         </ul>
                     </div>
-                    <div class="add-user-info-content hidden">
-                        <h4 class="title">发件人信息</h4>
-                        <form action="#" name="add-userInfo-form" class="form-inline">
+                    <button class="btn btn-warning btn-import">批量模板导入</button>
+                </div>
+                <div class="sender-content">
+                    <!--收货地址-->
+                    <section id="userInfo" class="sender-user-info" data-page='1'>
+                        <div class="user-info-header">
+                            <i></i>
+                            <h4>出口寄件</h4>
+                        </div>
+                        <div class="user-info-content">
+                            <h4 class="title">发件人信息</h4>
+                            <ul class="clearfix user-info-select-box">
+                                <li class="item select-item active" data-id="1">
+                                    <a href="javascript:;" class="set-address text-center">默认地址</a>
+                                    <p class="info">
+                                        <span class="name">朝日天</span>
+                                        <span class="tellphone">18181357777</span>
+                                    </p>
+                                    <div class="address">
+                                        四川省成都市高新区天府软件圆D54楼001号
+                                    </div>
+                                    <div class="operation">
+                                        <a href="javascript:;" class="update">修改</a>
+                                        <a href="javascript:;" class="delete">删除</a>
+                                    </div>
+                                </li>
+                                <li class="item select-item" data-id="2">
+                                    <a href="javascript:;" class="set-address text-center">默认地址</a>
+                                    <p class="info">
+                                        <span class="name">朝日天</span>
+                                        <span class="tellphone">18181357777</span>
+                                    </p>
+                                    <div class="address">
+                                        四川省成都市高新区天府软件圆D54楼001号
+                                    </div>
+                                    <div class="operation">
+                                        <a href="javascript:;" class="update">修改</a>
+                                        <a href="javascript:;" class="delete">删除</a>
+                                    </div>
+                                </li>
+                                <li class="item add-item">
+                                    <a href="javascript:void(0);" class="add-address" data-toggle="modal" data-target="#addAddressModal">
+                                        <i>+</i>
+                                        <div>增加地址</div>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="add-user-info-content">
+                            <h4 class="title">收件人信息</h4>
+
                             <fieldset>
                                 <span class="form-group">
-                                     <label>姓名：</label>
-                                    <input type="text" class="form-control" name="name" minlength="2" maxlength="8" required>
-                                </span>
+                                        <label>姓名：</label>
+                                        <input type="text" class="form-control" name="name" minlength="2" maxlength="8" required>
+                                    </span>
                                 <span class="form-group">
-                                     <label>联系方式：</label>
-                                    <input type="text" class="form-control" name="phone" phone="true" minlength="11" maxlength="11" cellphone="true" required>
-                                </span>
+                                        <label>联系方式：</label>
+                                        <input type="text" class="form-control" name="phone" phone="true" minlength="11" maxlength="11" cellphone="true" required>
+                                    </span>
                                 <span class="form-group">
-                                     <label>邮编：</label>
-                                    <input type="text" class="form-control" name="postcode" digits="true" minlength="4" maxlength="8" required>
-                                </span>
+                                        <label>邮编：</label>
+                                        <input type="text" class="form-control" name="postcode" digits="true" minlength="6" maxlength="6" required>
+                                    </span>
                             </fieldset>
                             <fieldset class="mt20">
                                 <span class="form-group">
-                                     <label>国家：</label>
-                                    <select name="country" id="country" class="form-control" required>
-                                        <option value="0">中国</option>
-                                        <option value="0">韩国</option>
-                                        <option value="0">日本</option>
-                                    </select>
-                                </span>
-                                <span class="form-group">
-                                     <label>州/郡/省：</label>
-                                    <select name="province" id="province" class="form-control" required>
-                                        <option value="0">中国</option>
-                                        <option value="0">韩国</option>
-                                        <option value="0">日本</option>
-                                    </select>
-                                </span>
-                                <span class="form-group">
-                                     <label>城市：</label>
-                                    <select name="city" id="city" class="form-control" required>
-                                        <option value="0">资阳</option>
-                                        <option value="0">成都</option>
-                                        <option value="0">基本</option>
-                                    </select>
-                                </span>
-                                <span class="form-group">
-                                     <label>详细地址：</label>
-                                    <input type="text" class="form-control address" name="address" required>
-                                </span>
-                            </fieldset>
-                            <div class="mt20">
-                                <button type="submit" class="btn btn-primary">添加</button>
-                                <button type="reset" class="btn btn-cancel">取消</button>
-                            </div>
-                        </form>
-                    </div>
-                </section>
-                <!--商品明细-->
-                <section id="shopDetail" class="sender-shop-detail" data-page='2'>
-                    <div class="user-info-header">
-                        <i></i>
-                        <h4>出口寄件</h4>
-                    </div>
-                    <div class="sender-parcel-detail-content">
-                        <h4 class="title">包裹明细</h4>
-                        <div class="parcel-form">
-                            <form action="#" name="shop-form" class="form-inline">
-                                <span class="form-group order-input">
-                                    <label>订单</label>
-                                    <input type="text" name="order" class="form-control">
-                                </span>
-                                <span class="form-group weight-input">
-                                    <label >包裹总重量</label>
-                                    <span class="input-group">
-                                    <input type="text" name="weight" class="form-control">
-                                    <div class="input-group-addon">kg</div>
+                                        <label>国家：</label>
+                                        <select name="country" id="country" class="form-control" required>
+                                            <option value="0">中国</option>
+                                            <option value="0">韩国</option>
+                                            <option value="0">日本</option>
+                                        </select>
                                     </span>
-                                </span>
-                                <fieldset class="remark-input mt20">
-                                    <p class="form-group">
-                                        <label>备注</label>
-                                        <input type="text" name="remark" class="form-control">
-                                    </p>
-                                </fieldset>
-                            </form>
+                                <span class="form-group">
+                                        <label>州/郡/省：</label>
+                                        <select name="province" id="province" class="form-control" required>
+                                            <option value="0">中国</option>
+                                            <option value="0">韩国</option>
+                                            <option value="0">日本</option>
+                                        </select>
+                                    </span>
+                                <span class="form-group">
+                                        <label>城市：</label>
+                                        <select name="city" id="city" class="form-control" required>
+                                            <option value="0">资阳</option>
+                                            <option value="0">成都</option>
+                                            <option value="0">基本</option>
+                                        </select>
+                                    </span>
+                                <span class="form-group">
+                                        <label>详细地址：</label>
+                                        <input type="text" class="form-control address" name="address" required>
+                                    </span>
+                            </fieldset>
                         </div>
-                    </div>
-                    <div class="shop-detail">
-                        <h4 class="title">商品明细</h4>
-                        <div class="pull-right form-inline select-shop-tempalte">
-                            <span class="form-group">
-                            <label>商品库模板：</label>
-                            <select name="template" id="template" class="form-control" required>
-                                <option value="0">请选择</option>
-                                <option value="0">模板１</option>
-                                <option value="0">模板２</option>
-                            </select>
-                            <button class="btn btn-link">新增模板</button>
-                        </span>
-                        </div>
-                        <table class="table  table-hover shop-table" border="1">
-                            <thead>
-                                <tr>
-                                    <td>SKU</td>
-                                    <td>商品名称(中文)</td>
-                                    <td>商品名称(英文)</td>
-                                    <td>HS编码</td>
-                                    <td>数量</td>
-                                    <td>净重(kg)</td>
-                                    <td>申报单价</td>
-                                    <td>申报币别</td>
-                                    <td>操作</td>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>123434</td>
-                                    <td>哈哈哈哈哈</td>
-                                    <td>test</td>
-                                    <td>111111</td>
-                                    <td>111111</td>
-                                    <td>0.12345</td>
-                                    <td>11111</td>
-                                    <td>502-USD</td>
-                                    <td><button class="btn btn-primary">删除</button></td>
-                                </tr>
-                                <tr>
-                                    <td>123434</td>
-                                    <td>哈哈哈哈哈</td>
-                                    <td>test</td>
-                                    <td>111111</td>
-                                    <td>111111</td>
-                                    <td>0.12345</td>
-                                    <td>11111</td>
-                                    <td>502-USD</td>
-                                    <td><button class="btn btn-primary">删除</button></td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <button class="btn btn-warning btn-add">新增</button>
-                    </div>
-                </section>
-            </div>
-            <button class="btn btn-next" data-page="2">下一步</a>
+                    </section>
+                </div>
+                <div class="sender-page">
+                    <button type="submit" class="btn btn-next" >下一步</button>
+                </div>
+            </form>
         </div>
     </section>
     <!--会员中心页尾-->
     <footer class="member-footer">
         <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
     </footer>
-    <script src="../static/lib/jquery.js"></script>
-    <script src="../static/lib/jquery.validate.min.js"></script>
-    <script src="../static/lib/validate.config.js"></script>
-    <script>
-        $(function () {
+    <div class="modal fade" id="addAddressModal" tabindex="-1" role="dialog" data-keyboard="false" aria-labelledby="addAddressModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content sender-add-address-modal">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="addAddressModal">新增发件地址</h4>
+                </div>
+                <div class="modal-body">
+                    <form action="#" class="form-horizontal" name="add-address-form">
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">类型：</label>
+                            <div class="col-sm-8">
+                                <input type="radio" class="hidden" id="out" name="selectType" checked/><label for="out" class="out type">出口</label>
+                                <input type="radio" class="hidden" id="in" name="selectType"/><label for="in" class="in type">进口</label>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">姓名：</label>
+                            <div class="col-sm-8">
+                                <input class="form-control" name="name" type="text" minlength="2" maxlength="8" required/>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">电话：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="cellphone" class="form-control" minlength="11" maxlength="11" mobile="true" required/>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">身份证号：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="idcard" class="form-control" minlength="15" maxlength="18" idcard="true" required/>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">国家：</label>
+                            <div class="col-sm-8">
+                                <select name="county" class="form-control">
+                                    <option value="0">中国</option> 
+                                    <option value="0">中国</option>      
+                                    <option value="0">中国</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-3 control-label">省/市/区:</label>
+                            <div class="col-sm-8">
+                                <select name="provinces" class="form-control">
+                                    <option value="0">中国</option> 
+                                    <option value="0">中国</option>      
+                                    <option value="0">中国</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">邮编：</label>
+                            <div class="col-sm-8">
+                                <input type="text" name="zipcode" class="form-control" minlength="6" maxlength="6" required>
+                            </div>
+                        </div>
+                        <div class="form-group form-group-xs">
+                            <label class="col-sm-3 control-label">详细地址：</label>
+                            <div class="col-sm-8">
+                                <textarea type="text" name="address" class="form-control" required></textarea>
+                            </div>
+                        </div>
+                </div>
+                <div class="modal-footer">
+                    <div class="col-sm-3"></div>
+                    <div class="col-sm-8 btn-save-section">
+                        <button type="submit" class="btn btn-primary btn-block btn-lg btn-save">保存</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div>
 
-            $('form[name="add-userInfo-form"]').validate({
-                errorClass: 'v-error',
-                errorElement: 'span',
-                debug: true,
-                messages: {
-                    phone: {
-                        required: "请输入手机号码",
-                        minlength: "请输入正确的手机号"
-                    },
-                    postcode: {
-                        required: "请输入邮编",
-                        digits: "请输入正确的邮编"
-                    },
-                    name: {
-                        required: "请输入姓名"
-                    }
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/bootstrap.js"></script>
+<script src="../static/lib/jquery.validate.min.js"></script>
+<script src="../static/lib/validate.config.js"></script>
+<script>
+    $(function () {
+        //增加地址
+        $('form[name="add-address-form"]').validate({
+            errorClass: 'v-error', 
+            errorElement: 'span',
+            debug: true,
+            messages: {
+                cellphone: {
+                    required: "请输入手机号码", 
+                    minlength: "请输入正确的手机号"
+                }, 
+                postcode: { 
+                    required: "请输入邮编",
+                    digits: "请输入正确的邮编" 
+                }, 
+                idcard:{
+                    required:"请输入身份证号"
                 },
-                submitHandler: function (form) {
-                    alert('提交回调')
-                    $.ajax({
-                        url: "",
-                        type: "POST",
-                        data: $("form[name='add-userInfo-form']").serialize(),
-                        dataType: "json",
-                        success: function (data) {
-                        },
-                        error: function () {
-                        }
-                    });
-                }
-            })
-            var $height = $(window).height();
-            $height = $height - 440;
-            $('.member-todo').css({
-                minHeight: $height
-            })
-
-            $('.set-address').on('click', function () {
-                var $this = $(this);
-                var id = $this.data('id')
-
-                var tipTexts = ['默认地址', '设为默认'];
-                changeAddress('/test', { id: id }, function (res) {
-                    if (res) {
-                        $this.html(tipTexts[0]);
-                        $this.parent('.select-item').addClass("active").siblings().removeClass("active")
-                        $this.parent('.select-item').siblings().find(".set-address").html(tipTexts[1])
-                    }
-                })
-            })
-
-            //设置默认地址
-            /*
-            * url  String 请求地址
-            * data Object 参数
-            * callback function 回调
-            */
-            function changeAddress(url, data, scallback, ecallback) {
+                zipCode: { 
+                    required: "请输入与邮编"
+                 }
+            }, 
+            submitHandler : function(form){
+                alert($(form).serialize())
                 $.ajax({
                     url: "",
                     type: "POST",
-                    data: data,
+                    data: $(form).serialize(),
                     dataType: "json",
-                    cache: false,
-                    success: function (res) {
-                        acallback(res)
-                    }.bind(this),
-                    error: function (e) {
-                        alert('设置默认地址失败')
-                    }.bind(this)
-                })
-            }
-
-
-            $('.add-address').on('click', function () {
-                $('.add-user-info-content').toggleClass("hidden");
-            })
-
-            //这里选项卡其实走不通  还是要submit 提交才行
-            $('.btn-next').on('click',function(){
-                var $this = $(this)
-                var page = $this.data("page")
-                $('.sender-user-info').each(function(i,item){
-                    if($(this).attr('data-page') == page){
-                        $(this).show()
-                    }else{
-                        $(this).hide();
+                    success: function (data) {
+                    },
+                    error: function () {
                     }
-                })
-            })
-
+                });
+            }
         })
-    </script>
-</body>
+
+        //收件人信息
+        $('form[name="add-userInfo-form"]').validate({
+            errorClass: 'v-error',
+            errorElement: 'span',
+            debug: true,
+            messages: {
+                phone: {
+                    required: "请输入手机号码",
+                    minlength: "请输入正确的手机号"
+                },
+                postcode: {
+                    required: "请输入邮编",
+                    digits: "请输入正确的邮编"
+                },
+                name: {
+                    required: "请输入姓名"
+                }
+            },
+            submitHandler: function (form) {
+                $.ajax({
+                    url: "",
+                    type: "POST",
+                    data: $(form).serialize(),
+                    dataType: "json",
+                    success: function (data) {
+                        location.href="./sender_two.html"
+                    },
+                    error: function () {
+                    }
+                });
+            }
+        })
+
+        // //将表单的数据保存到本地
+        // function saveUserInfo( formName,formData ){
+        //     var datas = formData.match(/\w*=[^&]*/g) || [];
+        //     var obj = [];
+        //     datas.forEach(function(item,i){
+        //         var arr = item.split("=");
+        //         obj.push({name:arr[0],value:arr[1]})
+        //     })
+            
+        //     sessionStorage.setItem(formName, JSON.stringify(obj))
+        // }
+        var $height = $(window).height();
+        $height = $height - 440;
+        $('.member-todo').css({
+            minHeight: $height
+        })
+
+        $('.set-address').on('click', function () {
+            var $this = $(this);
+            var id = $this.data('id')
+
+            var tipTexts = ['默认地址', '设为默认'];
+            changeAddress('/test', { id: id }, function (res) {
+                if (res) {
+                    $this.html(tipTexts[0]);
+                    $this.parent('.select-item').addClass("active").siblings().removeClass("active")
+                    $this.parent('.select-item').siblings().find(".set-address").html(tipTexts[1])
+                }
+            })
+        })
+
+        //设置默认地址
+        /*
+        * url  String 请求地址
+        * data Object 参数
+        * callback function 回调
+        */
+        function changeAddress(url, data, scallback, ecallback) {
+            $.ajax({
+                url: "",
+                type: "POST",
+                data: data,
+                dataType: "json",
+                cache: false,
+                success: function (res) {
+                    acallback(res)
+                }.bind(this),
+                error: function (e) {
+                    alert('设置默认地址失败')
+                }.bind(this)
+            })
+        }
+
+
+        // $('.add-address').on('click', function () {
+        //     $('.add-user-info-content').toggleClass("hidden");
+        // })
+
+        // //这里选项卡其实走不通  还是要submit 提交才行
+        // $('.btn-next').on('click',function(){
+        //     var $this = $(this)
+        //     var page = $this.data("page")
+        //     $('.sender-user-info').each(function(i,item){
+        //         if($(this).attr('data-page') == page){
+        //             $(this).show()
+        //         }else{
+        //             $(this).hide();
+        //         }
+        //     })
+        // })
+
+    })
+
+</script>
 
 </html>

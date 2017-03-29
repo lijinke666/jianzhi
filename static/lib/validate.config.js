@@ -50,7 +50,10 @@ jQuery.validator.addMethod("email", function (value, element) {
 	return this.optional(element) || (mail.test(value));
 }, "电子邮箱格式不正确");
 
-
+jQuery.validator.addMethod("idcard", function (value, element) {
+	var idCard = /(^[1-9]\d{5}(18|19|([23]\d))\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{3}[0-9Xx]$)|(^[1-9]\d{5}\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\d{2}$)/;
+	return this.optional(element) || (idCard.test(value));
+}, "身份证号格式不正确");
 //正整数 验证
 jQuery.validator.addMethod("positiveinteger", function(value, element) {
 	var aint=parseInt(value);	
@@ -63,6 +66,10 @@ jQuery.validator.addMethod("isNumber", function(value, element) {
 	return this.optional(element) || /^[-\+]?\d+$/.test(value) || /^[-\+]?\d+(\.\d+)?$/.test(value);       
 }, "请输入正确的数字");
 
+// 非负数
+jQuery.validator.addMethod("kg", function (value, element) {
+	return this.optional(element) || parseInt(value) >=0;
+}, "请输入正确的重量");
 //中文 验证
 jQuery.validator.addMethod("isCN", function(value, element) {
 	var CN = /^[\u4e00-\u9fa5]{2,7}$/;

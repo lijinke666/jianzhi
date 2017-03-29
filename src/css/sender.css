@@ -79,8 +79,30 @@
     background-color:#344e87;
     color:#FFF;
 }
+.sender-progress ul li.active .info{
+    color:#344e87;
+}
 .sender-progress{
-    margin-top:-10px;
+    position: relative;
+    margin-top:-25px;
+}
+.sender-progress .sender-progress-info {
+    position: absolute;
+    left:-30px;
+    bottom:-25px;
+}
+.sender-progress .info{
+    position: absolute;
+    bottom:-30px;
+    display: block;
+    width:100px;
+    left:-32px;
+}
+.sender-progress .sender-progress-info li{
+    float: left;
+    color:#000;
+    font-size:12px;
+    margin-right:50px;
 }
 .sender-progress li.rotate:nth-of-type(3).active::before,
 .sender-progress li.rotate:nth-of-type(5).active::before,
@@ -251,15 +273,6 @@
 .sender-content .sender-user-info .add-user-info-content input.address{
     width:280px;
 }
-.person-center-contain .btn-next{
-    width:410px;
-    height:45px;
-    line-height: 30px;
-    display: block;
-    margin:40px auto;
-    color:#fff !important;
-    background-color: #344E87;
-}
 .mt20{
     margin-top:20px;
 }
@@ -275,7 +288,7 @@
 span.v-error{
     position: absolute;
     color:#D43333;
-    right: -25px;
+    right: 0;
     bottom: -18px;
 }
 .sender-content .sender-parcel-detail{
@@ -335,4 +348,78 @@ span.v-error{
 .sender-content .sender-shop-detail  .btn-add{
     background-color: #e5821d;
     padding: 8px 42px;
+}
+.modal-dialog{
+    z-index: 9999;
+}
+.sender-add-address-modal .form-group{
+    margin-bottom: 28px;
+}
+.sender-add-address-modal .control-label{
+    color:#444;
+}
+.sender-add-address-modal .btn-save-section{
+    padding: 0;
+}
+.sender-add-address-modal .btn-save{
+    background-color: #344E87;
+}
+.add-user-info-content span.form-group{
+    margin-right:20px;
+}
+.sender-add-address-modal label.type{
+    padding: 8px 15px;
+    color:#444;
+    border:1px solid #d3d3d3;
+    transition: background-color,color .2s;
+    cursor: pointer;
+    float: left;
+}
+.sender-add-address-modal label.out{
+    border-radius: 5px 0 0 5px;
+    border-right:none;
+}
+.sender-add-address-modal label.in{
+    border-left:none;
+    border-radius: 0 5px 5px 0;
+}
+.sender-add-address-modal input[type="radio"]:checked +label.type{
+    background-color: #344E87;
+    color:#fff;
+}
+.sender-add-address-modal textarea{
+    resize: none;
+    min-height: 100px;
+}
+.sender-add-address-modal span.v-error{
+    right:12px;
+    bottom:-22px;
+}
+.sender-content .parcel-form>span{
+    position: relative;
+}
+.person-center-contain .btn-next,
+.person-center-contain .btn-prev{
+    width:410px;
+    height:45px;
+    line-height: 30px;
+    color:#fff !important;
+    font-size:14px;
+}
+.person-center-contain .btn-next{
+background-color: #344E87;
+}
+.person-center-contain .btn-prev{
+background-color: #e5821d;
+}
+.person-center-contain .btn-sm{
+    width:230px;
+}
+.person-center-contain .sender-page{
+    margin:40px auto;
+    text-align: center;
+}
+.person-center-contain .sender-page .btn{
+    display: inline-block;
+    margin:0 20px;
 }

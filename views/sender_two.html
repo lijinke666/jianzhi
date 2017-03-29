@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>会员中心</title>
+  <link rel="stylesheet" href="../static/lib/bootstrap.css">
+  <link rel="stylesheet" href="../src/css/member.css">
+  <link rel="stylesheet" href="../src/css/sender.css">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <!--头部-->
+  <section class="member-header not-select">
+    <img src="../static/image/member/LOGO.png" alt="">
+    <div class="member-header-right">
+      <div class="member-header-usericon">
+        <img src="../static/image/member/Head-portrait.png" alt="">
+      </div>
+      <span>易购全球</span>
+      <a href="javascript:void(0)">安全退出</a> |
+      <a href="javascript:void(0)">返回首页</a>
+    </div>
+  </section>
+  <!--导航-->
+  <nav class="member-nav clearfix not-select">
+    <ul>
+      <li class="m-nav-index">
+        <div class="m-nav-item">
+          <span class="iconfont icon-huiyuanshouyeICON"></span>
+          <span>首页</span>
+        </div>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-woyaojijianICON"></span>
+          <span>我要寄件</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li><a href="#">出口寄件</a></li>
+          <li><a href="#">进口寄件</a></li>
+          <li><a href="#">运单列表</a></li>
+          <li><a href="#">账单明细</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-kuajingshangpinICON"></span>
+          <span>跨境商品</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li class="m-nav-secTitle">供货</li>
+          <li><a href="#">发布商品</a></li>
+          <li><a href="#">商品管理</a></li>
+          <li><a href="#">货源订单</a></li>
+          <li class="m-nav-secTitle">分销</li>
+          <li><a href="#">分销订单</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-beianshenbaoICON"></span>
+          <span>备案申报</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li><a href="#">商品备案</a></li>
+          <li><a href="#">订单申报</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-wodedingdanICON"></span>
+          <span>我的订单</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li><a href="#">我的订单</a></li>
+          <li><a href="#">我的订单</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-wodezichanICON"></span>
+          <span>我的资产</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li><a href="#">我的资产</a></li>
+          <li><a href="#">我的资产</a></li>
+          <li><a href="#">我的资产</a></li>
+          <li><a href="#">我的资产</a></li>
+        </ul>
+      </li>
+      <li>
+        <div class="m-nav-item">
+          <span class="iconfont icon-yonghuzhongxinICON"></span>
+          <span>用户中心</span>
+          <div class="m-nav-arrow"> </div>
+        </div>
+        <ul class="m-nav-dropDown">
+          <li><a href="#">用户中心</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+  <!--会员中心-->
+  <section class="person-center">
+    <div class="person-center-contain">
+      <div class="person-bread-nav">
+        <span>您的位置：</span>
+        <ol class="breadcrumb">
+          <li><a href="#">我要推广</a></li>
+          <li class="active">出口寄件</li>
+        </ol>
+      </div>
+        <div class="sender-header">
+          <div class="pull-right sender-progress">
+            <ul class="none">
+              <!-- 当前模块rotate  添加active-->
+              <li class="rotate">1 <span class="info">填写寄件信息</span></li>
+              <li class="line">
+              </li>
+              <li class="rotate active">2 <span class="info">填写产品信息</span></li>
+              <li class="line">
+              </li>
+              <li class="rotate ">3 <span class="info">运价匹配</span></li>
+              <li class="line">
+              </li>
+              <li class="rotate ">4 <span class="info">生成运单</span></li>
+            </ul>
+            <!--<ul class="none sender-progress-info">
+              <li>填写寄件信息</li>
+              <li>填写产品信息</li>
+              <li>运价匹配</li>
+              <li>生成运单</li>
+            </ul>-->
+          </div>
+          <button class="btn btn-warning btn-import">批量模板导入</button>
+        </div>
+        <form action="#" name="parcel-form" class="form-inline">
+        <div class="sender-content">
+          <!--商品明细-->
+          <section id="shopDetail" class="sender-shop-detail" data-page='2'>
+              <div class="user-info-header">
+                  <i></i>
+                  <h4>出口寄件</h4>
+              </div>
+              <div class="sender-parcel-detail-content">
+                  <h4 class="title">包裹明细</h4>
+                  <div class="parcel-form">
+                          <span class="form-group order-input">
+                              <label>订单</label>
+                              <input type="text" name="order" class="form-control" required>
+                          </span>
+                          <span class="form-group weight-input">
+                              <label >包裹总重量</label>
+                              <span class="input-group">
+                              <input type="text" name="weight" class="form-control" isNumber="true" kg="true" required>
+                              <div class="input-group-addon">kg</div>
+                              </span>
+                          </span>
+                          <fieldset class="remark-input mt20">
+                              <p class="form-group">
+                                  <label>备注</label>
+                                  <input type="text" name="remark" class="note form-control" required>
+                              </p>
+                          </fieldset>
+                  </div>
+              </div>
+              <div class="shop-detail">
+                  <h4 class="title">商品明细</h4>
+                  <div class="pull-right form-inline select-shop-tempalte">
+                      <span class="form-group">
+                      <label>商品库模板：</label>
+                      <select name="template" id="template" class="form-control" required>
+                          <option value="0">请选择</option>
+                          <option value="0">模板１</option>
+                          <option value="0">模板２</option>
+                      </select>
+                      <button class="btn btn-link">新增模板</button>
+                  </span>
+                  </div>
+                  <table class="table  table-hover shop-table" border="1">
+                      <thead>
+                          <tr>
+                              <td>SKU</td>
+                              <td>商品名称(中文)</td>
+                              <td>商品名称(英文)</td>
+                              <td>HS编码</td>
+                              <td>数量</td>
+                              <td>净重(kg)</td>
+                              <td>申报单价</td>
+                              <td>申报币别</td>
+                              <td>操作</td>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <td>123434</td>
+                              <td>哈哈哈哈哈</td>
+                              <td>test</td>
+                              <td>111111</td>
+                              <td>111111</td>
+                              <td>0.12345</td>
+                              <td>11111</td>
+                              <td>502-USD</td>
+                              <td><button class="btn btn-primary">删除</button></td>
+                          </tr>
+                          <tr>
+                              <td>123434</td>
+                              <td>哈哈哈哈哈</td>
+                              <td>test</td>
+                              <td>111111</td>
+                              <td>111111</td>
+                              <td>0.12345</td>
+                              <td>11111</td>
+                              <td>502-USD</td>
+                              <td><button class="btn btn-primary">删除</button></td>
+                          </tr>
+                      </tbody>
+                  </table>
+                  <button class="btn btn-warning btn-add">新增</button>
+              </div>
+          </section>
+        </div>
+        <div class="sender-page">
+          <a href="javascript:history.back()" class="btn btn-prev btn-sm">上一步</a>
+          <button type="submit" class="btn btn-next btn-sm">下一步</button>
+        </div>
+        </form>
+    </div>
+  </section>
+  <!--会员中心页尾-->
+  <footer class="member-footer">
+    <p>Copyright © 2016 易购全球平台 egoint.com All Rights Reserved 备案号：蜀ICP备15029615号</p>
+  </footer>
+</body>
+<script src="../static/lib/jquery.js"></script>
+<script src="../static/lib/jquery.validate.min.js"></script>
+<script src="../static/lib/validate.config.js"></script>
+<script>
+  $(function () {
+    //包裹明细
+    $('form[name="parcel-form"]').validate({
+      errorClass: 'v-error',
+      errorElement: 'span',
+      debug: true,
+      ignore:".note",
+      submitHandler: function (form) {
+        alert($(form).serialize())
+        $.ajax({
+          url: "",
+          type: "POST",
+          data: $(form).serialize(),
+          dataType: "json",
+          success: function (data) {
+            location.href="./sender_three.html"
+          },
+          error: function () {
+          }
+        });
+      }
+    })
+
+    var $height = $(window).height();
+    $height = $height - 440;
+    $('.member-todo').css({
+      minHeight: $height
+    })
+  })
+
+</script>
+
+</html>
