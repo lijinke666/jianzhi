@@ -168,7 +168,7 @@
     padding: 24px 15px 15px 15px;
 }
 .sender-content .user-info-select-box li.select-item{
-    background: url("../../static/image/userInfo/user_select.png") no-repeat;
+    background: url("../../static/image/userInfo/user_select_none.png") no-repeat;
     background-size:cover;
 }
 .sender-content .user-info-select-box li.add-item{
@@ -247,19 +247,22 @@
     color:#333;
     font-size:40px;
 }
+.sender-content .user-info-select-box .select-item.active{
+background: url("../../static/image/userInfo/user_select.png") no-repeat;
+}
 .sender-content .user-info-select-box .select-item.active .set-address{
     background-color: #344e87;
 }
 .sender-content .user-info-select-box .select-item.active::before{
     content:"";
+    z-index: 3;
+    width:26px;
+    height:25px;
+    background-size:cover;
     position: absolute;
-    border:20px solid transparent;
-    border-right-color:#344e87;
-    -webkit-transform: rotate(-135deg);
-            transform: rotate(-135deg);
-    right:-20px;
-    bottom:-20px;
-    z-index: 2;
+    background: url("../../static/image/userInfo/select_gou.png") no-repeat;
+    right:0;
+    bottom:0;
 }
 .sender-content .user-info-select-box .select-item.active::after{
     position: absolute;
