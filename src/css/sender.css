@@ -359,7 +359,38 @@ span.v-error{
     text-align: center;
     line-height: 48px;
     color:#333;
-    padding: 0;
+    padding: 0 10px;
+    background-color: #f6f6f6;
+    position: relative;
+}
+.sender-content .sender-shop-detail .shop-table td .v-error{
+    bottom: -30px;
+    right: 10px;
+    z-index:99;
+}
+.sender-content .sender-shop-detail .shop-table td.sku input{
+    width: 95px;
+}
+.sender-content .sender-shop-detail .shop-table td.zh-name input{
+    width:95px;
+}
+.sender-content .sender-shop-detail .shop-table td.en-name input{
+    width:145px;
+}
+.sender-content .sender-shop-detail .shop-table td.hs input{
+    width:95px;
+}
+.sender-content .sender-shop-detail .shop-table td.sku name{
+    width:50px;
+}
+.sender-content .sender-shop-detail .shop-table td.kg input{
+    width:100px;
+}
+.sender-content .sender-shop-detail .shop-table td.price input{
+    width:50px;
+}
+.sender-content .sender-shop-detail .shop-table td.sku select{
+    width:150px;
 }
 .sender-content .sender-shop-detail  .btn-add{
     background-color: #e5821d;
