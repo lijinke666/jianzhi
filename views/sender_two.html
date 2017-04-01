@@ -201,10 +201,10 @@
                     <td class="en-name"><input type="text" class="form-control" name="en" required></td>
                     <td class="hs"><input type="text" class="form-control" name="hs"></td>
                     <td class="num"><input type="text" class="form-control" positiveinteger="true" name="num" required></td>
-                    <td class="kg"><input type="text" class="form-control" name="kg" required></td>
+                    <td class="kg"><input type="text" class="form-control" isNumber="true" name="kg" required></td>
                     <td class="price"><input type="text" name="price" class="form-control" isNumber="true" required></td>
                     <td class="type">
-                      <select name="type"  class="form-control">
+                      <select name="type" class="form-control">
                         <option value="1">新加坡元-DDD</option>
                       </select>
                     </td>
@@ -401,42 +401,44 @@
 <script src="../static/lib/validate.config.js"></script>
 <script>
   var index = 0;  //每次添加绑定一个新的name 不然无法验证
-  var defaultOptions = ['类型1','类型2','类型3'];   //申报币别下拉框数据
-  var testTem = [{
-    sku:"111",
-    zh:"中文",
-    en:"英文",
-    hs:"1223",
-    num:"11111",
-    kg:"12kg",
-    price:"11"
+  var defaultOptions = ['类型1', '类型2', '类型3'];   //申报币别下拉框数据
+  var testTem = [{    //测试模板数据
+    sku: "111",
+    zh: "中文",
+    en: "英文",
+    hs: "1223",
+    num: "11111",
+    kg: "12",
+    price: "11"
   }];
 
   //表单name配置  方便下面做循环收集
+  //后端 解析parse 的字段
   var formNamesConfig = {
-    sku:"sku",
-    zh:"zh",
-    en:"en",
-    hs:"hs",
-    num:"num",
-    kg:"kg",
-    price:"price",
-    type:"type"
+    sku: "sku",
+    zh: "zh",
+    en: "en",
+    hs: "hs",
+    num: "num",
+    kg: "kg",
+    price: "price",
+    type: "type"
   }
   $(function () {
-    $('.select-template').on('change',function(){
+    $('.select-template').on('change', function () {
       var tem = $(this).val();
-      if(tem != 'select'){
+      if (tem != 'select') {
         $.ajax({
-          url:"111",
-          type:"POST",
-          data:{template:tem},
-          dataType:"json",
-          success:function(res){
+          url: "111",
+          type: "POST",
+          cache: false,
+          data: { template: tem },
+          dataType: "json",
+          success: function (res) {
 
           },
-          error:function(res){
-            addTemplate($('.shop-table-tbody'),testTem)
+          error: function (res) {
+            addTemplate($('.shop-table-tbody'), testTem)
           }
         })
       }
@@ -448,16 +450,16 @@
     * target 目标位置
     * data   数据
     */
-    function addTemplate(target,data){
+    function addTemplate(target, data) {
       var nullStr = " "
       var data = data[0]
       var options = "";
-        for(var i=0; i<defaultOptions.length; i++){
-          options+= '<option value="'+ i +'" >' + defaultOptions[i] +'</option> '
-        }
-    
-      var sku = zh = en =hs = num = kg = price = ""
-      if(data){
+      for (var i = 0; i < defaultOptions.length; i++) {
+        options += '<option value="' + i + '" >' + defaultOptions[i] + '</option> '
+      }
+
+      var sku = zh = en = hs = num = kg = price = ""
+      if (data) {
         sku = data.sku;
         zh = data.zh;
         en = data.en;
@@ -469,29 +471,63 @@
 
       var id = Date.now()
       var temp = '<tr>'
-                  + '<td class="sku"><input type="text" value= "'+ sku +'" name="'+ formNamesConfig.sku+ (id) +'" class="form-control" required></td>'
-                  + ' <td class="zh-name"><input type="text" value="'+zh+'" class="form-control" name="'+formNamesConfig.zh+ (id) +'" required></td>'
-                  +  '<td class="en-name"><input type="text" value="' + en  + '" class="form-control" name="'+formNamesConfig.en+ (id) +'" required></td>'
-                  +  '<td class="hs"><input type="text" value="'+hs+'" class="form-control" name="'+formNamesConfig.hs +(id) +'"></td>'
-                  +  '<td class="num"><input type="text" value="'+ num + '" class="form-control" positiveinteger="true" name="'+formNamesConfig.num+ (id) +'" required></td>'
-                  +  '<td class="kg"><input type="text" value="'+ kg +'" class="form-control" name="'+formNamesConfig.kg+ (id) +'" required></td>'
-                  +  '<td class="price"><input type="text" value="'+price+'" class="form-control" isNumber="true" name="'+formNamesConfig.price+ (id) +'" required></td>'
-                  +  '<td class="type">'
-                  +  '<select name="'+ formNamesConfig.type +(id) +'"  class="form-control"> '+ options  + '</select>'
-                  +  '</td>'
-                  +  '<td class="delete"><button type="button" class="btn btn-primary btn-delete">删除</button></td>'
-                +'</tr>';
+        + '<td class="sku"><input type="text" value= "' + sku + '" name="' + formNamesConfig.sku + (id) + '" class="form-control" required></td>'
+        + ' <td class="zh-name"><input type="text" value="' + zh + '" class="form-control" name="' + formNamesConfig.zh + (id) + '" required></td>'
+        + '<td class="en-name"><input type="text" value="' + en + '" class="form-control" name="' + formNamesConfig.en + (id) + '" required></td>'
+        + '<td class="hs"><input type="text" value="' + hs + '" class="form-control" name="' + formNamesConfig.hs + (id) + '"></td>'
+        + '<td class="num"><input type="text" value="' + num + '" class="form-control" positiveinteger="true" name="' + formNamesConfig.num + (id) + '" required></td>'
+        + '<td class="kg"><input type="text" value="' + kg + '" class="form-control" name="' + formNamesConfig.kg + (id) + '" isNumber="true" required></td>'
+        + '<td class="price"><input type="text" value="' + price + '" class="form-control" isNumber="true" name="' + formNamesConfig.price + (id) + '" required></td>'
+        + '<td class="type">'
+        + '<select name="' + formNamesConfig.type + (id) + '"  class="form-control"> ' + options + '</select>'
+        + '</td>'
+        + '<td class="delete"><button type="button" class="btn btn-primary btn-delete">删除</button></td>'
+        + '</tr>';
       target.append($(temp))
     }
     //添加空数据
-    $('.btn-add').on('click',function(){
-        addTemplate($('.shop-table-tbody'),[])
+    $('.btn-add').on('click', function () {
+      addTemplate($('.shop-table-tbody'), [])
     })
 
     //删除  事件委托
-    $('.shop-table-tbody').on("click",".btn-delete",function(){
+    $('.shop-table-tbody').on("click", ".btn-delete", function () {
       $(this).parent().parent().remove();
     })
+
+    //获取包裹明细数据
+    function getParcelData() {
+      var parcel = $('.sender-parcel-detail-content')
+      var order = parcel.find('input[name="order"]').val();
+      var weight = parcel.find('input[name="weight"]').val();
+      var remark = parcel.find('input[name="remak"]').val();
+
+      return {
+        order: order || "",
+        weight: weight || "",
+        remark: remark || ""
+      }
+    }
+
+    //获取商品明细数据
+    function getShopData() {
+      // var data = decodeURI($(form).serialize());  //转码汉字\
+      // for(var i in formNamesConfig){
+      //   var thisName = formNamesConfig[i];
+      //   var req = new RegExp(thisName+"[0-9]*=([\u4e00-\u9fa5]|[0-9]|[A-z])*",'igm')
+      //   var nameData =  data.match(req) || []; 
+      // }
+      var Data = []; //商品明细数据
+      $('.shop-table-tbody>tr').each(function (i, v) {
+        var $this = $(this);
+        var o = {};
+        $this.find('input,select').each(function (index, input) {
+          o[Object.keys(formNamesConfig)[index]] = $(input).val()
+        })
+        Data.push(o)
+      })
+      return Data;
+    }
     //包裹明细
     $('form[name="parcel-form"]').validate({
       errorClass: 'v-error',
@@ -499,27 +535,30 @@
       debug: true,
       ignore: ".note",
       submitHandler: function (form) {
-        var Data = []; //处理后的所有数据
-        var data = $(form).serialize();
-        console.log(data)
-        for(var i in formNamesConfig){
-          console.log(formNamesConfig[i])
-          var req = new RegExp(formNamesConfig[i]+"[0-9]*=([\u4e00-\u9fa5]|[0-9]|[A-z])*",'igm')
-              var nameData =  data.match(req) || []; 
-                      console.log(nameData)
-                      //TODO 中文有问题
+        var allData = {}; //处理后所有数据
+
+        try {
+          var shopData = getShopData() || {};
+          var parceData = getParcelData() || {};
+
+          allData.shopData = shopData;
+          allData.parceData = parceData;
+          console.log(allData)
+          $.ajax({
+            url: "",
+            type: "POST",
+            data: allData,
+            dataType: "json",
+            success: function (data) {
+              location.href = "./sender_three.html"
+            },
+            error: function () {
+            }
+          });
+      
+        } catch (e) {
+          console.error('[Error]',e)
         }
-        $.ajax({
-          url: "",
-          type: "POST",
-          data: Data,
-          dataType: "json",
-          success: function (data) {
-            location.href = "./sender_three.html"
-          },
-          error: function () {
-          }
-        });
       }
     })
     // //新增商品明细
